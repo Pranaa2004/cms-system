@@ -9,3 +9,12 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('layouts.backend.main');
 });
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+Route::get('/login', function () {
+    
+}
