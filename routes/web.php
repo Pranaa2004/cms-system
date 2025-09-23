@@ -10,11 +10,10 @@ Route::get('/', function () {
     return view('layouts.backend.main');
 });
 
-
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('');
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/login', function () {
-    
-}
+    return view('auth.login');
+})->name('login');
