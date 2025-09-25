@@ -1,0 +1,48 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('pages', function (Blueprint $table) {
+            $table->bigIncrements('id')->unsigned();
+            $table->unsignedBigInteger('author_id');
+            $table->string('title',length:255);
+            $table->string('slug',length:255);
+            $table->string('title',length:255);
+            $table->longText('body');
+            $table->enum('status',['draft' ,'scheduled' , 'published']);
+            $table->timestamp('published_at', precision: 0);
+            $table->timestamp('expires_at', precision: 0);
+            $table->unsignedBigInteger('featured_media_id');
+            $table->longText('meta');
+            $table->timestamps('deleted_at');
+            $table->timestamps();
+        });
+    }
+
+    /*author—id
+
+
+
+fea
+meta
+deleted_at
+created_at
+updated_at
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('pages');
+    }
+};
