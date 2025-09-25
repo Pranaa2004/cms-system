@@ -18,7 +18,7 @@ export default defineConfig({
                 'resources/backend/assets/libs/chartist/dist/chartist.min.css',
                 'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css',
                 'resources/backend/dist/css/style.min.css',
-
+                
                 //<--------------------------- JS ----------------------------------->
 
                 // <---------- FrontEnd  JS -------------->
@@ -46,6 +46,11 @@ export default defineConfig({
                 "resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js",
                 "resources/backend/assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js",
                 "resources/backend/dist/js/pages/dashboards/dashboard1.min.js",
+
+                //<-- Login -->
+                'resources/backend/assets/libs/jquery/dist/jquery.min.js',
+                'resources/backend/assets/libs/popper.js/dist/umd/popper.min.js',
+                'resources/backend/assets/libs/bootstrap/dist/js/bootstrap.min.js',
             ],
             refresh: true,
         }),

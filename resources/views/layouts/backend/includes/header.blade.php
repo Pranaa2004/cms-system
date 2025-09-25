@@ -11,8 +11,9 @@
             <!-- ============================================================== -->
             <div class="navbar-brand">
                 <!-- Logo icon -->
-                <a href="index.html">
-                    <img src="{{ Vite::asset('resources/backend/assets/images/freedashDark.svg') }}" alt=""
+                <div></div>
+                <a href="/dashboard">
+                    <img src="{{ Vite::asset('resources/backend/assets/images/logo/logocopy.png') }}" alt=""
                         class="img-fluid">
                 </a>
             </div>
@@ -181,7 +182,7 @@
                                 class="svg-icon me-2 ms-1"></i>
                             Account Setting</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power"
+                        <a class="dropdown-item" href="/logout"><i data-feather="power"
                                 class="svg-icon me-2 ms-1"></i>
                             Logout</a>
                         <div class="dropdown-divider"></div>

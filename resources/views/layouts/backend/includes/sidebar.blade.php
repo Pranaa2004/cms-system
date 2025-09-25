@@ -6,11 +6,14 @@
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html" aria-expanded="false"><i
-                            data-feather="home" class="feather-icon"></i><span class="hide-menu">Dashboard</span></a>
-                </li>
+                @auth
+                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/dashboard" aria-expanded="false"><i
+                                data-feather="home" class="feather-icon"></i><span class="hide-menu">Dashboard</span></a>
+                    </li>
+                @endauth
+
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu">Applications</span></li>
+                {{-- <li class="nav-small-cap"><span class="hide-menu">Applications</span></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link" href="ticket-list.html" aria-expanded="false"><i
                             data-feather="tag" class="feather-icon"></i><span class="hide-menu">Ticket List
@@ -145,8 +148,8 @@
                         aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
                             class="hide-menu">Cards
                         </span></a>
-                </li>
-                <li class="list-divider"></li>
+                </li> --}}
+                {{-- <li class="list-divider"></li> --}}
                 <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
@@ -160,7 +163,7 @@
                         </span></a>
                 </li>
 
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                         aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
                             class="hide-menu">Icons
                         </span></a>
@@ -171,10 +174,10 @@
                         <li class="sidebar-item"><a href="icon-simple-lineicon.html" class="sidebar-link"><span
                                     class="hide-menu"> Simple Line Icons </span></a></li>
                     </ul>
-                </li>
+                </li> --}}
 
 
-                <li class="list-divider"></li>
+                {{-- <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
@@ -212,8 +215,8 @@
                         <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
                                     class="hide-menu"> item
                                     1.4</span></a></li>
-                    </ul>
-                </li>
+                    </ul> --}}
+                {{-- </li> --}}
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
