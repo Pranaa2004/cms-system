@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -37,6 +38,7 @@ class AuthController extends Controller
 
     public function storeregister(Request $request)
     {
+
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -49,17 +51,17 @@ class AuthController extends Controller
         $user->password = bcrypt($request->input('password'));
         $user->save();
 
-        return redirect()->route('login_show')->with('success', 'User created successfully.');
+        return redirect('/login')->with('success', 'User created successfully.');
     }
 
     public function dashboard_show()
     {
         if (Auth::check()) {
             return view('dashboard');
-         }// else {
+        } // else {
         //     return redirect('/login');
         // }
-        return redirect()->route('login')->with('error', 'You must be logged in to access the dashboard.');
+        return redirect()->route('login_show')->with('error', 'You must be logged in to access the dashboard.');
     }
 
     public function logout(Request $request)

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ Vite::asset('resources/backend/assets/images/logo/logo11.png') }}">
     <title>Register</title>
     <!-- Custom CSS -->
     {{-- @vite('resources/backend/dist/css/style.min.css') --}}
@@ -48,7 +48,7 @@
                     <div class="p-3">
                         <img src="{{ Vite::asset('resources/backend/assets/images/big/icon.png') }}" alt="wrapkit">
                         <h2 class="mt-3 text-center">Sign Up for Free</h2>
-                        <form class="mt-4" action="register_store" method="post">
+                        <form class="mt-4" action="{{ route('register_store') }}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
@@ -70,7 +70,7 @@
                                     <button type="submit" class="btn w-100 btn-dark">Sign Up</button>
                                 </div>
                                 <div class="col-lg-12 text-center mt-5">
-                                    Already have an account? <a href="{{ route('register_store') }}" class="text-danger">Sign In</a>
+                                    Already have an account? <a href="{{ route('login_show') }}" class="text-danger">Sign In</a>
                                 </div>
                             </div>
                         </form>
