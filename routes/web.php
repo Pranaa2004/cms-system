@@ -24,14 +24,15 @@ Route::get('/register', [AuthController::class, 'register_show'])->name('registe
 Route::post('/register', [AuthController::class, 'register_store'])->name('register_store');
 
 // Route::get('/dashboard', [AuthController::class, 'dashboard_show'])->name('dashboard')->middleware('auth');
-Route::view('/dashboard','index');
+Route::view('/dashboard', 'index');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
-Route::resource([
-    '/menus'=> MenuController::class,
-    '/posts'=>PostController::class,
-    '/pages'=>PageController::class,
-    '/tags'=>TagController::class,
-    '/category'=>CategoryController::class
+Route::resources([
+    '/menus' => MenuController::class,
+    '/posts' => PostController::class,
+    '/pages' => PageController::class,
+    '/tags' => TagController::class,
+    '/category' => CategoryController::class
+
 ]);
