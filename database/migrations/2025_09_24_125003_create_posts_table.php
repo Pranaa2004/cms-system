@@ -17,7 +17,6 @@ return new class extends Migration
             $table->unsignedBigInteger('editor_id');
             $table->string('title',length:255);
             $table->string('excerpt',length:255);
-            $table->string('title',length:255);
             $table->longText('body');
             $table->enum('status',['draft' ,'scheduled' , 'published']);
             $table->timestamp('published_at', precision: 0);
@@ -25,7 +24,7 @@ return new class extends Migration
             $table->tinyInteger('is_featured');
             $table->unsignedBigInteger('featured_media_id');
             $table->longText('meta');
-            $table->timestamps('deleted_at');
+            $table->timestamp('deleted_at', precision: 0);
             $table->timestamps();
 
         });

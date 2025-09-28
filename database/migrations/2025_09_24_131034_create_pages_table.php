@@ -12,18 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pages', function (Blueprint $table) {
-            $table->bigIncrements('id')->unsigned();
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('author_id');
             $table->string('title',length:255);
             $table->string('slug',length:255);
-            $table->string('title',length:255);
             $table->longText('body');
             $table->enum('status',['draft' ,'scheduled' , 'published']);
             $table->timestamp('published_at', precision: 0);
             $table->timestamp('expires_at', precision: 0);
             $table->unsignedBigInteger('featured_media_id');
             $table->longText('meta');
-            $table->timestamps('deleted_at');
+            $table->timestamp('deleted_at', precision: 0);
             $table->timestamps();
         });
     }
