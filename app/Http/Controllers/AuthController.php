@@ -60,7 +60,7 @@ class AuthController extends Controller
     public function dashboard_show()
     {
         if (Auth::check()) {
-            return view('/dashboard');
+            return view('index');
         }
 
         return redirect()->route('login_show')->with('error', 'You must be logged in to access the dashboard.');

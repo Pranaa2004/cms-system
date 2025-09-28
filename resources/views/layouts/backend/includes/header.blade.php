@@ -13,7 +13,7 @@
                 <!-- Logo icon -->
                 <div></div>
                 <a href="/dashboard">
-                    <img src="{{ Vite::asset('resources/backend/assets/images/logo/logocopy.png') }}" alt=""
+                    <img src="{{ Vite::asset('resources/backend/assets/images/logo/header.png') }}" alt=""
                         class="img-fluid">
                 </a>
             </div>

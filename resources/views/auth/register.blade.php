@@ -6,7 +6,7 @@
     <!-- Login box.scss -->
         <!-- ============================================================== -->
         <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
-            style="background:url({{ Vite::asset('resources/backend//assets/images/big/auth-bg.jpg') }}) no-repeat center center;">
+            style="background:url({{ Vite::asset('resources/backend//assets/image/big/auth-bg.jpg') }}) no-repeat center center;">
             <div class="auth-box row text-center">
                 <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url({{ Vite::asset('resources/backend/assets/images/logo/1.png') }});">
                 </div>
@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group mb-3">
-                                        <input class="form-control" type="password" placeholder="password" name="password">
+                                        <input class="form-control" type="password" placeholder="password" name="password" autocomplete="off">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 text-center">

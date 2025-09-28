@@ -37,7 +37,7 @@
         <!-- ============================================================== -->
         <!-- Main wrapper - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        @unless (request()->routeIs('login') || !Auth::check())
+        {{-- @unless (request()->routeIs('login') || !Auth::check()) --}}
             <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
                 data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
                 <!-- ============================================================== -->
@@ -61,7 +61,7 @@
                 <!-- End Page wrapper  -->
                 <!-- ============================================================== -->
             </div>
-        @endunless
+        {{-- @endunless --}}
         @yield('LogReg')
         <!-- ============================================================== -->
         <!-- End Wrapper -->
