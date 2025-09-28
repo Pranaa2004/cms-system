@@ -10,7 +10,7 @@
         <meta name="author" content="">
         <!-- Favicon icon -->
         <link rel="icon" type="image/png" sizes="16x16"
-            href="{{ Vite::asset('resources/backend/assets/images/logo/TitleLogo.png') }}">
+            href="{{ Vite::asset('resources/backend/assets/images/logo/titlelogos.png') }}">
         <title>@yield('title')</title>
         <!-- Custom CSS -->
         @vite(['resources/backend/assets/extra-libs/c3/c3.min.css', 'resources/backend/assets/libs/chartist/dist/chartist.min.css', 'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css', 'resources/backend/dist/css/style.min.css'])

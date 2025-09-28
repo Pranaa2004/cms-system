@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -11,7 +12,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+        return view('pages.backend.posts.index',compact('posts'));
     }
 
     /**
@@ -19,7 +21,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.backend.posts.create');
     }
 
     /**
@@ -27,7 +29,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -35,7 +37,7 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -43,7 +45,7 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
     }
 
     /**
@@ -51,7 +53,7 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
     }
 
     /**
@@ -59,6 +61,6 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
     }
 }
