@@ -52,7 +52,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                         aria-expanded="false"><i data-feather="box" class="feather-icon"></i><span
                             class="hide-menu">UI Elements </span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -97,10 +97,10 @@
                                     class="hide-menu"> Spinner </span></a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
                         aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
-                            class="hide-menu">Cards
+                            class="hide-menu">Media
                         </span></a>
                 </li>
                 {{-- <li class="list-divider"></li> --}}
