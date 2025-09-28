@@ -1,3 +1,16 @@
-<div>
-    <!-- When there is no desire, all things are at peace. - Laozi -->
-</div>
+@extends('layouts.backend.main')
+
+@section('title','')
+
+@push('css')
+
+@endpush
+
+
+@section('content')
+
+@endsection
+
+@push('script')
+
+@endpush

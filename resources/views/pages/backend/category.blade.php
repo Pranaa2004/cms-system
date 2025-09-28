@@ -1,3 +1,16 @@
-<div>
-    <!-- An unexamined life is not worth living. - Socrates -->
-</div>
+@extends('layouts.backend.main')
+
+@section('title','')
+
+@push('css')
+
+@endpush
+
+
+@section('content')
+
+@endsection
+
+@push('script')
+
+@endpush

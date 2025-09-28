@@ -31,47 +31,48 @@ class AuthController extends Controller
         ])->onlyInput('email');
     }
 
-    public function register()
+
+    public function register_show()
     {
         return view('auth.register');
     }
 
-    public function storeregister(Request $request)
+    public function register_store(Request $request)
     {
-
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:8|confirmed'
         ]);
 
-        $user = new User;
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->password = bcrypt($request->input('password'));
-        $user->save();
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
 
-        return redirect('/login')->with('success', 'User created successfully.');
+        Auth::login($user); // Optional: auto-login after registration
+        return redirect('/dashboard')->with('success', 'User created and logged in successfully.');
     }
+
+
 
     public function dashboard_show()
     {
         if (Auth::check()) {
-            return view('dashboard');
-        } // else {
-        //     return redirect('/login');
-        // }
+            return view('/dashboard');
+        }
+
         return redirect()->route('login_show')->with('error', 'You must be logged in to access the dashboard.');
     }
 
     public function logout(Request $request)
     {
         Auth::logout();
-
         $request->session()->invalidate();
-
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect('/login')->with('success', 'Logged out successfully.');
     }
 }
+
