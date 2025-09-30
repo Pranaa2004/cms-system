@@ -30,38 +30,40 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <input class="form-control" type="password" placeholder="Password"
-                                                name="password" autocomplete="off">
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <span class="input-group-text" id="togglePassword">
-                                                <i class="fa fa-eye" id="eyeIcon"></i>
-                                            </span>
-                                        </div>
+                                    <div class="input-group mb-3">
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Enter your password" name="password">
+                                        <span class="input-group-text" id="togglePassword">
+                                            <i class="far fa-eye-slash" id="eyeIcon"></i>
+                                            <!-- Font Awesome eye-slash icon -->
+                                        </span>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <input class="form-control" type="password" placeholder="Confirm Password"
-                                        name="password_confirmation" autocomplete="off">
 
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group mb-3">
+                                <div class="input-group mb-3">
+                                    <input type="password" class="form-control" id="confirm_password"
+                                        placeholder="Confirm your password" name="password_confirmation">
+                                    <span class="input-group-text" id="togglePassword2">
+                                        <i class="far fa-eye-slash" id="eyeIcon2"></i> <!-- Font Awesome eye-slash icon -->
+                                    </span>
                                 </div>
                             </div>
-                            <div class="col-lg-12 text-center">
-                                <button type="submit" class="btn w-100 btn-dark">Sign Up</button>
-                            </div>
-                            <div class="col-lg-12 text-center mt-5">
-                                Already have an account? <a href="{{ route('login_show') }}" class="text-danger">Sign In</a>
-                            </div>
                         </div>
-                    </form>
+                        <div class="col-lg-12 text-center">
+                            <button type="submit" class="btn w-100 btn-dark">Sign Up</button>
+                        </div>
+                        <div class="col-lg-12 text-center mt-5">
+                            Already have an account? <a href="{{ route('login_show') }}" class="text-danger">Sign In</a>
+                        </div>
                 </div>
+                </form>
             </div>
         </div>
+    </div>
     </div>
     <!-- ============================================================== -->
     <!-- Login box.scss -->
@@ -69,29 +71,55 @@
 
 @push('script')
     <script>
-        $(document).ready(function() {
-            document.addEventListener('DOMContentLoaded', function() {
-                const passwordField = document.getElementById('password');
-                const togglePassword = document.getElementById('togglePassword');
-                const eyeIcon = document.getElementById('eyeIcon');
+        // $(document).ready(function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordField = document.getElementById('password');
+            const togglePassword = document.getElementById('togglePassword');
+            const eyeIcon = document.getElementById('eyeIcon');
 
-                togglePassword.addEventListener('click', function() {
-                    // Toggle the type attribute
-                    const type = passwordField.getAttribute('type') === 'password' ? 'text' :
-                        'password';
-                    passwordField.setAttribute('type', type);
+            const passwordField2 = document.getElementById('confirm_password');
+            const togglePassword2 = document.getElementById('togglePassword2');
+            const eyeIcon2 = document.getElementById('eyeIcon2');
 
-                    // Toggle the eye icon
-                    if (type === 'password') {
-                        eyeIcon.classList.remove('fa-eye-slash');
-                        eyeIcon.classList.add('fa-eye');
-                    } else {
-                        eyeIcon.classList.remove('fa-eye');
-                        eyeIcon.classList.add('fa-eye-slash');
-                    }
-                });
+            togglePassword.addEventListener('click', function() {
+                // Toggle the type attribute
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' :
+                    'password';
+                passwordField.setAttribute('type', type);
+
+                // Toggle the eye icon
+                if (type === 'password') {
+                    eyeIcon.classList.remove('fa-eye');
+                    eyeIcon.classList.add('fa-eye-slash');
+
+
+                } else {
+                    eyeIcon.classList.remove('fa-eye-slash');
+                    eyeIcon.classList.add('fa-eye');
+
+                }
+            });
+
+            togglePassword2.addEventListener('click', function() {
+                // Toggle the type attribute
+                const type = passwordField2.getAttribute('type') === 'password' ? 'text' :
+                    'password';
+                passwordField2.setAttribute('type', type);
+
+                // Toggle the eye icon
+                if (type === 'password') {
+                    eyeIcon2.classList.remove('fa-eye');
+                    eyeIcon2.classList.add('fa-eye-slash');
+
+
+                } else {
+                    eyeIcon2.classList.remove('fa-eye-slash');
+                    eyeIcon2.classList.add('fa-eye');
+
+                }
             });
         });
+        // });
 
 
         // $(document).ready(function() {

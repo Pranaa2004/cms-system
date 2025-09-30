@@ -14,7 +14,7 @@
         <title>@yield('title')</title>
         <!-- Custom CSS -->
         @vite(['resources/backend/assets/extra-libs/c3/c3.min.css', 'resources/backend/assets/libs/chartist/dist/chartist.min.css', 'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css', 'resources/backend/dist/css/style.min.css'])
-
+        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> --}}
         <!-- Custom CSS -->
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +37,7 @@
         <!-- ============================================================== -->
         <!-- Main wrapper - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        {{-- @unless (request()->routeIs('login') || !Auth::check()) --}}
+        @unless (request()->routeIs('login') || !Auth::check())
             <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
                 data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
                 <!-- ============================================================== -->
@@ -61,7 +61,7 @@
                 <!-- End Page wrapper  -->
                 <!-- ============================================================== -->
             </div>
-        {{-- @endunless --}}
+        @endunless
         @yield('LogReg')
         <!-- ============================================================== -->
         <!-- End Wrapper -->

@@ -182,9 +182,19 @@
                                 class="svg-icon me-2 ms-1"></i>
                             Account Setting</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/logout"><i data-feather="power"
-                                class="svg-icon me-2 ms-1"></i>
-                            Logout</a>
+                        <table>
+                            <tr>
+                                <td><a class="dropdown-item"><i data-feather="power" class="svg-icon me-2 ms-1"></i>
+                                </td>
+                                <td>
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <input type="submit" value="Logout">
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                        </a>
                         <div class="dropdown-divider"></div>
                         <div class="pl-4 p-3"><a href="javascript:void(0)" class="btn btn-sm btn-info">View
                                 Profile</a></div>

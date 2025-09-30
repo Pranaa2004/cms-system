@@ -18,20 +18,20 @@
                         aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
                             class="hide-menu">Post</span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                        <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('posts.index') }}" class="sidebar-link"><span
                                     class="hide-menu">All Post
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="table-dark-basic.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('posts.create') }}" class="sidebar-link"><span
                                     class="hide-menu">Add Post
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="table-sizing.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('category.index') }}" class="sidebar-link"><span
                                     class="hide-menu">
                                     Category
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="table-sizing.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('tags.index') }}" class="sidebar-link"><span
                                     class="hide-menu">
                                     Tags
                                 </span></a>

@@ -4,7 +4,7 @@
 
 @section('LogReg')
 <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
-    style="background:url({{ Vite::asset('resources/backend/assets/image/big/auth-bg.jpg') }}) no-repeat center center;">
+    style="repeat center center;">
     <div class="auth-box row">
         <!-- Left Image Column -->
         <div class="col-lg-7 col-md-5 modal-bg-img"
@@ -32,7 +32,7 @@
                         <!-- Username -->
                         <div class="col-lg-12">
                             <div class="form-group mb-3">
-                                <label class="form-label text-dark" for="uname">Username</label>
+                                <label class="form-label text-dark" for="uname">Username/E-mail</label>
                                 <input class="form-control" id="uname" type="text" name="username"
                                     placeholder="Enter your username" required>
                                 @error('username')

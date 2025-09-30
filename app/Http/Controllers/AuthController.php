@@ -31,7 +31,7 @@ class AuthController extends Controller
         ])->onlyInput('email');
     }
 
-
+    //      ------ Register -------
     public function register_show()
     {
         return view('auth.register');
@@ -52,11 +52,11 @@ class AuthController extends Controller
         ]);
 
         Auth::login($user); // Optional: auto-login after registration
-        return redirect('/dashboard')->with('success', 'User created and logged in successfully.');
+        return redirect()->route('login_show')->with('success', 'User created and logged in successfully.');
     }
 
 
-
+    //      ---- Dashboard -----
     public function dashboard_show()
     {
         if (Auth::check()) {
@@ -66,13 +66,14 @@ class AuthController extends Controller
         return redirect()->route('login_show')->with('error', 'You must be logged in to access the dashboard.');
     }
 
+    //      ---- logout ------
     public function logout(Request $request)
     {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login')->with('success', 'Logged out successfully.');
+        return redirect()->route('login_show')->with('success', 'Logged out successfully.');
     }
 }
 
