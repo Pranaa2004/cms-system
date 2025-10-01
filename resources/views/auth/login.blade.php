@@ -18,7 +18,6 @@
                     <img src="{{ Vite::asset('resources/backend/assets/images/big/icon.png') }}" alt="Admin Panel Logo">
                 </div>
                 <h2 class="mt-3 text-center">Sign In</h2>
-                <p class="text-center">Enter your email address and password to access the admin panel.</p>
 
                 <!-- Display Session Error -->
                 @if(session('error'))
@@ -32,10 +31,10 @@
                         <!-- Username -->
                         <div class="col-lg-12">
                             <div class="form-group mb-3">
-                                <label class="form-label text-dark" for="uname">Username/E-mail</label>
-                                <input class="form-control" id="uname" type="text" name="username"
+                                <label class="form-label text-dark" for="uname">Username</label>
+                                <input class="form-control" id="uname" type="email" name="email"
                                     placeholder="Enter your username" required>
-                                @error('username')
+                                @error('email')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
