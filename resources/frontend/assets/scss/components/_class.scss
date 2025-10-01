@@ -1,0 +1,103 @@
+/*
+************
+*************************
+05. section
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.h10_class-area {
+	background: #4846AB;
+    position: relative;
+    z-index: 1;
+}
+
+.h10_class-content-title {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    @media #{$md}{
+      font-size: 40px;
+    }
+    @media #{$xs}{
+      font-size: 38px;
+    }
+    @media #{$sm}{
+      font-size: 48px;
+    }
+  }
+  .h10_class-content p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 37px;
+  }
+  .h10_class-content-title span {
+    display: inline-block;
+    padding: 5px 15px;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border: 1px solid #fff;
+    line-height: 1;
+    border-radius: 4px;
+    padding-left: 40px;
+    margin-left: 5px;
+  }
+  .h10_class-content-title span::before {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    background: #f20;
+    width: 12px;
+    height: 12px;
+    margin-top: -6px;
+    border-radius: 50%;
+    animation: scaleup 1s linear 0s infinite alternate;
+  }
+
+  @keyframes scaleup {
+    0% {
+      transform: scale(0.5);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
+  .h10_class-shape-1 {
+    position: absolute;
+    left: 65px;
+    top: 50%;
+    animation: animation-upDown-1 3s linear 0s infinite alternate;
+    transform: translateY(-50%);
+    @media #{$xxl}{
+      left: 10px;
+      width: 40px;
+    }
+  }
+  .h10_class-shape-2 {
+    position: absolute;
+    top: 60px;
+    left: 46%;
+    transform: translateX(-50%);
+    animation: animation-popup-2 1.2s linear 0s infinite alternate;
+  }
+  .h10_class-shape-3 {
+    position: absolute;
+    left: 42%;
+    bottom: 160px;
+    transform: translateX(-50%);
+    animation: animation-leftRight-1 3s linear 0s infinite alternate;
+  }

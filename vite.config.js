@@ -6,11 +6,19 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                // <------------------------- CSS ----------------------------------->
+                // <===================================== CSS ===============================>
 
                 // <---------- FrontEnd  CSS -------------->
                 'resources/frontend/css/app.css',
-
+                'resources/frontend/assets/css/bootstrap.min.css',
+                'resources/frontend/assets/css/animate.min.css',
+                'resources/frontend/assets/css/magnific-popup.css',
+                'resources/frontend/assets/css/fontawesome-all.min.css',
+                'resources/frontend/assets/css/odometer.min.css',
+                'resources/frontend/assets/css/nice-select.css',
+                'resources/frontend/assets/css/meanmenu.css',
+                'resources/frontend/assets/css/swiper-bundle.min.css',
+                'resources/frontend/assets/css/main.css',
 
 
                 //  <---------- BackEnd  CSS -------------->
@@ -18,14 +26,23 @@ export default defineConfig({
                 'resources/backend/assets/libs/chartist/dist/chartist.min.css',
                 'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css',
                 'resources/backend/dist/css/style.min.css',
-                
-                //<--------------------------- JS ----------------------------------->
+
+                //<------------------------------------------------------------------------- JS ---------------------------------------------------------->
 
                 // <---------- FrontEnd  JS -------------->
                 'resources/frontend/js/app.js',
-
-
-
+                'resources/frontend/assets/js/jquery.min.js',
+                'resources/frontend/assets/js/bootstrap.bundle.min.js',
+                'resources/frontend/assets/js/swiper-bundle.min.js',
+                'resources/frontend/assets/js/jquery.meanmenu.min.js',
+                'resources/frontend/assets/js/wow.min.js',
+                'resources/frontend/assets/js/jquery.nice-select.min.js',
+                'resources/frontend/assets/js/jquery.scrollUp.min.js',
+                'resources/frontend/assets/js/jquery.magnific-popup.min.js',
+                'resources/frontend/assets/js/odometer.min.js',
+                'resources/frontend/assets/js/appear.min.js',
+                'resources/frontend/assets/js/jquery.bxslider.min.js',
+                'resources/frontend/assets/js/main.js',
 
                 //  <---------- BackEnd  JS ------------>
                 "resources/backend/assets/libs/jquery/dist/jquery.min.js",

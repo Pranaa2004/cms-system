@@ -1,0 +1,288 @@
+/*
+************
+*************************
+23. account
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.account {
+  &-wrap {
+    background: #fff;
+    box-shadow: 0px 10px 50px rgba(30, 30, 30, 0.1);
+    max-width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &-link {
+      width: 100%;
+      background: #F5F5F5;
+      height: 55px;
+      line-height: 55px;
+      text-align: center;
+      border-radius: 10px 0 10px 0;
+      border: 1px solid rgba(4, 0, 23, 0.1);
+      position: relative;
+      z-index: 1;
+      a {
+        color: var(--clr-body-heading);
+        font-size: 16px;
+        font-weight: 500;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        display: inline-block;
+      }
+    }
+    &-current {
+      width: 100%;
+      border: 1px solid rgba(4, 0, 23, 0.1);
+      border-radius: 0 10px 0 10px;
+      text-align: center;
+      height: 55px;
+      line-height: 55px;
+      border-top: 2px solid var(--clr-theme-primary);
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--clr-body-heading);
+        width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+  &-main {
+    padding: 65px 80px 70px;
+    @media #{$md}{
+      padding: 65px 60px 70px;
+    }
+    @media #{$xs}{
+      padding: 65px 30px 70px;
+    }
+    @media #{$sm}{
+      padding: 65px 50px 70px;
+    }
+  }
+  &-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    @media #{$xs}{
+      font-size: 28px;
+    }
+    @media #{$sm}{
+      font-size: 32px;
+    }
+  }
+}
+.sign-up {
+  .account-top-link {
+    border-radius: 0 10px 0 10px; 
+  }
+  .account-top-current {
+    border-radius: 10px 0 10px 0;
+  }
+}
+.account {
+  &-form {
+    &-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      label {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--clr-body-heading);
+        margin-bottom: 5px;
+      }
+      a {
+        font-size: 14px;
+        color: rgba(4, 0, 23, 0.6);
+        font-weight: 400;
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+    &-input {
+      position: relative;
+      z-index: 1;
+      input {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid rgba(4, 0, 23, 0.1);
+        border-radius: 6px;
+        padding: 0 20px;
+        font-size: 14px;
+        color: rgba(4, 0, 23, 0.6);
+      }
+      span {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        height: 50px;
+        display: inline-block;
+        line-height: 50px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      &-pass {
+        input {
+          padding-right: 50px;
+        }
+      }
+    }
+    &-button {
+      margin-bottom: 40px;
+    }
+  }
+  &-form {
+    &-condition {
+      margin-bottom: 35px;
+      span {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+  &-btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    background-color: var(--clr-theme-primary);
+    border-radius: 6px;
+  }
+  &-break {
+    position: relative;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: rgba(4, 0, 23, 0.14);
+    }
+    span {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      font-size: 14px;
+      line-height: 1;
+      padding: 5px 11px;
+      color: rgba(4, 0, 23, 0.7);
+    }
+  }
+  &-bottom {
+    padding-top: 35px;
+    &-text {
+      text-align: center;
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+        color: var(--clr-body-heading);
+        line-height: 20px;
+        a {
+          display: inline-block;
+          color: var(--clr-theme-primary);
+        }
+      }
+    }
+  }
+  &-option {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 35px;
+    &-account {
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(4, 0, 23, 0.1);
+      height: 50px;
+      width: 100%;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 6px;
+      line-height: 50px;
+      img {
+        flex-shrink: 0;
+        max-width: 20px;
+      }
+      span {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+      }
+    }
+    @media #{$xs}{
+      flex-wrap: wrap;
+    }
+    @media #{$sm}{
+      flex-wrap: nowrap;
+    }
+  }
+}
+.account-form-condition {
+  .condition_label {
+    display: block;
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+  }
+  .condition_label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .check_mark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: transparent;
+    border: 1px solid rgba(30, 30, 30, 0.3);
+    border-radius: 2px;
+  }
+  .check_mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .condition_label input:checked ~ .check_mark:after {
+    display: block;
+  }
+  .condition_label .check_mark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid rgba(30, 30, 30, 0.4);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,82 @@
+/*
+************
+*************************
+06. brand
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.brand {
+	&-wrap {
+		border: 1px solid rgba(30, 30, 30, 0.1);
+		padding-top: 35px;
+		padding-bottom: 35px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	&-item {
+		text-align: center;
+	}
+	&-content {
+		h5 {
+			font-size: 18px;
+			font-weight: 500;
+			text-align: center;
+			margin-bottom: 35px;
+			color: rgba(30, 30, 30, 0.8);
+		}
+	}
+}
+.brand-item .brand-hover-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	transform: translateY(-100%);
+	opacity: 0;
+	visibility: hidden;
+	margin: auto;
+	right: 0;
+}
+.brand-item {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	img {
+		@include transition(.3s);
+	}
+	.brand-hover-img {
+		left: 50%;
+		transform: translate(-50%, -100%);
+	}
+	&:hover {
+		.brand-hover-img {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.brand-main-img {
+			transform: translateY(100%);
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+// home 6 css 
+
+.h6_brand-area {
+	.brand-wrap {
+		border: none;
+		padding: 0;
+	}
+	.brand-item {
+		text-align: center;
+	}
+	.brand-item .brand-hover-img {
+		margin: 0;
+	}
+}

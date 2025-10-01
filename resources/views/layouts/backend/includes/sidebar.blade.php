@@ -7,7 +7,7 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 {{-- @auth --}}
-                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/dashboard" aria-expanded="false"><i
+                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('dashboard') }}" aria-expanded="false"><i
                                 data-feather="home" class="feather-icon"></i><span class="hide-menu">Dashboard</span></a>
                     </li>
                 {{-- @endauth --}}
@@ -42,11 +42,11 @@
                         aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
                             class="hide-menu">Pages</span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                        <li class="sidebar-item"><a href="chart-morris.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('pages.index') }}" class="sidebar-link"><span
                                     class="hide-menu">All Pages
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="chart-chart-js.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('pages.create') }}" class="sidebar-link"><span
                                     class="hide-menu">Add Pages
                                 </span></a>
                         </li>

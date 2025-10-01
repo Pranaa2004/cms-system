@@ -1,0 +1,171 @@
+/*
+************
+*************************
+11. about
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.h7_scholarship {
+    &-img {
+      margin-bottom: -370px;
+      position: relative;
+      z-index: 1;
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 10, 10, 0.30);
+      }
+      @media #{$lg}{
+        margin-bottom: -255px;
+      }
+      @media #{$md}{
+        margin-bottom: -235px;
+      }
+      @media #{$xs}{
+        margin-bottom: -145px;
+        margin-bottom: -35%;
+      }
+      @media #{$sm}{
+        margin-bottom: -150px;
+      }
+      transition: all .8s cubic-bezier(.25, .46, .45, .94);
+      clip-path: inset(0 0 0 0);
+      img {
+        transition: all .8s cubic-bezier(.25, .46, .45, .94);
+        transform: scale(1);
+        width: 100%;
+      }
+      &:hover {
+        clip-path: inset(8px 8px 8px 8px);
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    &-wrap {
+        background-color: #4846AB;
+        padding-top: 435px;
+        padding-bottom: 110px;
+        position: relative;
+        z-index: auto;
+        @media #{$lg}{
+          padding-top: 300px;
+        }
+        @media #{$md}{
+          padding-top: 270px;
+        }
+        @media #{$xs}{
+          padding-top: 170px;
+          padding-top: calc(33% + 24px);
+        }
+        @media #{$sm}{
+          padding-top: 240px;
+        }
+    }
+}
+
+
+.h7_scholarship-content {
+    width: 420px;
+    margin-left: auto;
+    @media #{$md}{
+      width: 320px;
+    }
+    @media #{$xs}{
+      width: 100%;
+    }
+  }
+
+  .h7_scholarship-content a {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    display: inline-flex;
+    height: 50px;
+    padding: 0 30px;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #FFF;
+    &:hover {
+        background-color: var(--clr-theme-primary-6);
+        border-color: var(--clr-theme-primary-6);
+    }
+  }
+  .h7_scholarship-content p {
+    color: #EFEFEF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+  .h7_scholarship-title {
+    position: absolute;
+    left: 75px;
+    bottom: 65px;
+    z-index: 2;
+    @media #{$lg}{
+      bottom: 90px;
+    }
+    @media #{$md}{
+      left: 50px;
+      bottom: 100px;
+    }
+    @media #{$xs}{
+      position: static;
+    }
+    @media #{$sm}{
+      position: absolute;
+      left: 15px;
+      bottom: 140px;
+    }
+  }
+.h7_scholarship-title h1 {
+  color: #FFF;
+  font-size: 140px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: end;
+  @media #{$xl}{
+    font-size: 110px;
+  }
+  @media #{$lg, $md}{
+    font-size: 85px;
+    text-align: start;
+  }
+  @media #{$xs}{
+    font-size: 54px;
+    text-align: start;
+  }
+  span {
+    display: block;
+  }
+}
+.h7_scholarship-title h1 span.scholar-bottom {
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+  @media #{$lg}{
+    font-size: 85px;
+  }
+  @media #{$md}{
+    font-size: 70px;
+  }
+  @media #{$xs}{
+    font-size: 45px;
+    display: inline-block;
+  }
+  @media #{$sm}{
+    font-size: 60px;
+    display: block;
+  }
+}
