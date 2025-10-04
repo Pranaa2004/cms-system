@@ -27,9 +27,13 @@ Route::get('/dashboard', [AuthController::class, 'dashboard_show'])->name('dashb
 // Route::view('/dashboard', 'index');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::post('/forgotpw', [AuthController::class, 'forgotpw'])->name('forgotpw');
+Route::get('/forgotpw', [AuthController::class, 'forgotpw'])->name('forgotpw');
 
-Route::view('/', 'pages.frontend.home');;
+Route::view('/', 'pages.frontend.home');
+
+Route::post('/', function () {
+    return view('pages.frontend.home');
+})->name('/home');
 
 Route::resources([
     '/menus' => MenuController::class,

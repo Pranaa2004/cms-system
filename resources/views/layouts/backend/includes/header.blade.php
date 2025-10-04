@@ -187,7 +187,7 @@
                                 <td><a class="dropdown-item"><i data-feather="power" class="svg-icon me-2 ms-1"></i>
                                 </td>
                                 <td>
-                                    <form action="{{ route('logout') }}" method="POST">
+                                    <form action="/" method="POST">
                                         @csrf
                                         <input type="submit" value="Logout">
                                     </form>
