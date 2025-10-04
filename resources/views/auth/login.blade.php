@@ -55,7 +55,7 @@
                             <!-- Remember Me -->
                             <div class="col-lg-12">
                                 <div class="form mb-3">
-                                    <a href="" class="fs-6 text-start">Forgot Password</a>
+                                    <a href="{{ route('forgotpw') }}" class="fs-6 text-start">Forgot Password</a>
                                 </div>
                             </div>
 

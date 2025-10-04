@@ -98,7 +98,7 @@
                              </ul>
                          </div>
                          <div class="h9_header-btn2 d-none d-sm-block">
-                             <a href="#" class="h9_header-btn theme-btn theme-btn-9">
+                             <a href="{{ route('login_show') }}" class="h9_header-btn theme-btn theme-btn-9">
                                  <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                      <path
@@ -123,5 +123,4 @@
              </div>
          </div>
      </div>
- </header>
-
+</header>

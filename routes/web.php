@@ -29,6 +29,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::post('/forgotpw', [AuthController::class, 'forgotpw'])->name('forgotpw');
 
+Route::view('/', 'pages.frontend.home');;
 
 Route::resources([
     '/menus' => MenuController::class,
