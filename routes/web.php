@@ -9,9 +9,6 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
 
 
-Route::get('/', function () {
-    return view('index');
-});
 
 // Route::get('/', function () {
 //     return view('layouts.backend.main');
@@ -31,9 +28,9 @@ Route::get('/forgotpw', [AuthController::class, 'forgotpw'])->name('forgotpw');
 
 Route::view('/', 'pages.frontend.home');
 
-Route::post('/', function () {
-    return view('pages.frontend.home');
-})->name('/home');
+// Route::post('/', function () {
+//     return view('pages.frontend.home');
+// })->name('/home');
 
 Route::resources([
     '/menus' => MenuController::class,

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
 
 
@@ -77,8 +78,8 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-
-        return redirect()->route('login_show')->with('success', 'Logged out successfully.');
+        Cache::flush();
+        return redirect('/')->with('success', 'Logged out successfully.');
     }
 }
 
