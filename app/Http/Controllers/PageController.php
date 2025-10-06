@@ -40,13 +40,13 @@ class PageController extends Controller
 
         ]);
 
-        Page::create($validated);
+        // Page::create($validated);
 
         // $page = Page::create([
-        //     // 'author_id'=>,
-        //     // 'title'=>,
-        //     // 'slug'=>,
-        //     // 'body'=>
+        //     'author_id'=>1,
+        //     'title'=> $validated->
+        //     'slug'=>,
+        //     'body'=>
 
         // ]);
 
@@ -60,7 +60,7 @@ class PageController extends Controller
      */
     public function show(string $id)
     {
-
+        
     }
 
     /**

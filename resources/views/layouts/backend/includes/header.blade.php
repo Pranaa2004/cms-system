@@ -164,8 +164,8 @@
                         aria-haspopup="true" aria-expanded="false">
                         <img src="{{ Vite::asset('resources/backend/assets/images/users/profile-pic.jpg') }}"
                             alt="user" class="rounded-circle" width="40">
-                        <span class="ms-2 d-none d-lg-inline-block"><span>Hello,</span> <span class="text-dark">Jason
-                                Doe</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
+                        <span class="ms-2 d-none d-lg-inline-block"><span>Hello,</span> <span class="text-dark">{{ Auth::user()->name }}
+                                </span> <i data-feather="chevron-down" class="svg-icon"></i></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-right user-dd animated flipInY">
                         <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
