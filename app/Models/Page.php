@@ -8,13 +8,19 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Page extends Model
 {
-    public function posts() : BelongsToMany
+    public function posts(): BelongsToMany
     {
         return $this->belongsToMany(Post::class);
     }
 
-    public function user() :BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
+
+
+    protected $fillable = [
+        'title', 
+
+    ];
 }

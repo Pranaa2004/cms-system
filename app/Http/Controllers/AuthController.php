@@ -78,7 +78,7 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        Cache::flush();
+
         return redirect('/')->with('success', 'Logged out successfully.');
     }
 }

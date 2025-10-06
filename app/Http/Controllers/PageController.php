@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class PageController extends Controller
 {
@@ -34,19 +36,19 @@ class PageController extends Controller
         $validated = $request->validate([
             'title' => 'required|max:255',
             'content' => 'required',
-            'profile_picture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000',
+            // 'profile_picture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000',
 
         ]);
 
         Page::create($validated);
 
-        $page = Page::create([
-            // 'author_id'=>,
-            // 'title'=>,
-            // 'slug'=>,
-            // 'body'=>
+        // $page = Page::create([
+        //     // 'author_id'=>,
+        //     // 'title'=>,
+        //     // 'slug'=>,
+        //     // 'body'=>
 
-        ]);
+        // ]);
 
         return redirect()->route('pages.index')->with('success', 'Page created successfully.');
 
