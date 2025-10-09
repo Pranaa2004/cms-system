@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title',length:255);
             $table->string('excerpt',length:255);
             $table->longText('body');
-            $table->enum('status',['draft' ,'scheduled' , 'published']);
+            $table->enum('status',['draft' ,'scheduled' , 'published', 'achived']);
             $table->timestamp('published_at', precision: 0);
             $table->timestamp('expires_at', precision: 0);
             $table->tinyInteger('is_featured');

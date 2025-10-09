@@ -23,18 +23,17 @@
                                 <thead>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Description</th>
                                         <th>Slug</th>
+                                        <th>Description</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($tags as $tag)
                                         <tr>
-
                                             <td>{{ $tag->name }}</td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>{{ $tag->slug}}</td>
+                                            <td>{{ $tag->description}}</td>
                                             <td>
                                                 <a href="{{ route('tags.edit', $tag->id) }}"
                                                     class="btn btn-sm btn-warning">Edit</a>
@@ -52,8 +51,8 @@
                                 <tfoot>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Description</th>
                                         <th>Slug</th>
+                                        <th>Description</th>
                                         <th>Actions</th>
                                     </tr>
                                 </tfoot>

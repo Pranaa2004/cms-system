@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TagController extends Controller
 {
@@ -29,7 +30,18 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255|unique:categories,name',
+            'slug'=>"required|unique:tags"
+
+        ]);
+
+        $tag = new Tag;
+        $tag->name = $validatedData['name'];
+        $tag->slug = str::slug($validatedData['slug']);
+        $tag->save();
+
+        return redirect()->back()->with('success', 'Category created successfully!');
     }
 
     /**
@@ -37,7 +49,7 @@ class TagController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**

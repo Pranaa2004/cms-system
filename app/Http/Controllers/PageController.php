@@ -33,22 +33,20 @@ class PageController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        $validated = $request->validate([
+        $validatedata = $request->validate([
             'title' => 'required|max:255',
             'content' => 'required',
             // 'profile_picture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000',
 
         ]);
 
-        // Page::create($validated);
+        $page = Page::create([
+            'author_id'=>1,
+            'title'=> $validatedata['title'],
+            'slug'=> Str::slug($request->input('slug')),
+            'body'=>1,
 
-        // $page = Page::create([
-        //     'author_id'=>1,
-        //     'title'=> $validated->
-        //     'slug'=>,
-        //     'body'=>
-
-        // ]);
+        ]);
 
         return redirect()->route('pages.index')->with('success', 'Page created successfully.');
 
@@ -60,7 +58,7 @@ class PageController extends Controller
      */
     public function show(string $id)
     {
-        
+
     }
 
     /**

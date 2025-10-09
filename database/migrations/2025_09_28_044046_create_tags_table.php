@@ -15,6 +15,7 @@ return new class extends Migration
             $table->bigIncrements('id')->unsigned();
             $table->string('name',length:255);
             $table->string('slug',length:255);
+            $table->text('description');
             $table->timestamps();
         });
     }
