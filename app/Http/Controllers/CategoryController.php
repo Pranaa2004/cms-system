@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationException;
 
 class CategoryController extends Controller
 {
@@ -64,7 +65,9 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = Category::find($id);
+        $categories = Category::all()->sortByDesc('created_at');
+        return view('pages.backend.category.edit', compact('category', 'categories'));
     }
 
     /**
@@ -72,7 +75,26 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        try {
+            $validatedData = $request->validate([
+                'name' => 'required|string|max:255|unique:categories,name',
+                'slug' => 'required|string|unique:categories,slug'
+            ]);
+
+            $category = Category::find($id);
+            $category->update([
+                'name' =>  $validatedData['name'],
+                'slug' => $validatedData['slug'],
+                'parent_id' => $request->input('parent_id'),
+                'description' => $request->input('description'),
+                'order_column' => 1,
+            ]);
+
+            return redirect()->route('category.index')->with('success', 'Category created successfully!');
+        } catch (ValidationException $e) {
+            $errors = $e->errors();
+            return redirect()->back()->withErrors($errors)->withInput();
+        }
     }
 
     /**
