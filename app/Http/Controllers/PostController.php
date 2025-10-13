@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -29,7 +30,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedata = $request->validate([
+            'title'=> 'required|string'
+        ]);
+
+        $post = new Post;
+        $post->orther_id = Auth::user()->id;
+        $post->editor_id = Auth::user()->id;
+        $post->title = $validatedata['title'];
+        // $post->excerpt = Str::substr($validatedata['description'], 0, );
+        $post->body = $validatedata['description'];
+        // $post->status =
+        // $post->save();
         
+
     }
 
     /**
@@ -61,6 +75,9 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
+        $post = Post::find($id);
+        $post->delete();
 
+        return redirect()->back()->with('Sucess','Successfully Deleted !');
     }
 }

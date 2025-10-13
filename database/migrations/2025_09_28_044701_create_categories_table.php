@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name',length:255);
-            $table->string('slug',length:255);
+            $table->string('name', length: 255);
+            $table->string('slug', length: 255);
             $table->unsignedBigInteger('parent_id');
             $table->text('description');
             $table->integer('order_column')->unsigned();

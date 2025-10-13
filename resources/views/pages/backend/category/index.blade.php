@@ -31,10 +31,9 @@
                                 <tbody>
                                     @foreach ($categories as $category)
                                         <tr>
-
                                             <td>{{ $category->name }}</td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>{{ $category->description }}</td>
+                                            <td>{{ $category->slug }}</td>
                                             <td>
                                                 <a href="{{ route('category.edit', $category->id) }}"
                                                     class="btn btn-sm btn-warning">Edit</a>

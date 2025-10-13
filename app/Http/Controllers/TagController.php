@@ -14,7 +14,7 @@ class TagController extends Controller
     public function index()
     {
         $tags = Tag::all()->sortByDesc('created_at');
-        return view('pages.backend.tags.index',compact('tags'));
+        return view('pages.backend.tags.index', compact('tags'));
     }
 
     /**
@@ -32,7 +32,7 @@ class TagController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255|unique:categories,name',
-            'slug'=>"required|unique:tags"
+            'slug' => "required|unique:tags"
 
         ]);
 
@@ -47,9 +47,8 @@ class TagController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-
+    public function show(string $id) {
+        //
     }
 
     /**
@@ -73,6 +72,9 @@ class TagController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $tag = Tag::find($id);
+        $tag->delete();
+
+        return redirect()->back()->with('success', 'Successfully Deleted !');
     }
 }

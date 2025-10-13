@@ -20,9 +20,7 @@ class CategoryController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create() {
-
-    }
+    public function create() {}
 
     /**
      * Store a newly created resource in storage.
@@ -32,15 +30,23 @@ class CategoryController extends Controller
         //dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required|string|max:255|unique:categories,name',
+            'slug' => 'required|string|unique:categories,slug'
         ]);
 
-        $category = Category::create([
-            'name' => $validatedData['name'],
-            'slug' => Str::slug($request->input('slug')),
-            'parent_id' => $request->input('parent_id'),
-            'description' => $request->input('description'),
-            'order_column' => 1
-        ]);
+        $category = new Category;
+        $category->name =  $validatedData['name'];
+        $category->slug = $validatedData['slug'];
+        $category->parent_id = $request->input('parent_id');
+        $category->description = $request->input('description');
+        $category->order_column = 1;
+        $category->save();
+        // Category::create([
+        //     'name' =>
+        //     'slug' => Str::slug($validatedData['slug']),
+        //     'parent_id' => $request->input('parent_id'),
+        //     'description' => $request->input('description'),
+        //     'order_column' => 1
+        // ]);
 
         return redirect()->back()->with('success', 'Category created successfully!');
     }
@@ -74,6 +80,9 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $category = Category::find($id);
+        $category->delete();
+
+        return redirect()->back()->with('Success', 'Success Fully Deleted !');
     }
 }
