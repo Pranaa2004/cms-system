@@ -51,7 +51,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description" name="description" rows="5" required>{{ $category->description}}</textarea>
+                        <textarea class="form-control" id="description" name="description" rows="5" required>{{ $category->description }}</textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Update Category</button>
                 </form>
@@ -68,4 +68,3 @@
         </div>
     @endif
 @endsection
-
