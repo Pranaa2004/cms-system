@@ -78,18 +78,23 @@ class CategoryController extends Controller
         try {
             $validatedData = $request->validate([
                 'name' => 'required|string|max:255|unique:categories,name',
-                'slug' => 'required|string|unique:categories,slug'
+                'slug' => 'required|string|alpha_dash|lowercase|max:255',
             ]);
 
             $category = Category::find($id);
-            $category->update([
-                'name' =>  $validatedData['name'],
-                'slug' => $validatedData['slug'],
-                'parent_id' => $request->input('parent_id'),
-                'description' => $request->input('description'),
-                'order_column' => 1,
-            ]);
-
+            $category->name =  $validatedData['name'];
+            $category->slug = $validatedData['slug'];
+            $category->parent_id = $request->input('parent_id');
+            $category->description = $request->input('description');
+            $category->order_column = 1;
+            $category->save();
+            // $category->update([
+            //     'name' =>  $validatedData['name'],
+            //     'slug' => $validatedData['slug'],
+            //     'parent_id' => $request->input('parent_id'),
+            //     'description' => $request->input('description'),
+            //     'order_column' => 1,
+            // ]);
             return redirect()->route('category.index')->with('success', 'Category created successfully!');
         } catch (ValidationException $e) {
             $errors = $e->errors();

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationData;
+use PhpParser\Node\Stmt\TryCatch;
+use Illuminate\Validation\ValidationException;
 
 class TagController extends Controller
 {
@@ -31,14 +34,15 @@ class TagController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255|unique:categories,name',
-            'slug' => "required|unique:tags"
+            'name' => 'required|string|max:255|unique:tags,name',
+            'slug' => 'required|unique:tags,slug',
 
         ]);
 
         $tag = new Tag;
         $tag->name = $validatedData['name'];
         $tag->slug = str::slug($validatedData['slug']);
+        $tag->description = $request->input('description');
         $tag->save();
 
         return redirect()->back()->with('success', 'Category created successfully!');
@@ -47,7 +51,8 @@ class TagController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id) {
+    public function show(string $id)
+    {
         //
     }
 
@@ -56,7 +61,8 @@ class TagController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $tag = Tag::find($id);
+        return view('pages.backend.tags.edit', compact('tag'));
     }
 
     /**
@@ -64,7 +70,24 @@ class TagController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        try {
+            $validatedData = $request->validate([
+                'name' => 'required|string|max:255|unique:tags,name',
+                'slug' => 'required|string|alpha_dash|lowercase|max:255',
+
+            ]);
+
+            $tag = Tag::find($id);
+            $tag->name = $validatedData['name'];
+            $tag->slug = str::slug($validatedData['slug']);
+            $tag->description = $request->input('description');
+            $tag->save();
+
+            return redirect()->route('tags.index')->with('success', 'Category created successfully!');
+        } catch (ValidationException $e) {
+            $errors = $e->errors();
+            return redirect()->back()->withErrors($errors)->withInput();
+        }
     }
 
     /**
