@@ -56,13 +56,13 @@
 
 @extends('layouts.backend.main')
 
-@section('title', 'Create Page')
+@section('title', 'Create Post')
 
 @section('content')
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-7 align-self-center">
-                <h4 class="page-title">Create Page</h4>
+                <h4 class="page-title">Create Post</h4>
                 <div class="d-flex align-items-center">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -70,9 +70,9 @@
                                 <a href="#">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="{{ route('pages.index') }}">Pages</a>
+                                <a href="{{ route('pages.index') }}">Posts</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Create Page</li>
+                            <li class="breadcrumb-item active" aria-current="page">Create Post</li>
                         </ol>
                     </nav>
                 </div>

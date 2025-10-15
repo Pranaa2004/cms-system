@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Page;
+use App\StatusEnum;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\Mime\DraftEmail;
+  use Illuminate\Validation\Rules\Enum;
 
 class PageController extends Controller
 {
@@ -31,13 +34,14 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
         $validatedata = $request->validate([
             'title' => 'required|string|max:255',
             'slug' => 'required|string|alpha_dash|lowercase|max:255|unique:pages,slug',
             'content' => 'required|string|max:255',
-            'authod_id' => 'unique:pages,author_id'
-            // 'profile_picture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000',
+            'authod_id' => 'unique:pages,author_id',
+            'status' => ['required', new Enum(StatusEnum::class)],
+
+            //'profile_picture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000',
 
         ]);
 
@@ -45,13 +49,14 @@ class PageController extends Controller
 
         $page = new Page;
         $page->author_id = Auth::id();
-            $page = Page::create([
-                'author_id' => 1,
-                'title' => $validatedata['title'],
-                'slug' => Str::slug($request->input('slug')),
-                'body' => 1,
+        $page->title = $validatedata['title'];
+        $page->slug = Str::slug($request->input('slug'));
+        $page->body = $validatedata['content'];
+        $page->status = $validatedata['status'];
 
-            ]);
+
+
+
 
         return redirect()->route('pages.index')->with('success', 'Page created successfully.');
     }

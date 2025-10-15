@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\StatusEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,13 +50,17 @@ class User extends Authenticatable
     }
 
 
-    public function pages() :HasMany
+    public function pages(): HasMany
     {
         return $this->hasMany(Page::class);
     }
 
-    public function posts() :HasMany
+    public function posts(): HasMany
     {
         return $this->hasMany(Post::class);
     }
+
+    protected $casts = [
+        'status' => StatusEnum::class,
+    ];
 }
