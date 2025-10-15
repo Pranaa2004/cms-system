@@ -92,7 +92,10 @@
                                 <!-- Remember Me -->
                                 <div class="col-lg-12">
                                     <div class="form mb-3">
-                                        <a href="{{ route('forgotpw') }}" class="fs-6 text-start">Forgot Password</a>
+                                        <form action="{{ route('password.email') }}" method="POST">
+                                            @csrf
+                                            <button type="submit">Forgot Password</button>
+                                        </form>
                                     </div>
                                 </div>
 
@@ -121,7 +124,7 @@
         <!-- ============================================================== -->
         @include('layouts.backend.includes.scripts')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        
+
     </body>
 
 </html>

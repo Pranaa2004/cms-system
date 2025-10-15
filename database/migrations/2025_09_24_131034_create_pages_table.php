@@ -26,17 +26,6 @@ return new class extends Migration
             $table->timestamps();
         });
     }
-
-    /*author—id
-
-
-
-fea
-meta
-deleted_at
-created_at
-updated_at
-
     /**
      * Reverse the migrations.
      */

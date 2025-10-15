@@ -50,11 +50,13 @@ class PageController extends Controller
         $page = new Page;
         $page->author_id = Auth::id();
         $page->title = $validatedata['title'];
-        $page->slug = Str::slug($request->input('slug'));
+        $page->slug = Str::slug($validatedata['slug']);
         $page->body = $validatedata['content'];
         $page->status = $validatedata['status'];
-
-
+        $page->published_at =$request->input('published_at');
+        $page->expires_at = $request->input('expires_at');
+        // $page->featured_media_id =
+        // $page->meta = 
 
 
 

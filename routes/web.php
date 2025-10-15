@@ -7,7 +7,8 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
-
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 
 
 // Route::get('/', function () {
@@ -21,16 +22,10 @@ Route::get('/register', [AuthController::class, 'register_show'])->name('registe
 Route::post('/register', [AuthController::class, 'register_store'])->name('register_store');
 
 Route::get('/dashboard', [AuthController::class, 'dashboard_show'])->name('dashboard');
-// Route::view('/dashboard', 'index');
+
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/forgotpw', [AuthController::class, 'forgotpw'])->name('forgotpw');
-
 Route::view('/', 'pages.frontend.home');
-
-// Route::post('/', function () {
-//     return view('pages.frontend.home');
-// })->name('/home');
 
 Route::resources([
     '/menus' => MenuController::class,
@@ -40,3 +35,14 @@ Route::resources([
     '/category' => CategoryController::class
 
 ]);
+
+
+Route::controller(ForgotPasswordController::class)->group(function () {
+    Route::post('forget-password', 'sendResetLinkEmail')->name('password.email');
+});
+
+// ---------------------------- Reset Password ----------------------------//
+Route::controller(ResetPasswordController::class)->group(function () {
+    Route::get('reset-password/{token}', 'showResetForm')->name('password.reset');
+    Route::post('reset-password', 'reset')->name('password.update');
+});
