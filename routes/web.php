@@ -36,10 +36,10 @@ Route::resources([
 
 ]);
 
+// --------------------------- Forget Password ------------------------------//
 
-Route::controller(ForgotPasswordController::class)->group(function () {
-    Route::post('forget-password', 'sendResetLinkEmail')->name('password.email');
-});
+Route::post('/forget-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 
 // ---------------------------- Reset Password ----------------------------//
 Route::controller(ResetPasswordController::class)->group(function () {

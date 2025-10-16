@@ -92,10 +92,7 @@
                                 <!-- Remember Me -->
                                 <div class="col-lg-12">
                                     <div class="form mb-3">
-                                        <form action="{{ route('password.email') }}" method="POST">
-                                            @csrf
-                                            <button type="submit">Forgot Password</button>
-                                        </form>
+                                        <a href="{{ route('password.request') }}" class="fs-6 text-start">Forgot Password</a>
                                     </div>
                                 </div>
 

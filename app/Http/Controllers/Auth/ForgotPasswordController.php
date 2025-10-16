@@ -14,7 +14,7 @@ use Carbon\Carbon;
 
 class ForgotPasswordController extends Controller
 {
-        /** Show the email request form */
+    /** Show the email request form */
     public function showLinkRequestForm(): View
     {
         return view('auth.passwords.email');
@@ -47,9 +47,8 @@ class ForgotPasswordController extends Controller
             });
 
             return back()->with('success', 'We have e-mailed your password reset link! :)');
-
         } catch (\Exception $e) {
-            Log::error('Password Reset Email Error: '.$e->getMessage());
+            Log::error('Password Reset Email Error: ' . $e->getMessage());
             return back()->with('error', 'Something went wrong while sending the reset email. Please try again.');
         }
     }
