@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Mime\DraftEmail;
-  use Illuminate\Validation\Rules\Enum;
+use Illuminate\Validation\Rules\Enum;
 
 class PageController extends Controller
 {
@@ -40,6 +40,8 @@ class PageController extends Controller
             'content' => 'required|string|max:255',
             'authod_id' => 'unique:pages,author_id',
             'status' => ['required', new Enum(StatusEnum::class)],
+            'publish_at' => 'nullable|date',
+            'expires_at' => 'nullable|date',
 
             //'profile_picture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000',
 
@@ -53,10 +55,11 @@ class PageController extends Controller
         $page->slug = Str::slug($validatedata['slug']);
         $page->body = $validatedata['content'];
         $page->status = $validatedata['status'];
-        $page->published_at =$request->input('published_at');
-        $page->expires_at = $request->input('expires_at');
+        $page->published_at = $validatedata['published_at'];
+        $page->expires_at = $validatedata['expires_at'];
+        // $page->
         // $page->featured_media_id =
-        // $page->meta = 
+        // $page->meta =
 
 
 
