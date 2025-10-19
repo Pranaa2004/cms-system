@@ -65,6 +65,7 @@
                                                     <button type="submit" class="btn btn-sm btn-danger"
                                                         onclick="return confirm('Are you sure you want to delete this page?')">Delete</button>
                                                 </form>
+                                                <a href=""  class="btn btn-sm btn-primary">Publish</a>
                                             </td>
                                         </tr>
                                     @endforeach
