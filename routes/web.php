@@ -43,6 +43,6 @@ Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkReques
 
 // ---------------------------- Reset Password ----------------------------//
 Route::controller(ResetPasswordController::class)->group(function () {
-    Route::get('reset-password/{token}', 'showResetForm')->name('password.reset');
+    Route::get('reset-password/{token}', 'getPassword')->name('password.reset');
     Route::post('reset-password', 'reset')->name('password.update');
 });

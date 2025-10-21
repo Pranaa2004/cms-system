@@ -66,7 +66,7 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <label for="image" class="form-label">Image</label>
-                                        <input type="file" class="form-control" id="image" name="image">
+                                        <input type="file" class="form-control" id="image" name="image" accept="image/*">
                                     </div>
                                     <div class="col-6">
                                         <label for="expires_at" class="form-label">Expires at</label>

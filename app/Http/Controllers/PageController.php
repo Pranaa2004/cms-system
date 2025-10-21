@@ -42,10 +42,15 @@ class PageController extends Controller
             'status' => ['required', new Enum(StatusEnum::class)],
             'publish_at' => 'nullable|date',
             'expires_at' => 'nullable|date',
-
-            //'profile_picture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000',
+            'image'=>'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
 
         ]);
+
+        $imagepath = null;
+        if($request->hasFile('image'))
+        {
+            $imagepath = $request->file('image')->store('photos','public');
+        }
 
         //author_id title slug body status published_at expires_at featured_media_id meta
 
@@ -58,6 +63,7 @@ class PageController extends Controller
         $page->published_at = $validatedata['published_at'];
         $page->expires_at = $validatedata['expires_at'];
         // $page->
+        // $page->
         // $page->featured_media_id =
         // $page->meta =
 
@@ -69,12 +75,18 @@ class PageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id) {}
+    public function show(string $id)
+    {
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id) {}
+    public function edit(string $id)
+    {
+        //
+    }
 
     /**
      * Update the specified resource in storage.
