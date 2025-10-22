@@ -18,9 +18,16 @@ class Page extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function mediaAsset(): BelongsTo
+    {
+        return $this->belongsTo(MediaAsset::class);
+    }
+
+
 
     protected $fillable = [
-        'title', 
-
+        'title'
     ];
+
+
 }

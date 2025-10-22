@@ -34,7 +34,7 @@
                             <table id="zero_config" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>{{$path}}</th>
                                         <th>Title</th>
                                         <th>Content</th>
                                         <th>Image</th>
@@ -44,12 +44,12 @@
                                 <tbody>
                                     @foreach ($pages as $page)
                                         <tr>
-                                            <td>{{ $page->id }}</td>
+
                                             <td>{{ $page->title }}</td>
-                                            <td>{{ Str::limit($page->content, 50) }}</td>
+                                            <td>{{ Str::limit($page->body, 50) }}</td>
                                             <td>
-                                                @if ($page->image)
-                                                    <img src="{{ asset('storage/' . $page->image) }}"
+                                                @if ($page->featured_media_id != null)
+                                                    <img src="{{ asset('storage/'.{{ $page->image }}) }}"
                                                         alt="{{ $page->title }}" width="100">
                                                 @else
                                                     N/A
@@ -72,7 +72,7 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th>ID</th>
+
                                         <th>Title</th>
                                         <th>Content</th>
                                         <th>Image</th>

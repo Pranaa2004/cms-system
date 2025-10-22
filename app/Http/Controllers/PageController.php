@@ -18,6 +18,7 @@ class PageController extends Controller
     public function index()
     {
         $pages = Page::all();
+
         return view('pages.backend.pages.index', compact('pages'));
     }
 
@@ -40,19 +41,11 @@ class PageController extends Controller
             'content' => 'required|string|max:255',
             'authod_id' => 'unique:pages,author_id',
             'status' => ['required', new Enum(StatusEnum::class)],
-            'publish_at' => 'nullable|date',
+            'published_at' => 'nullable|date',
             'expires_at' => 'nullable|date',
-            'image'=>'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
 
         ]);
-
-        $imagepath = null;
-        if($request->hasFile('image'))
-        {
-            $imagepath = $request->file('image')->store('photos','public');
-        }
-
-        //author_id title slug body status published_at expires_at featured_media_id meta
 
         $page = new Page;
         $page->author_id = Auth::id();
@@ -62,12 +55,32 @@ class PageController extends Controller
         $page->status = $validatedata['status'];
         $page->published_at = $validatedata['published_at'];
         $page->expires_at = $validatedata['expires_at'];
-        // $page->
-        // $page->
-        // $page->featured_media_id =
-        // $page->meta =
 
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
 
+            // Store the file in public
+            $path = $file->store('uploads/pages', 'public');
+
+            // Get image size as an Array
+            $imageInfo = getimagesize($file);
+
+            // Create media asset
+            $page->mediaAsset()->create([
+                'disk' => 'public',
+                'path' => $path,
+                'mime_type' => $file->getMimeType(),
+                'size_kb' => round($file->getSize() / 1024, 2),
+                'width' => $imageInfo[0] ?? null,
+                'height' => $imageInfo[1] ?? null,
+                'alt' => $validatedata['title'],
+                'variants' => '',
+            ]);
+        }
+
+        $page->featured_media_id = 1;
+        $page->meta = "";
+        $page->save();
 
         return redirect()->route('pages.index')->with('success', 'Page created successfully.');
     }
@@ -85,7 +98,8 @@ class PageController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $page = Page::find($id);
+        return view('pages.backend.pages.edit',compact('page'));
     }
 
     /**
