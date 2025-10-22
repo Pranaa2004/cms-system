@@ -37,29 +37,48 @@
         <!-- ============================================================== -->
         <!-- Main wrapper - style you can find in pages.scss -->
         <!-- ============================================================== -->
-            <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-                data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+            data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+            <!-- ============================================================== -->
+            @include('layouts.backend.includes.header')
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            @include('layouts.backend.includes.sidebar')
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Page wrapper  -->
+            <!-- ============================================================== -->
+            <div class="page-wrapper">
                 <!-- ============================================================== -->
-                @include('layouts.backend.includes.header')
+                @yield('content')
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
-                @include('layouts.backend.includes.sidebar')
+                <!-- Error wrapper  -->
+                <!-- ============================================================== -->
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <!-- ============================================================== -->
+                <!-- End Error wrapper  -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
-                <!-- Page wrapper  -->
+                @include('layouts.backend.includes.footer')
                 <!-- ============================================================== -->
-                <div class="page-wrapper">
-                    <!-- ============================================================== -->
-                    @yield('content')
-                    <!-- ============================================================== -->
-                    <!-- ============================================================== -->
-                    @include('layouts.backend.includes.footer')
-                    <!-- ============================================================== -->
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Page wrapper  -->
-                <!-- ============================================================== -->
+
             </div>
+            <!-- ============================================================== -->
+            <!-- End Page wrapper  -->
+            <!-- ============================================================== -->
+
+
+        </div>
         <!-- ============================================================== -->
         <!-- End Wrapper -->
         <!-- ============================================================== -->
@@ -71,17 +90,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         @stack('script')
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+
     </body>
 
 </html>
-
-

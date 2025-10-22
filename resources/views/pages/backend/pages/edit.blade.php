@@ -11,7 +11,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="#">Dashboard</a>
+                                <a href="{{ route('dashboard') }}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item">
                                 <a href="{{ route('pages.index') }}">Pages</a>
@@ -32,51 +32,76 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="title" class="form-label">Title</label>
-                                <input type="text" class="form-control" id="title" name="title"
-                                    value="{{ old('title') }}" required value="{{ $page->title }}">
+                                <input type="text" class="form-control" id="title" name="title" required
+                                    value="{{ $page->title }}">
                             </div>
                             <div class="mb-3">
                                 <label for="slug" class="form-label">Slug</label>
-                                <input type="text" class="form-control" id="slug" name="slug"
-                                    value="{{ old('slug') }}" required value="{{ $page->slug }}">
+                                <input type="text" class="form-control" id="slug" name="slug" required
+                                    value="{{ $page->slug }}">
                             </div>
                             <div class="mb-3">
                                 <label for="content" class="form-label">Content</label>
-                                <textarea class="form-control" id="content" name="content" rows="5" required>{{ old('content') }}</textarea>
+                                <textarea class="form-control" id="content" name="content" rows="5" required>{{ $page->body }}</textarea>
                             </div>
                             <div class="mb-3">
                                 <div class="row">
                                     <div class="col-6">
                                         <label for="status" class="form-label">Status</label>
                                         <select name="status" id="status" class="form-select">
-                                            <option value="draft" selected>Draft</option>
-                                            <option value="published">Published</option>
-                                            <option value="archived">Archived</option>
-                                            <option value="scheduled">Scheduled</option>
+                                            <option value="draft"
+                                                @if ($page->status == 'draft') @selected(true) @endif>Draft
+                                            </option>
+                                            <option value="published"
+                                                @if ($page->status == 'published') @selected(true) @endif>
+                                                Published</option>
+                                            <option value="archived"
+                                                @if ($page->status == 'archived') @selected(true) @endif>
+                                                Archived</option>
+                                            <option value="scheduled"
+                                                @if ($page->status == 'scheduled') @selected(true) @endif>
+                                                Scheduled</option>
                                         </select>
                                     </div>
                                     <div class="col-6">
                                         <label for="published_at" class="form-label">Published at</label>
                                         <input type="datetime-local" class="form-control" id="published_at"
-                                            name="published_at">
+                                            name="published_at" value="{{ $page->published_at }}">
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <div class="row">
                                     <div class="col-6">
-                                        <label for="image" class="form-label">Image</label>
-                                        <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                                        <div class="mb-3">
+                                            <label for="image" class="form-label">Image</label>
+
+                                            {{-- Show existing image if available --}}
+                                            @if (!empty($page->featured_media_id))
+                                                <div class="mb-2">
+                                                    <a href="{{ asset('storage/' . $page->media->path) }}"><img
+                                                            src="{{ asset('storage/' . $page->media->path) }}"
+                                                            alt="{{ $page->title }}" width="120"
+                                                            class="rounded shadow-sm"></a>
+                                                </div>
+                                            @endif
+
+                                            {{-- Upload new image --}}
+                                            <input type="file" class="form-control" id="image" name="image"
+                                                accept="image/*">
+                                        </div>
+
                                     </div>
                                     <div class="col-6">
                                         <label for="expires_at" class="form-label">Expires at</label>
-                                        <input type="datetime-local" class="form-control" id="expires_at" name="expires_at">
+                                        <input type="datetime-local" class="form-control" id="expires_at" name="expires_at"
+                                            value="{{ $page->expires_at }}">
                                     </div>
                                 </div>
                             </div>
 
 
-                            <button type="submit" class="btn btn-primary">Create Page</button>
+                            <button type="submit" class="btn btn-primary">Update Page</button>
                         </form>
                     </div>
                 </div>

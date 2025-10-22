@@ -34,7 +34,6 @@
                             <table id="zero_config" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>{{$path}}</th>
                                         <th>Title</th>
                                         <th>Content</th>
                                         <th>Image</th>
@@ -49,11 +48,12 @@
                                             <td>{{ Str::limit($page->body, 50) }}</td>
                                             <td>
                                                 @if ($page->featured_media_id != null)
-                                                    <img src="{{ asset('storage/'.{{ $page->image }}) }}"
+                                                    <img src="{{ asset('storage/' . $page->media->path) }}"
                                                         alt="{{ $page->title }}" width="100">
                                                 @else
                                                     N/A
                                                 @endif
+
                                             </td>
                                             <td>
                                                 <a href="{{ route('pages.edit', $page->id) }}"
@@ -65,7 +65,7 @@
                                                     <button type="submit" class="btn btn-sm btn-danger"
                                                         onclick="return confirm('Are you sure you want to delete this page?')">Delete</button>
                                                 </form>
-                                                <a href=""  class="btn btn-sm btn-primary">Publish</a>
+                                                <a href="" class="btn btn-sm btn-primary">Publish</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -86,5 +86,5 @@
             </div>
         </div>
     </div>
-
+    
 @endsection
