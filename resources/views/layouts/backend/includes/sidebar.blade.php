@@ -7,9 +7,10 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 {{-- @auth --}}
-                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('dashboard') }}" aria-expanded="false"><i
-                                data-feather="home" class="feather-icon"></i><span class="hide-menu">Dashboard</span></a>
-                    </li>
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('dashboard') }}"
+                        aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                            class="hide-menu">Dashboard</span></a>
+                </li>
                 {{-- @endauth --}}
 
                 <li class="list-divider"></li>
@@ -48,6 +49,20 @@
                         </li>
                         <li class="sidebar-item"><a href="{{ route('pages.create') }}" class="sidebar-link"><span
                                     class="hide-menu">Add Pages
+                                </span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                        aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                            class="hide-menu">Media</span></a>
+                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                        <li class="sidebar-item"><a href="{{ route('medias.index') }}" class="sidebar-link"><span
+                                    class="hide-menu">Media Library
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="{{ route('medias.create') }}" class="sidebar-link"><span
+                                    class="hide-menu">Add Media File
                                 </span></a>
                         </li>
                     </ul>
@@ -98,11 +113,11 @@
                         </li>
                     </ul>
                 </li> --}}
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
+                {{-- <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
                         aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
                             class="hide-menu">Media
                         </span></a>
-                </li>
+                </li> --}}
                 {{-- <li class="list-divider"></li> --}}
                 {{-- <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
 

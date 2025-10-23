@@ -9,7 +9,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
-
+use App\Http\Controllers\MediaController;
 
 // Route::get('/', function () {
 //     return view('layouts.backend.main');
@@ -32,7 +32,8 @@ Route::resources([
     '/posts' => PostController::class,
     '/pages' => PageController::class,
     '/tags' => TagController::class,
-    '/category' => CategoryController::class
+    '/category' => CategoryController::class,
+    '/medias' => MediaController::class
 
 ]);
 
