@@ -33,11 +33,12 @@
                             <div class="mb-3">
                                 <input type="file" class="form-control" id="image" name="image" accept="image/*">
                             </div>
+
                             <button type="submit" class="btn btn-primary">Create Page</button>
                         </form>
                     </div>
                 </div>
-            </div>h
+            </div>
         </div>
     </div>
 @endsection

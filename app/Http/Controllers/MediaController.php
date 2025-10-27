@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MediaAsset;
 use Illuminate\Http\Request;
 
 class MediaController extends Controller
@@ -11,7 +12,7 @@ class MediaController extends Controller
      */
     public function index()
     {
-        
+        return view('pages.backend.media.index');
     }
 
     /**
@@ -27,7 +28,27 @@ class MediaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $valiadtedata = $request->validate([
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
+        ]);
+
+        $file = $valiadtedata['image'];
+        $path = $file->store('uploads/media', 'public');
+        $imageSize = getimagesize($file);
+
+        $media = new MediaAsset;
+        $media->disk = "public";
+        $media->path = $path;
+        $media->mime_type = $file->getMimeType();
+        $media->size_kb = $file->getSize()/1024;
+        $media->width = $imageSize[0]??null;
+        $media->height = $imageSize[1]??null;
+        $media->alt = "klj";
+        $media->variants = "";
+        $media->save();
+
+        return view('pages.backend.media.index');
+
     }
 
     /**
