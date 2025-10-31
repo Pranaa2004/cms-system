@@ -9,7 +9,6 @@ export default defineConfig({
                 // <===================================== CSS ===============================>
 
                 // <---------- FrontEnd  CSS -------------->
-                'resources/frontend/css/app.css',
                 'resources/frontend/assets/css/bootstrap.min.css',
                 'resources/frontend/assets/css/animate.min.css',
                 'resources/frontend/assets/css/magnific-popup.css',
@@ -30,7 +29,6 @@ export default defineConfig({
                 //<------------------------------------------------------------------------- JS ---------------------------------------------------------->
 
                 // <---------- FrontEnd  JS -------------->
-                'resources/frontend/js/app.js',
                 'resources/frontend/assets/js/jquery.min.js',
                 'resources/frontend/assets/js/bootstrap.bundle.min.js',
                 'resources/frontend/assets/js/swiper-bundle.min.js',
@@ -41,7 +39,6 @@ export default defineConfig({
                 'resources/frontend/assets/js/jquery.magnific-popup.min.js',
                 'resources/frontend/assets/js/odometer.min.js',
                 'resources/frontend/assets/js/appear.min.js',
-                'resources/frontend/assets/js/jquery.bxslider.min.js',
                 'resources/frontend/assets/js/main.js',
 
                 //  <---------- BackEnd  JS ------------>
@@ -74,3 +71,6 @@ export default defineConfig({
         tailwindcss(),
     ],
 });
+
+
+

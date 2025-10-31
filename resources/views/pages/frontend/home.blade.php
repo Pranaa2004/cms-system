@@ -1,129 +1,71 @@
 @extends('layouts.frontend.main')
 
-@section('title', 'Home')
+@section('title', 'School University & Online Education Template | Eduan - eLearning Education')
 
 @section('content')
     <main>
         <!-- banner area start -->
-        <section class="slider-area fix">
-            <div class="swiper h9_slider-active">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="h9_single-banner" data-background="assets/img/banner/9/1.jpg">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xxl-7 col-lg-8 col-md-11">
-                                        <div class="h9_banner-content">
-                                            <span class="h9_banner-content-subtitle" data-animation="fadeInUp"
-                                                data-delay="0.3s">🏆 100 Quality Courses Online</span>
-                                            <h1 class="h9_banner-content-title" data-animation="fadeInUp" data-delay="0.5s">
-                                                Find The Best Online Courses & Learn.</h1>
-                                            <p class="h9_banner-content-text" data-animation="fadeInUp" data-delay="0.7s">
-                                                Lorem ipsum dolor sit amet consectetur adipiscing elit Mauris id orci
-                                                interdum, aliquam <br> diam vitae, facilisis lorem. Praesent facilisis
-                                                turpis urna.</p>
-                                            <div class="h9_banner-content-btn" data-animation="fadeInUp" data-delay="0.9s">
-                                                <a href="#" class="theme-btn theme-btn-9">More Details<i
-                                                        class="fa-light fa-arrow-right"></i></a>
-                                            </div>
+        <section class="h2_banner-area">
+            <div class="h2_single-banner">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            <div class="h2_banner-content">
+                                <div class="section-area-2 mb-45 ">
+                                    <h1 class="section-title">World's Best Online
+                                        Platform <span>Eduan. <img src="assets/img/banner/2/line.png" alt=""></span>
+                                    </h1>
+                                    <p class="section-text">Through a combination of lectures, readings, and discussions,
+                                        students will gain a solid foundation in educational psychology.</p>
+                                </div>
+                                <form action="#" class="h2_banner-form">
+                                    <input type="text" placeholder="Search Course">
+                                    <button type="submit"><i class="fa-thin fa-magnifying-glass"></i></button>
+                                </form>
+                                <span class="h2_banner-content-text">Have any questions ? <a href="#">Get Free
+                                        Example</a></span>
+                                <div class="h2_banner-tutor">
+                                    <div class="h2_banner-tutor-img">
+                                        <div class="h2_banner-inner-img">
+                                            <img src="assets/img/banner/2/tutor-1.png" alt="">
                                         </div>
+                                        <div class="h2_banner-inner-img">
+                                            <img src="assets/img/banner/2/tutor-2.png" alt="">
+                                        </div>
+                                        <div class="h2_banner-inner-img">
+                                            <img src="assets/img/banner/2/tutor-3.png" alt="">
+                                        </div>
+                                        <div class="h2_banner-inner-img">
+                                            <img src="assets/img/banner/2/tutor-4.png" alt="">
+                                            <span>2k+</span>
+                                        </div>
+                                    </div>
+                                    <div class="h2_banner-tutor-text">
+                                        <span>More Than</span>
+                                        <span>2k+ Tutors</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="h9_single-banner" data-background="assets/img/banner/9/2.jpg">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xxl-7 col-lg-8 col-md-11">
-                                        <div class="h9_banner-content">
-                                            <span class="h9_banner-content-subtitle" data-animation="fadeInUp"
-                                                data-delay="0.3s">🏆 100 Quality Courses Online</span>
-                                            <h1 class="h9_banner-content-title" data-animation="fadeInUp" data-delay="0.5s">
-                                                Find The Best Online Courses & Learn.</h1>
-                                            <p class="h9_banner-content-text" data-animation="fadeInUp" data-delay="0.7s">
-                                                Lorem ipsum dolor sit amet consectetur adipiscing elit Mauris id orci
-                                                interdum, aliquam <br> diam vitae, facilisis lorem. Praesent facilisis
-                                                turpis urna.</p>
-                                            <div class="h9_banner-content-btn" data-animation="fadeInUp" data-delay="0.9s">
-                                                <a href="#" class="theme-btn theme-btn-9">More Details<i
-                                                        class="fa-light fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block">
+                            <div class="h2_banner-right pl-80">
+                                <div class="h2_banner-img">
+                                    <img src="assets/img/banner/2/banner-bg.png" alt="">
+                                </div>
+                                <div class="h2_banner-right-shape">
+                                    <img class="h2_banner-shape-1" src="assets/img/banner/2/shape_1.png" alt="">
+                                    <div class="inner-shpae-1">
+                                        <img class="h2_banner-shape-2" src="assets/img/banner/2/shape_2.png" alt="">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="h9_single-banner" data-background="assets/img/banner/9/3.jpg">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xxl-7 col-lg-8 col-md-11">
-                                        <div class="h9_banner-content">
-                                            <span class="h9_banner-content-subtitle" data-animation="fadeInUp"
-                                                data-delay="0.3s">🏆 100 Quality Courses Online</span>
-                                            <h1 class="h9_banner-content-title" data-animation="fadeInUp" data-delay="0.5s">
-                                                Find The Best Online Courses & Learn.</h1>
-                                            <p class="h9_banner-content-text" data-animation="fadeInUp" data-delay="0.7s">
-                                                Lorem ipsum dolor sit amet consectetur adipiscing elit Mauris id orci
-                                                interdum, aliquam <br> diam vitae, facilisis lorem. Praesent facilisis
-                                                turpis urna.</p>
-                                            <div class="h9_banner-content-btn" data-animation="fadeInUp" data-delay="0.9s">
-                                                <a href="#" class="theme-btn theme-btn-9">More Details<i
-                                                        class="fa-light fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
+                                <div class="h2_banner-meta">
+                                    <div class="h2_banner-meta-info">
+                                        <span>Popular Course</span>
+                                        <h5>Start Learning Today!!</h5>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="h9_single-banner" data-background="assets/img/banner/9/4.jpg">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xxl-7 col-lg-8 col-md-11">
-                                        <div class="h9_banner-content">
-                                            <span class="h9_banner-content-subtitle" data-animation="fadeInUp"
-                                                data-delay="0.3s">🏆 100 Quality Courses Online</span>
-                                            <h1 class="h9_banner-content-title" data-animation="fadeInUp" data-delay="0.5s">
-                                                Find The Best Online Courses & Learn.</h1>
-                                            <p class="h9_banner-content-text" data-animation="fadeInUp" data-delay="0.7s">
-                                                Lorem ipsum dolor sit amet consectetur adipiscing elit Mauris id orci
-                                                interdum, aliquam <br> diam vitae, facilisis lorem. Praesent facilisis
-                                                turpis urna.</p>
-                                            <div class="h9_banner-content-btn" data-animation="fadeInUp" data-delay="0.9s">
-                                                <a href="#" class="theme-btn theme-btn-9">More Details<i
-                                                        class="fa-light fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="h9_single-banner" data-background="assets/img/banner/9/5.jpg">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xxl-7 col-lg-8 col-md-11">
-                                        <div class="h9_banner-content">
-                                            <span class="h9_banner-content-subtitle" data-animation="fadeInUp"
-                                                data-delay="0.3s">🏆 100 Quality Courses Online</span>
-                                            <h1 class="h9_banner-content-title" data-animation="fadeInUp"
-                                                data-delay="0.5s">Find The Best Online Courses & Learn.</h1>
-                                            <p class="h9_banner-content-text" data-animation="fadeInUp"
-                                                data-delay="0.7s">Lorem ipsum dolor sit amet consectetur adipiscing elit
-                                                Mauris id orci interdum, aliquam <br> diam vitae, facilisis lorem. Praesent
-                                                facilisis turpis urna.</p>
-                                            <div class="h9_banner-content-btn" data-animation="fadeInUp"
-                                                data-delay="0.9s">
-                                                <a href="#" class="theme-btn theme-btn-9">More Details<i
-                                                        class="fa-light fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
+                                    <div class="h2_banner-meta-rating">
+                                        <span><i class="fa-solid fa-star"></i>4.5 (3.4k Reviews)</span>
+                                        <h5>Congratulations</h5>
                                     </div>
                                 </div>
                             </div>
@@ -134,783 +76,2182 @@
         </section>
         <!-- banner area end -->
 
-        <!-- slider Dot start -->
-        <section class="h9_slider-thumb">
-            <div class="swiper h9_slider-active-nav">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="h9_slider-thumb-item h9_slider-green">
-                            <div class="h9_slider-thumbs-icon">
-                                <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M37.8756 18.7999L33.2506 14.1749C31.5006 12.4249 29.1006 12.5249 27.9256 14.3749L25.3506 18.4499L33.5756 26.6749L37.6506 24.0999C39.4256 22.9999 39.5256 20.4249 37.8756 18.7999Z"
-                                        fill="currentColor" />
-                                    <path
-                                        d="M25.3497 18.4501L19.3747 18.1001C16.0247 17.9001 14.8747 18.9251 14.4997 22.1001L12.9997 34.7751C12.6747 37.4501 14.5997 39.3501 17.2747 39.0501L29.9497 37.5501C33.1247 37.1751 34.2747 36.0251 33.9497 32.6751L33.5997 26.7001"
-                                        fill="currentColor" />
-                                    <path d="M14.7246 37.3002L19.3496 32.6752" stroke="#10C45C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M18.5 51H33.5C46 51 51 46 51 33.5V18.5C51 6 46 1 33.5 1H18.5C6 1 1 6 1 18.5V33.5C1 46 6 51 18.5 51Z"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <div class="h9_slider-thumbs-info">
-                                <h4>Graphic & Web-design</h4>
-                                <a href="#">Read More<i class="fa-regular fa-arrow-up-right"></i></a>
+        <!-- counter area start -->
+        <div class="counter-area pt-120 pb-110">
+            <div class="container">
+                <div class="counter-wrap">
+                    <div class="row g-0">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="counter-item">
+                                <div class="counter-icon">
+                                    <i class="fa-thin fa-globe"></i>
+                                </div>
+                                <div class="counter-info">
+                                    <h3 class="counter-info-title">
+                                        <span class="odometer count_one" data-count="34">00</span>
+                                        <span>k</span>
+                                    </h3>
+                                    <span class="counter-info-text">Foreign Followers</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="h9_slider-thumb-item h9_slider-skyBlue">
-                            <div class="h9_slider-thumbs-icon">
-                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M34.0024 18.6002H38.4025C42.8025 18.6002 45.0026 16.4002 45.0026 12.0001V7.60008C45.0026 3.20003 42.8025 1 38.4025 1H34.0024C29.6024 1 27.4023 3.20003 27.4023 7.60008V12.0001C27.4023 16.4002 29.6024 18.6002 34.0024 18.6002Z"
-                                        fill="currentColor" />
-                                    <path
-                                        d="M7.60008 45.0001H12.0001C16.4002 45.0001 18.6002 42.8 18.6002 38.4V33.9999C18.6002 29.5999 16.4002 27.3998 12.0001 27.3998H7.60008C3.20003 27.3998 1 29.5999 1 33.9999V38.4C1 42.8 3.20003 45.0001 7.60008 45.0001Z"
-                                        stroke="currentColor" stroke-width="2" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M9.80011 18.6002C14.6603 18.6002 18.6002 14.6603 18.6002 9.80011C18.6002 4.93994 14.6603 1 9.80011 1C4.93994 1 1 4.93994 1 9.80011C1 14.6603 4.93994 18.6002 9.80011 18.6002Z"
-                                        stroke="currentColor" stroke-width="2" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M36.2025 45.0001C41.0626 45.0001 45.0026 41.0601 45.0026 36.2C45.0026 31.3398 41.0626 27.3998 36.2025 27.3998C31.3423 27.3998 27.4023 31.3398 27.4023 36.2C27.4023 41.0601 31.3423 45.0001 36.2025 45.0001Z"
-                                        stroke="currentColor" stroke-width="2" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <div class="h9_slider-thumbs-info">
-                                <h4>IT & Software</h4>
-                                <a href="#">Read More<i class="fa-regular fa-arrow-up-right"></i></a>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="counter-item">
+                                <div class="counter-icon">
+                                    <i class="fa-thin fa-book-open"></i>
+                                </div>
+                                <div class="counter-info">
+                                    <h3 class="counter-info-title">
+                                        <span class="odometer count_one" data-count="12">00</span>
+                                        <span>k</span>
+                                    </h3>
+                                    <span class="counter-info-text">Classes complete</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="h9_slider-thumb-item h9_slider-orange">
-                            <div class="h9_slider-thumbs-icon">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.8 49H32.2C44.2 49 49 44.2 49 32.2V17.8C49 5.8 44.2 1 32.2 1H17.8C5.8 1 1 5.8 1 17.8V32.2C1 44.2 5.8 49 17.8 49Z"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M33.4006 40.5997C36.0406 40.5997 38.2006 38.4397 38.2006 35.7997V14.1997C38.2006 11.5597 36.0406 9.39966 33.4006 9.39966C30.7606 9.39966 28.6006 11.5597 28.6006 14.1997V35.7997C28.6006 38.4397 30.7366 40.5997 33.4006 40.5997Z"
-                                        fill="currentColor" />
-                                    <path
-                                        d="M16.6008 40.6003C19.2408 40.6003 21.4008 38.4403 21.4008 35.8003V27.4003C21.4008 24.7603 19.2408 22.6003 16.6008 22.6003C13.9608 22.6003 11.8008 24.7603 11.8008 27.4003V35.8003C11.8008 38.4403 13.9368 40.6003 16.6008 40.6003Z"
-                                        fill="currentColor" />
-                                </svg>
-                            </div>
-                            <div class="h9_slider-thumbs-info">
-                                <h4>Digital Marketing</h4>
-                                <a href="#">Read More<i class="fa-regular fa-arrow-up-right"></i></a>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="counter-item">
+                                <div class="counter-icon">
+                                    <i class="fa-thin fa-user-group"></i>
+                                </div>
+                                <div class="counter-info">
+                                    <h3 class="counter-info-title">
+                                        <span class="odometer count_one" data-count="214">00</span>
+                                        <span>k</span>
+                                    </h3>
+                                    <span class="counter-info-text">Students Enrolled</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="h9_slider-thumb-item h9_slider-blue">
-                            <div class="h9_slider-thumbs-icon">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M21.4433 1.57037H16.9004C5.54296 1.57037 1 6.11334 1 17.4707V31.0996C1 42.457 5.54296 47 16.9004 47H30.5293C41.8867 47 46.4296 42.457 46.4296 31.0996V26.5567"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M32.8937 3.88757L14.9944 21.7869C14.313 22.4683 13.6315 23.8085 13.4953 24.7852L12.5185 31.6224C12.1551 34.0983 13.9041 35.8246 16.38 35.4839L23.2172 34.5072C24.1712 34.3709 25.5114 33.6894 26.2156 33.008L44.1148 15.1087C47.2041 12.0195 48.6578 8.43054 44.1148 3.88757C39.5719 -0.65539 35.9829 0.798359 32.8937 3.88757Z"
-                                        fill="currentColor" />
-                                    <path d="M30.3235 6.45471C31.8454 11.8836 36.0931 16.1312 41.5446 17.6758"
-                                        stroke="#307AD5" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <div class="h9_slider-thumbs-info">
-                                <h4>UI & UX Design</h4>
-                                <a href="#">Read More<i class="fa-light fa-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="h9_slider-thumb-item h9_slider-pink">
-                            <div class="h9_slider-thumbs-icon">
-                                <svg width="39" height="48" viewBox="0 0 39 48" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M37.8 12.5V35.5C37.8 44.7 35.5 47 26.3 47H12.5C3.3 47 1 44.7 1 35.5V12.5C1 3.3 3.3 1 12.5 1H26.3C35.5 1 37.8 3.3 37.8 12.5Z"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M24.0005 9.0498H14.8005" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M19.8347 41.2002C22.0439 41.2002 23.8347 39.4093 23.8347 37.2002C23.8347 34.9911 22.0439 33.2002 19.8347 33.2002C17.6256 33.2002 15.8347 34.9911 15.8347 37.2002C15.8347 39.4093 17.6256 41.2002 19.8347 41.2002Z"
-                                        fill="currentColor" />
-                                </svg>
-                            </div>
-                            <div class="h9_slider-thumbs-info">
-                                <h4>Mobile & Web App</h4>
-                                <a href="#">Read More<i class="fa-light fa-arrow-up-right"></i></a>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="counter-item">
+                                <div class="counter-icon">
+                                    <i class="fa-thin fa-medal"></i>
+                                </div>
+                                <div class="counter-info">
+                                    <h3 class="counter-info-title">
+                                        <span class="odometer count_one" data-count="56">00</span>
+                                        <span>k</span>
+                                    </h3>
+                                    <span class="counter-info-text">Certified teachers</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- slider Dot end -->
+        </div>
+        <!-- counter area end -->
 
-        <!-- faq area start -->
-        <section class="h9_faq-area pt-115 pb-105">
+        <!-- category area start -->
+        <section class="h2_category-area pb-100">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="section-area-9 text-center mb-40">
-                            <span class="section-subtitle">Top Popular Courses</span>
-                            <h2 class="section-title mb-0">Explore Featured Courses</h2>
+                        <div class="section-area-2 small-section-area-2 text-center">
+                            <h2 class="section-title mb-50">Explore <span>Categories <img src="assets/img/banner/2/line.png"
+                                        alt=""></span></h2>
                         </div>
                     </div>
                 </div>
-                <div class="h9_faq-content">
-                    <div class="accordion" id="Expp">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            <img src="assets/img/faq/9/1.png" alt="">SEO & Digital Marketing
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">
-                                            <img src="assets/img/faq/9/2.png" alt="">jQuery & JavaScript
-                                            Fundamental
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            <img src="assets/img/faq/9/3.png" alt="">Android Development
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                            aria-expanded="false" aria-controls="collapseFour">
-                                            <img src="assets/img/faq/9/4.png" alt="">WordPress Plugin Development
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFour" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                            aria-expanded="false" aria-controls="collapseFive">
-                                            <img src="assets/img/faq/9/5.png" alt="">Cyber Security
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFive" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_category-item mb-30">
+                            <div class="h2_category-img">
+                                <img src="assets/img/category/2/1.jpg" alt="">
                             </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingSix">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
-                                            aria-controls="collapseSix">
-                                            <img src="assets/img/faq/9/6.png" alt="">Data Sconce & Business
-                                        </button>
-                                    </h2>
-                                    <div id="collapseSix" class="accordion-collapse collapse"
-                                        aria-labelledby="headingSix" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingSeven">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseSeven"
-                                            aria-expanded="false" aria-controls="collapseSeven">
-                                            <img src="assets/img/faq/9/7.png" alt="">React Native Course
-                                        </button>
-                                    </h2>
-                                    <div id="collapseSeven" class="accordion-collapse collapse"
-                                        aria-labelledby="headingSeven" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingEight">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseEight"
-                                            aria-expanded="false" aria-controls="collapseEight">
-                                            <img src="assets/img/faq/9/8.png" alt="">User Interface Design in
-                                            Figma
-                                        </button>
-                                    </h2>
-                                    <div id="collapseEight" class="accordion-collapse collapse"
-                                        aria-labelledby="headingEight" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingNine">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseNine"
-                                            aria-expanded="false" aria-controls="collapseNine">
-                                            <img src="assets/img/faq/9/9.png" alt="">iOS Development Course
-                                        </button>
-                                    </h2>
-                                    <div id="collapseNine" class="accordion-collapse collapse"
-                                        aria-labelledby="headingNine" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTen">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false"
-                                            aria-controls="collapseTen">
-                                            <img src="assets/img/faq/9/10.png" alt="">Strategy Law & Organization
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTen" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTen" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingEleven">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseEleven"
-                                            aria-expanded="false" aria-controls="collapseEleven">
-                                            <img src="assets/img/faq/9/11.png" alt="">Data Science & Machine
-                                        </button>
-                                    </h2>
-                                    <div id="collapseEleven" class="accordion-collapse collapse"
-                                        aria-labelledby="headingEleven" data-bs-parent="#Expp">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                <li><i class="fa-light fa-book-blank"></i>42 Lessons</li>
-                                                <li><i class="fa-light fa-user-group"></i>64 Students</li>
-                                                <li><i class="fa-light fa-clock"></i>20 Hours</li>
-                                            </ul>
-                                            <p>
-                                                Sed vitae varius justo, eu blandit purus. Integer cursus diam ut orci
-                                                lobortis vestibulum. Nunc euismod volutpat nulla, sit amet efficitur turpis
-                                                consectetur et.
-                                            </p>
-                                            <div class="accordion-body-bottom">
-                                                <span><del>$150</del>$99.00</span>
-                                                <a href="#">More Details<i
-                                                        class="fa-regular fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="h2_category-content">
+                                <h5><a href="course.html">Digital Marketing</a></h5>
+                                <p>26 Items</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_category-item mb-30">
+                            <div class="h2_category-img">
+                                <img src="assets/img/category/2/2.jpg" alt="">
+                            </div>
+                            <div class="h2_category-content">
+                                <h5><a href="course.html">Graphic Design</a></h5>
+                                <p>26 Items</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_category-item mb-30">
+                            <div class="h2_category-img">
+                                <img src="assets/img/category/2/3.jpg" alt="">
+                            </div>
+                            <div class="h2_category-content">
+                                <h5><a href="course.html">Writing & Reading</a></h5>
+                                <p>26 Items</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_category-item mb-30">
+                            <div class="h2_category-img">
+                                <img src="assets/img/category/2/4.jpg" alt="">
+                            </div>
+                            <div class="h2_category-content">
+                                <h5><a href="course.html">IT & Software</a></h5>
+                                <p>26 Items</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_category-item mb-30">
+                            <div class="h2_category-img">
+                                <img src="assets/img/category/2/5.jpg" alt="">
+                            </div>
+                            <div class="h2_category-content">
+                                <h5><a href="course.html">Mobile Application</a></h5>
+                                <p>26 Items</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_category-item mb-30">
+                            <div class="h2_category-img">
+                                <img src="assets/img/category/2/6.jpg" alt="">
+                            </div>
+                            <div class="h2_category-content">
+                                <h5><a href="course.html">Art & Humanities</a></h5>
+                                <p>26 Items</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_category-item mb-30">
+                            <div class="h2_category-img">
+                                <img src="assets/img/category/2/7.jpg" alt="">
+                            </div>
+                            <div class="h2_category-content">
+                                <h5><a href="course.html">Web Design</a></h5>
+                                <p>26 Items</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_category-item mb-30">
+                            <div class="h2_category-img">
+                                <img src="assets/img/category/2/8.jpg" alt="">
+                            </div>
+                            <div class="h2_category-content">
+                                <h5><a href="course.html">UX/UI Design</a></h5>
+                                <p>26 Items</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- faq area end -->
+        <!-- category area end -->
 
-        <!-- choose area start -->
-        <section class="h9_choose-area">
+        <!-- course area start -->
+        <section class="h2_course-area pt-110 pb-120">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-area-9 text-center mb-40">
-                            <span class="section-subtitle">Why Choose Us</span>
-                            <h2 class="section-title mb-0">Reasons To Select Us</h2>
+                <div class="row align-items-end">
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="section-area-2">
+                            <h2 class="section-title mb-50">Browse Our <br> Exclusive <span>Courses <img
+                                        src="assets/img/banner/2/line.png" alt=""></span></h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="h2_course-tab mb-40">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-home" type="button" role="tab"
+                                        aria-controls="pills-home" aria-selected="true">See All
+                                        <span>New</span></button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-profile" type="button" role="tab"
+                                        aria-controls="pills-profile" aria-selected="false">Web Design</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-contact" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">Marketing</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-four-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-four" type="button" role="tab"
+                                        aria-controls="pills-four" aria-selected="false">Lifestyle</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-five-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-five" type="button" role="tab"
+                                        aria-controls="pills-five" aria-selected="false">Graphic Design</button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="h9_choose-item mb-30">
-                            <div class="h9_choose-item-icon">
-                                <img src="assets/img/choose/1.png" alt="">
+                <div class="h2_course-wrap">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/1.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Introduction
+                                                    to Psychology Subject</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>23 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>45 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-1.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Eric Wid get</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$140</del>$96.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/2.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Complete
+                                                    Angular Developer in 2023</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>54 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>72 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-2.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Hanson Deck</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$120</del>$70.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/3.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">The Science
+                                                    of Well-being for Teens</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>67 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-3.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Max Conversion</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$150</del>$99.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/4.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">AWS Machine
+                                                    Learning Engineer</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>57 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>98 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-4.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Ravi O'Leigh</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$159</del>$98.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/5.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Introduction
+                                                    User Experience Design</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>58 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>50 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-5.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Valentino Morose</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$135</del>$69.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/6.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Spoken
+                                                    English for Career Develop</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>35 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-6.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Dylan Meringue</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$230</del>$173</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="h9_choose-item-title">Personalized Learning</h4>
-                            <p>Ut cursus sem metus, sagittis ullamcorper neque porttitor se Proin commodo lacinia dolor
-                                bibendum sem vulputate vitae. Donec ultrices ante ac malesuada.</p>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="h9_choose-item mb-30">
-                            <div class="h9_choose-item-icon">
-                                <img src="assets/img/choose/2.png" alt="">
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/1.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Introduction
+                                                    to Psychology Subject</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>23 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>45 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-1.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Eric Wid get</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$140</del>$96.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/2.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Complete
+                                                    Angular Developer in 2023</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>54 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>72 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-2.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Hanson Deck</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$120</del>$70.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/3.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">The Science
+                                                    of Well-being for Teens</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>67 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-3.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Max Conversion</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$150</del>$99.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/4.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">AWS Machine
+                                                    Learning Engineer</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>57 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>98 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-4.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Ravi O'Leigh</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$159</del>$98.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/5.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Introduction
+                                                    User Experience Design</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>58 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>50 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-5.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Valentino Morose</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$135</del>$69.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/6.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Spoken
+                                                    English for Career Develop</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>35 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-6.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Dylan Meringue</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$230</del>$173</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="h9_choose-item-title">Trusted Content</h4>
-                            <p>Ut cursus sem metus, sagittis ullamcorper neque porttitor se Proin commodo lacinia dolor
-                                bibendum sem vulputate vitae. Donec ultrices ante ac malesuada.</p>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="h9_choose-item mb-30">
-                            <div class="h9_choose-item-icon">
-                                <img src="assets/img/choose/3.png" alt="">
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/1.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Introduction
+                                                    to Psychology Subject</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>23 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>45 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-1.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Eric Wid get</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$140</del>$96.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/2.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Complete
+                                                    Angular Developer in 2023</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>54 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>72 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-2.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Hanson Deck</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$120</del>$70.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/3.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">The Science
+                                                    of Well-being for Teens</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>67 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-3.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Max Conversion</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$150</del>$99.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/4.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">AWS Machine
+                                                    Learning Engineer</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>57 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>98 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-4.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Ravi O'Leigh</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$159</del>$98.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/5.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Introduction
+                                                    User Experience Design</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>58 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>50 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-5.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Valentino Morose</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$135</del>$69.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/6.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Spoken
+                                                    English for Career Develop</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>35 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-6.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Dylan Meringue</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$230</del>$173</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="h9_choose-item-title">Tool Empower Teachers</h4>
-                            <p>Ut cursus sem metus, sagittis ullamcorper neque porttitor se Proin commodo lacinia dolor
-                                bibendum sem vulputate vitae. Donec ultrices ante ac malesuada.</p>
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="h9_choose-item-big mb-30">
-                            <div class="h9_choose-item-big-img">
-                                <img src="assets/img/choose/bg-1.jpg" alt="">
-                            </div>
-                            <div class="h9_choose-item-big-content">
-                                <span>Become an Instructor</span>
-                                <h3><a href="#">Come and Join Us to Disseminate Your Expertise.</a></h3>
-                                <p>Ut cursus sem metus, sagittis ullamcorper neque port Proin commodo lacinia Donec ultrices
-                                    ante ac malesuada.</p>
-                                <a href="#" class="theme-btn theme-btn-9">Become an Instructor<i
-                                        class="fa-light fa-angle-right"></i></a>
+                        <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pills-four-tab"
+                            tabindex="0">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/1.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Introduction
+                                                    to Psychology Subject</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>23 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>45 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-1.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Eric Wid get</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$140</del>$96.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/2.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Complete
+                                                    Angular Developer in 2023</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>54 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>72 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-2.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Hanson Deck</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$120</del>$70.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/3.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">The Science
+                                                    of Well-being for Teens</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>67 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-3.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Max Conversion</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$150</del>$99.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/4.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">AWS Machine
+                                                    Learning Engineer</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>57 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>98 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-4.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Ravi O'Leigh</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$159</del>$98.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/5.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a
+                                                    href="course-details.html">Introduction User Experience Design</a>
+                                            </h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>58 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>50 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-5.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Valentino Morose</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$135</del>$69.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/6.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Spoken
+                                                    English for Career Develop</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>35 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-6.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Dylan Meringue</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$230</del>$173</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="h9_choose-item-big mb-30">
-                            <div class="h9_choose-item-big-img">
-                                <img src="assets/img/choose/bg-2.jpg" alt="">
-                            </div>
-                            <div class="h9_choose-item-big-content">
-                                <span>Learners and Students</span>
-                                <h3><a href="#">There Are No Limits to What You Can Learn.</a></h3>
-                                <p>Ut cursus sem metus, sagittis ullamcorper neque port Proin commodo lacinia Donec ultrices
-                                    ante ac malesuada.</p>
-                                <a href="#" class="theme-btn theme-btn-9">Terners, start here<i
-                                        class="fa-light fa-angle-right"></i></a>
+                        <div class="tab-pane fade" id="pills-five" role="tabpanel" aria-labelledby="pills-five-tab"
+                            tabindex="0">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/1.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a
+                                                    href="course-details.html">Introduction to Psychology Subject</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>23 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>45 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-1.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Eric Wid get</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$140</del>$96.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/2.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Complete
+                                                    Angular Developer in 2023</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>54 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>72 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-2.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Hanson Deck</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$120</del>$70.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/3.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">The
+                                                    Science of Well-being for Teens</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>67 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-3.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Max Conversion</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$150</del>$99.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/4.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">AWS
+                                                    Machine Learning Engineer</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>57 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>98 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-4.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Ravi O'Leigh</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$159</del>$98.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/5.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a
+                                                    href="course-details.html">Introduction User Experience Design</a>
+                                            </h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>58 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>50 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-5.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Valentino Morose</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$135</del>$69.00</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="h2_course-item mb-30">
+                                        <div class="h2_course-item-img">
+                                            <a href="course-details.html"><img src="assets/img/course/2/6.jpg"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="h2_course-content">
+                                            <div class="h2_course-content-top">
+                                                <div class="h2_course-rating">
+                                                    <ul>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                        <li><i class="fa-solid fa-star"></i></li>
+                                                    </ul>
+                                                    <span>(03 Reviews)</span>
+                                                </div>
+                                                <div class="h2_course-save">
+                                                    <a href="#"><i class="fa-thin fa-bookmark"></i></a>
+                                                </div>
+                                            </div>
+                                            <h5 class="h2_course-content-title"><a href="course-details.html">Spoken
+                                                    English for Career Develop</a></h5>
+                                            <div class="h2_course-content-info">
+                                                <span><i class="fa-thin fa-book-blank"></i>35 Lessons</span>
+                                                <span><i class="fa-thin fa-user-group"></i>24 Students</span>
+                                            </div>
+                                            <p class="h2_course-content-text">
+                                                Through a combination of lectures, readings and discussions students.
+                                            </p>
+                                            <div class="h2_course-content-author">
+                                                <div class="h2_course-author-img">
+                                                    <img src="assets/img/course/2/author-6.jpg" alt="">
+                                                </div>
+                                                <div class="h2_course-author-info">
+                                                    <span>By <a href="#">Dylan Meringue</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h2_course-content-bottom">
+                                            <div class="h2_course-bottom-price">
+                                                <span><del>$230</del>$173</span>
+                                            </div>
+                                            <div class="h2_course-bottom-btn">
+                                                <a href="course-details.html">More Details<i
+                                                        class="fa-light fa-arrow-right"></i><i
+                                                        class="fa-light fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- choose area end -->
+        <!-- course area end -->
+
+        <!-- about area start -->
+        <section class="h2_about-area pt-120 pb-70">
+            <img src="assets/img/about/2/shape-5.png" alt="" class="h2_about-top-shape">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="h2_about-img mb-50">
+                            <div class="h2_about-inner-img">
+                                <img src="assets/img/about/2/1.jpg" alt="" class="h2_inner-img">
+                                <img src="assets/img/about/2/shape-4.png" alt="" class="h2_inner-img-shape">
+                            </div>
+                            <div class="h2_about-inner-img2">
+                                <img src="assets/img/about/2/2.jpg" alt="">
+                                <div class="h2_about-img-button"><a href="https://www.youtube.com/watch?v=dMlASgogxo4"
+                                        class="popup-video"><i class="fa-solid fa-play"></i></a></div>
+                            </div>
+                            <div class="h2_about-rating d-none d-sm-block">
+                                <span><i class="fa-solid fa-star"></i>4.5 (3.4k Reviews)</span>
+                                <h5>Congratulations</h5>
+                            </div>
+                            <div class="h2_about-img-shape d-none d-sm-block">
+                                <img class="h2_about-shape-1" src="assets/img/about/2/shape-1.png" alt="">
+                                <img class="h2_about-shape-2" src="assets/img/about/2/shape-2.png" alt="">
+                                <img class="h2_about-shape-3" src="assets/img/about/2/shape-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-10 mb-50">
+                        <div class="section-area-2 mb-35">
+                            <h2 class="section-title mb-20">Education Instructors Play Crucial Role in Shaping The Lives
+                                of Their <span>Students <img src="assets/img/banner/2/line.png" alt=""></span>
+                            </h2>
+                            <p class="section-text">
+                                Maecenas Felis Tellus, dictum sed fermentum vel, various condiment dolour. Donec aliquot,
+                                denim ut auctor molestee, era elite pharetra masa, at impediment eros qualm sed libero. Sed
+                                arco lorem, rut rum.
+                            </p>
+                        </div>
+                        <div class="h2_about-button">
+                            <a href="#" class="theme-btn theme-btn-medium">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about area end -->
+
+        <!-- cta 2 area start -->
+        <div class="h2_cta-area">
+            <div class="container">
+                <div class="h2_cta-wrap bg-default pt-70 pb-80" data-background="assets/img/cta/2/1.jpg">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-8 col-md-10">
+                            <div class="h2_cta-content">
+                                <div class="section-area-2 small-section-area-2 text-center">
+                                    <h2 class="section-title mb-30">Are You Ready To Start <br>
+                                        Your <span>Course? <img src="assets/img/banner/2/line.png"
+                                                alt=""></span></h2>
+                                </div>
+                                <form action="#" class="h2_cta-content-form">
+                                    <input type="email" placeholder="Search course">
+                                    <button type="submit">Start Learning Today</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cta 2 area end -->
+
+        <!-- price area start -->
+        <section class="h2_price-area pt-110 pb-90">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-7 col-md-10">
+                        <div class="section-area-2 mb-50 text-center">
+                            <h2 class="section-title mb-30">Examining the Costs and
+                                Benefits of
+                                <span>Education <img src="assets/img/banner/2/line.png" alt=""></span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="h2_price-item mb-30">
+                            <div class="h2_price-item-title">
+                                <h5>Standard</h5>
+                            </div>
+                            <div class="h2_price-amount">
+                                <del>$24.00</del>
+                                <div class="h2_price-amount-info">
+                                    <h2>$22</h2>
+                                    <p>
+                                        <span>Per</span>
+                                        <span>Month</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="h2_price-middle-info">
+                                <p class="h2_price-middle-info-1">Discounted Price For USA</p>
+                                <p class="h2_price-middle-info-2">Per User, billed annually</p>
+                            </div>
+                            <div class="h2_price-button">
+                                <a href="#">Enroll Now</a>
+                            </div>
+                            <div class="h3_price-content">
+                                <div class="h2_price-content-top"><a href="#">Choose 2 - year plan</a><span>Save
+                                        6%</span></div>
+                                <div class="h2_price-content-list">
+                                    <ul>
+                                        <li>Facilizes sed odic morbid quiz.</li>
+                                        <li>Design nexus et malasadas fames brand.</li>
+                                        <li>Artistic mind will be great for creation.</li>
+                                        <li>Roadmap for business agency arborator.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="h2_price-item mb-30">
+                            <div class="h2_price-popular-tag">
+                                <span>Most Popular</span>
+                            </div>
+                            <div class="h2_price-item-title">
+                                <h5>Professional</h5>
+                            </div>
+                            <div class="h2_price-amount">
+                                <del>$36.00</del>
+                                <div class="h2_price-amount-info">
+                                    <h2>$28</h2>
+                                    <p>
+                                        <span>Per</span>
+                                        <span>Month</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="h2_price-middle-info">
+                                <p class="h2_price-middle-info-1">Discounted Price For USA</p>
+                                <p class="h2_price-middle-info-2">Per User, billed annually</p>
+                            </div>
+                            <div class="h2_price-button">
+                                <a href="#">Enroll Now</a>
+                            </div>
+                            <div class="h3_price-content">
+                                <div class="h2_price-content-top"><a href="#">Choose 2 - year plan</a><span>Save
+                                        24%</span></div>
+                                <div class="h2_price-content-list">
+                                    <ul>
+                                        <li>Facilizes sed odic morbid quiz.</li>
+                                        <li>Design nexus et malasadas fames brand.</li>
+                                        <li>Artistic mind will be great for creation.</li>
+                                        <li>Roadmap for business agency arborator.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="h2_price-item mb-30">
+                            <div class="h2_price-item-title">
+                                <h5>Business</h5>
+                            </div>
+                            <div class="h2_price-amount">
+                                <del>$74.00</del>
+                                <div class="h2_price-amount-info">
+                                    <h2>$56</h2>
+                                    <p>
+                                        <span>Per</span>
+                                        <span>Month</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="h2_price-middle-info">
+                                <p class="h2_price-middle-info-1">Discounted Price For USA</p>
+                                <p class="h2_price-middle-info-2">Per User, billed annually</p>
+                            </div>
+                            <div class="h2_price-button">
+                                <a href="#">Enroll Now</a>
+                            </div>
+                            <div class="h2_price-content">
+                                <div class="h2_price-content-top"><a href="#">Choose 2 - year plan</a><span>Save
+                                        12%</span></div>
+                                <div class="h2_price-content-list">
+                                    <ul>
+                                        <li>Facilizes sed odic morbid quiz.</li>
+                                        <li>Design nexus et malasadas fames brand.</li>
+                                        <li>Artistic mind will be great for creation.</li>
+                                        <li>Roadmap for business agency arborator.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- price area end -->
 
         <!-- teacher area start -->
-        <section class="h9_teacher-area pt-105 pb-80">
+        <section class="h2_teacher-area pb-80">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="section-area-9 text-center mb-40">
-                            <span class="section-subtitle">Meet Our Mentors</span>
-                            <h2 class="section-title mb-0">Our Expert Teacher</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="teacher-active-9 swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="h9_teacher-item mb-30">
-                                <div class="h9_teacher-img">
-                                    <img src="assets/img/teacher/9/1.jpg" alt="">
-                                </div>
-                                <div class="h9_teacher-content">
-                                    <h5 class="h9_teacher-content-title">
-                                        <a href="#">Theodore Handle</a>
-                                    </h5>
-                                    <span>Math Teacher</span>
-                                </div>
+                    <div class="col-xl-6 col-lg-8 col-md-12 mb-30">
+                        <div class="h2_teacher-section bg-default" data-background="assets/img/teacher/2/bg.jpg">
+                            <div class="section-area-2">
+                                <h2 class="section-title mb-30">Our Most <br> Experience
+                                    <span>Professor <img src="assets/img/banner/2/line.png" alt=""></span>
+                                </h2>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="h9_teacher-item mb-30">
-                                <div class="h9_teacher-img">
-                                    <img src="assets/img/teacher/9/2.jpg" alt="">
-                                </div>
-                                <div class="h9_teacher-content">
-                                    <h5 class="h9_teacher-content-title">
-                                        <a href="#">Douglas Lyphe</a>
-                                    </h5>
-                                    <span>Art Teacher</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="h9_teacher-item mb-30">
-                                <div class="h9_teacher-img">
-                                    <img src="assets/img/teacher/9/3.jpg" alt="">
-                                </div>
-                                <div class="h9_teacher-content">
-                                    <h5 class="h9_teacher-content-title">
-                                        <a href="#">Nathaneal Down</a>
-                                    </h5>
-                                    <span>Lead Teacher</span>
-                                </div>
+                            <div class="h2_teacher-button">
+                                <a href="#" class="theme-btn theme-btn-medium teacher-btn">Become An
+                                    Instructor</a>
                             </div>
                         </div>
                     </div>
-                    <div class="h9_teacher-pagination mt-50"></div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_teacher-item mb-30">
+                            <div class="h2_teacher-img">
+                                <img src="assets/img/teacher/2/1.jpg" alt="">
+                            </div>
+                            <div class="h2_teacher-content">
+                                <h5 class="h2_teacher-content-title">
+                                    <a href="#">Parsley Montana</a>
+                                </h5>
+                                <span>Lead Teacher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_teacher-item mb-30">
+                            <div class="h2_teacher-img">
+                                <img src="assets/img/teacher/2/2.jpg" alt="">
+                            </div>
+                            <div class="h2_teacher-content">
+                                <h5 class="h2_teacher-content-title">
+                                    <a href="#">Parsley Montana</a>
+                                </h5>
+                                <span>Lead Teacher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_teacher-item mb-30">
+                            <div class="h2_teacher-img">
+                                <img src="assets/img/teacher/2/3.jpg" alt="">
+                            </div>
+                            <div class="h2_teacher-content">
+                                <h5 class="h2_teacher-content-title">
+                                    <a href="#">Parsley Montana</a>
+                                </h5>
+                                <span>Lead Teacher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_teacher-item mb-30">
+                            <div class="h2_teacher-img">
+                                <img src="assets/img/teacher/2/4.jpg" alt="">
+                            </div>
+                            <div class="h2_teacher-content">
+                                <h5 class="h2_teacher-content-title">
+                                    <a href="#">Parsley Montana</a>
+                                </h5>
+                                <span>Lead Teacher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_teacher-item mb-30">
+                            <div class="h2_teacher-img">
+                                <img src="assets/img/teacher/2/5.jpg" alt="">
+                            </div>
+                            <div class="h2_teacher-content">
+                                <h5 class="h2_teacher-content-title">
+                                    <a href="#">Parsley Montana</a>
+                                </h5>
+                                <span>Lead Teacher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="h2_teacher-item mb-30">
+                            <div class="h2_teacher-img">
+                                <img src="assets/img/teacher/2/6.jpg" alt="">
+                            </div>
+                            <div class="h2_teacher-content">
+                                <h5 class="h2_teacher-content-title">
+                                    <a href="#">Parsley Montana</a>
+                                </h5>
+                                <span>Lead Teacher</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- teacher area end -->
 
-        <!-- testimonial area start -->
-        <section class="h9_testimonial-area">
-            <div class="container">
-                <div class="h9_testimonial-wrap pt-125 pb-135">
-                    <div class="row justify-content-end">
-                        <div class="col-xl-9 col-lg-9">
-                            <h3 class="h9_testimonial-title">Student Feedback</h3>
-
-                            <div class="h9_testimonial-active swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="h9_testimonial-item">
-                                            <p>“I come from a poor family. At home it’s one room, just a room we live in.
-                                                When I was a child, I used to fear mathematics. But now, I am in love with
-                                                mathematics because of Khan Academy.”</p>
-                                            <h6>ANJALI<span>INDIA</span></h6>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="h9_testimonial-item">
-                                            <p>“I come from a poor family. At home it’s one room, just a room we live in.
-                                                When I was a child, I used to fear mathematics. But now, I am in love with
-                                                mathematics because of Khan Academy.”</p>
-                                            <h6>ANJALI<span>INDIA</span></h6>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="h9_testimonial-item">
-                                            <p>“I come from a poor family. At home it’s one room, just a room we live in.
-                                                When I was a child, I used to fear mathematics. But now, I am in love with
-                                                mathematics because of Khan Academy.”</p>
-                                            <h6>ANJALI<span>INDIA</span></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="h9_testimonial-thumb-wrap mt-90">
-                                <div class="h9_testimonial-thumbs swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="h9_testimonial-img">
-                                                <img src="assets/img/testimonial/9/1.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="h9_testimonial-img">
-                                                <img src="assets/img/testimonial/9/2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="h9_testimonial-img">
-                                                <img src="assets/img/testimonial/9/3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="h9_testimonial-pagination d-none d-xl-flex"></div>
-            <div class="h9_testimonial-navigation">
-                <div class="h9_testimonial-prev">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 15L8 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M15 8L8 1L1 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </div>
-                <div class="h9_testimonial-next">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 1L8 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M15 8L8 15L1 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-        </section>
-        <!-- testimonial area end -->
-
         <!-- blog area start -->
-        <section class="h9_blog-area pt-115">
+        <section class="h2_blog-area pb-90">
             <div class="container">
-                <div class="row align-items-end mb-20">
-                    <div class="col-md-9">
-                        <div class="section-area-9 mb-20">
-                            <span class="section-subtitle">Latest News</span>
-                            <h2 class="section-title mb-0">Our Latest Articles</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="h5_category-section-button mb-30 text-md-end">
-                            <a href="#" class="theme-btn theme-btn-9">View All Blog</a>
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8 col-md-10">
+                        <div class="section-area-2 mb-50 text-center h2_blog-section-area">
+                            <h2 class="section-title mb-30">Our Latest
+                                <span>Articles <img src="assets/img/banner/2/line.png" alt=""></span>
+                            </h2>
+                            <p class="section-text">
+                                Through a combination of lectures, readings, discussions, students will gain a solid
+                                foundation in educational psychology.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="h9_blog-item mb-30 active">
-                            <div class="h9_blog-content">
-                                <div class="h9_blog-content-meta">
-                                    <a href="#" class="h9_blog-content-meta-tag">Blog</a>
-                                    <span>March 24, 2023</span>
+                        <div class="h2_blog-item mb-30">
+                            <div class="h2_blog-img">
+                                <a href="blog-details.html"><img src="assets/img/blog/2/blog-1.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="h2_blog-content">
+                                <div class="h2_blog-content-meta">
+                                    <span><i class="fa-thin fa-user"></i>Admin</span>
+                                    <span><i class="fa-thin fa-clock"></i>June 23, 2023</span>
                                 </div>
-                                <h5 class="h9_blog-content-title"><a href="blog-details.html">Four Ways to Keep Your
-                                        Workout Routine Fresh</a></h5>
-                                <p>Maecenas Felis Tellus, dictum sed pharetra fermentum......</p>
-                                <a href="#" class="h9_blog-btn">
-                                    <svg width="19" height="12" viewBox="0 0 19 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.9998 5.60059L1 5.60059" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M13 1.00058L17.8399 5.81971L13 10.6396" stroke="currentColor"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
+                                <h5 class="h2_blog-content-title"><a href="blog-details.html">Education Week News and
+                                        Views on Education Policy and Practice.</a></h5>
+                                <a href="#" class="theme-btn blog-btn t-theme-btn">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="h9_blog-item mb-30">
-                            <div class="h9_blog-content">
-                                <div class="h9_blog-content-meta">
-                                    <a href="#" class="h9_blog-content-meta-tag">Blog</a>
-                                    <span>March 24, 2023</span>
+                        <div class="h2_blog-item mb-30">
+                            <div class="h2_blog-img">
+                                <a href="blog-details.html"><img src="assets/img/blog/2/blog-2.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="h2_blog-content">
+                                <div class="h2_blog-content-meta">
+                                    <span><i class="fa-thin fa-user"></i>Admin</span>
+                                    <span><i class="fa-thin fa-clock"></i>June 23, 2023</span>
                                 </div>
-                                <h5 class="h9_blog-content-title"><a href="blog-details.html">The Complete Guide to Build
-                                        RESTful API Application</a></h5>
-                                <p>Maecenas Felis Tellus, dictum sed pharetra fermentum......</p>
-                                <a href="#" class="h9_blog-btn">
-                                    <svg width="19" height="12" viewBox="0 0 19 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.9998 5.60059L1 5.60059" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M13 1.00058L17.8399 5.81971L13 10.6396" stroke="currentColor"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
+                                <h5 class="h2_blog-content-title"><a href="blog-details.html">The Learning Network
+                                        Teaching and Learning With The New York Times.</a></h5>
+                                <a href="#" class="theme-btn blog-btn t-theme-btn">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="h9_blog-item mb-30">
-                            <div class="h9_blog-content">
-                                <div class="h9_blog-content-meta">
-                                    <a href="#" class="h9_blog-content-meta-tag">Blog</a>
-                                    <span>March 24, 2023</span>
+                        <div class="h2_blog-item mb-30">
+                            <div class="h2_blog-img">
+                                <a href="blog-details.html"><img src="assets/img/blog/2/blog-3.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="h2_blog-content">
+                                <div class="h2_blog-content-meta">
+                                    <span><i class="fa-thin fa-user"></i>Admin</span>
+                                    <span><i class="fa-thin fa-clock"></i>June 23, 2023</span>
                                 </div>
-                                <h5 class="h9_blog-content-title"><a href="blog-details.html">Only One Thing Impossible
-                                        For God Find Sense in Any.</a></h5>
-                                <p>Maecenas Felis Tellus, dictum sed pharetra fermentum......</p>
-                                <a href="#" class="h9_blog-btn">
-                                    <svg width="19" height="12" viewBox="0 0 19 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.9998 5.60059L1 5.60059" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M13 1.00058L17.8399 5.81971L13 10.6396" stroke="currentColor"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
+                                <h5 class="h2_blog-content-title"><a href="blog-details.html">Nothing is Impossible to
+                                        Learn If you are Passionate About this Subject</a></h5>
+                                <a href="#" class="theme-btn blog-btn t-theme-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -920,22 +2261,28 @@
         <!-- blog area end -->
 
         <!-- cta area start -->
-        <div class="h6_cta-area pt-90 h9_cta-area">
+        <div class="cta-area">
             <div class="container">
-                <div class="h6_cta-wrapper" data-background="assets/img/cta/7/bg.jpg">
-                    <img class="h6_cta-wrapper-img" src="assets/img/cta/7/1.png" alt="">
-                    <div class="h6_cta-content mb-30 mb-md-0">
-                        <h2 class="h6_cta-title">Are you ready to take
-                            the next step?</h2>
-                    </div>
-                    <div class="h6_cta-button">
-                        <a href="#" class="h6_cta-btn">Application Form<i
-                                class="fa-light fa-arrow-up-right"></i></a>
+                <div class="cta-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="cta-content mb-30 mb-lg-0">
+                                <span class="cta-subtitle">Download App</span>
+                                <h2 class="cta-title">Are you Ready to Start your
+                                    Online Course?</h2>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="cta-button">
+                                <a href="#" class="cta-btn"><i class="fa-brands fa-apple"></i>Apple Store</a>
+                                <a href="#" class="cta-btn"><i class="fa-brands fa-google-play"></i>Play
+                                    Store</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- cta area end -->
-
     </main>
 @endsection

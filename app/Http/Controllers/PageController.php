@@ -169,7 +169,7 @@ class PageController extends Controller
         $page->featured_media_id = $mediaId;
         $page->meta = '';
         $page->save();
-        
+
         return redirect()->route('pages.index')->with('success', 'Page updated successfully!');
     }
 
@@ -183,5 +183,6 @@ class PageController extends Controller
         $page->delete();
 
         return redirect()->route('pages.index')->with('Success', 'Successfully Deleted !!');
+        
     }
 }

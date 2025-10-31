@@ -25,8 +25,6 @@ Route::get('/dashboard', [AuthController::class, 'dashboard_show'])->name('dashb
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::view('/', 'pages.frontend.home');
-
 Route::resources([
     '/menus' => MenuController::class,
     '/posts' => PostController::class,
@@ -47,3 +45,26 @@ Route::controller(ResetPasswordController::class)->group(function () {
     Route::get('reset-password/{token}', 'getPassword')->name('password.reset');
     Route::post('reset-password', 'reset')->name('password.update');
 });
+
+
+//-------------- Frontend ------------------------------
+Route::view('/', 'pages.frontend.home')->name('home');
+Route::view('/about','pages.frontend.about')->name('about');
+Route::view('/teacher','pages.frontend.teacher')->name('teacher');
+Route::view('/teacher-details','pages.frontend.teacher-details')->name('teacher-details');
+Route::view('/events','pages.frontend.events')->name('events');
+Route::view('event-details','pages.frontend.event-details')->name('event-details');
+Route::view('404','pages.frontend.error')->name('error');
+Route::view('/gallery','pages.frontend.gallery')->name('gallery');
+Route::view('contact-us','pages.frontend.contact')->name('contact-us');
+Route::view('price','pages.frontend.price')->name('price');
+
+
+
+
+
+
+
+
+
+

@@ -56,7 +56,7 @@ class MediaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
     }
 
     /**
