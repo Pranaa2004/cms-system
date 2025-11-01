@@ -1,43 +1,5 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Tell the browser to be responsive to screen width -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!-- Favicon icon -->
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="{{ Vite::asset('resources/backend/assets/images/logo/titlelogos.png') }}">
-        <title>@yield('title')</title>
-        <!-- Custom CSS -->
-        @vite(['resources/backend/assets/extra-libs/c3/c3.min.css', 'resources/backend/assets/libs/chartist/dist/chartist.min.css', 'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css', 'resources/backend/dist/css/style.min.css'])
-        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> --}}
-        <!-- Custom CSS -->
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-    </head>
-
-    <body>
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <div class="preloader">
-            <div class="lds-ripple">
-                <div class="lds-pos"></div>
-                <div class="lds-pos"></div>
-            </div>
-        </div>
-        <!-- ============================================================== -->
-        <!-- Main wrapper - style you can find in pages.scss -->
-        <!-- ============================================================== -->
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
+        {{-- <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
             style="background:url({{ Vite::asset('resources/backend//assets/image/big/auth-bg.jpg') }}) no-repeat center center;">
             <div class="auth-box row text-center">
                 <div class="col-lg-7 col-md-5 modal-bg-img"
@@ -99,84 +61,131 @@
                 </div>
             </div>
         </div>
-        </div>n
-        <!-- ============================================================== -->
-        <!-- End Wrapper -->
-        <!-- ============================================================== -->
-        <!-- End Wrapper -->
-        <!-- ============================================================== -->
-        <!-- All Jquery -->
-        <!-- ============================================================== -->
-        @include('layouts.backend.includes.scripts')
-        <script>
-            // $(document).ready(function() {
-            document.addEventListener('DOMContentLoaded', function() {
-                const passwordField = document.getElementById('password');
-                const togglePassword = document.getElementById('togglePassword');
-                const eyeIcon = document.getElementById('eyeIcon');
-
-                const passwordField2 = document.getElementById('confirm_password');
-                const togglePassword2 = document.getElementById('togglePassword2');
-                const eyeIcon2 = document.getElementById('eyeIcon2');
-
-                togglePassword.addEventListener('click', function() {
-                    // Toggle the type attribute
-                    const type = passwordField.getAttribute('type') === 'password' ? 'text' :
-                        'password';
-                    passwordField.setAttribute('type', type);
-
-                    // Toggle the eye icon
-                    if (type === 'password') {
-                        eyeIcon.classList.remove('fa-eye');
-                        eyeIcon.classList.add('fa-eye-slash');
+        </div> --}}
 
 
-                    } else {
-                        eyeIcon.classList.remove('fa-eye-slash');
-                        eyeIcon.classList.add('fa-eye');
 
-                    }
-                });
+@extends('layouts.frontend.main')
 
-                togglePassword2.addEventListener('click', function() {
-                    // Toggle the type attribute
-                    const type = passwordField2.getAttribute('type') === 'password' ? 'text' :
-                        'password';
-                    passwordField2.setAttribute('type', type);
+@section('title', 'Sign-up')
 
-                    // Toggle the eye icon
-                    if (type === 'password') {
-                        eyeIcon2.classList.remove('fa-eye');
-                        eyeIcon2.classList.add('fa-eye-slash');
+<!-- breadcrumb area start -->
+@section('brd_crm_list', 'Sign Up')
+<!-- breadcrumb area end -->
 
+@section('content')
+    <!-- sign up area start -->
+    <div class="account-area pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-10">
+                    <div class="account-wrap">
+                        <div class="account-top sign-up">
+                            <div class="account-top-current">
+                                <span>Sign Up</span>
+                            </div>
+                            <div class="account-top-link">
+                                <a href="{{ route('login_show') }}">Sign In</a>
+                            </div>
+                        </div>
+                        <div class="account-main">
+                            <h3 class="account-title">Sign in to Your Account </h3>
+                            <form action="{{ route('register_store') }}" class="account-form" method="POST">
+                                <div class="account-form-item mb-20">
+                                    <div class="account-form-label">
+                                        <label>First Name</label>
+                                    </div>
+                                    <div class="account-form-input">
+                                        <input type="text" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="account-form-item mb-20">
+                                    <div class="account-form-label">
+                                        <label>Last Name</label>
+                                    </div>
+                                    <div class="account-form-input">
+                                        <input type="text" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="account-form-item mb-20">
+                                    <div class="account-form-label">
+                                        <label>Your Email</label>
+                                    </div>
+                                    <div class="account-form-input">
+                                        <input type="email" placeholder="Enter Your Email">
+                                    </div>
+                                </div>
+                                <div class="account-form-item mb-15">
+                                    <div class="account-form-label">
+                                        <label>Your Password</label>
+                                        <a href="{{ route('password.request') }}">Forgot Password ?</a>
+                                    </div>
+                                    <div class="account-form-input account-form-input-pass">
+                                        <input type="text" placeholder="*********">
+                                        <span><i class="fa-thin fa-eye"></i></span>
+                                    </div>
+                                </div>
+                                <div class="account-form-condition">
+                                    <label class="condition_label">Remember Me
+                                        <input type="checkbox">
+                                        <span class="check_mark"></span>
+                                    </label>
+                                </div>
+                                <div class="account-form-button">
+                                    <button type="submit" class="account-btn">Sign Up</button>
+                                </div>
+                            </form>
+                            <div class="account-break">
+                                <span>OR</span>
+                            </div>
+                            <div class="account-bottom">
+                                <div class="account-option">
+                                    <a href="#" class="account-option-account">
+                                        <img src="assets/img/bg/google.png" alt="">
+                                        <span>Google</span>
+                                    </a>
+                                    <a href="#" class="account-option-account">
+                                        <img src="assets/img/bg/apple.png" alt="">
+                                        <span>Apple</span>
+                                    </a>
+                                    <a href="#" class="account-option-account">
+                                        <img src="assets/img/bg/facebook.png" alt="">
+                                        <span>Facebook</span>
+                                    </a>
+                                </div>
+                                <div class="account-bottom-text">
+                                    <p>Already have an account ? <a href="sign-in.html">Sign In for here</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sign up area end -->
 
-                    } else {
-                        eyeIcon2.classList.remove('fa-eye-slash');
-                        eyeIcon2.classList.add('fa-eye');
-
-                    }
-                });
-            });
-            // });
-
-
-            // $(document).ready(function() {
-            //     let password = $('#psw').val().trim();
-            //     let conpassword = $('#cpsw').val().trim();
-
-            //     if(password == conpassword){
-            //         $('msg').val("Hello");
-            //     }
-
-            //     $('#frm_register').submit(function(){
-            //         alert("jiii")
-            //        $('msg').val("Hello");
-            //     })
-
-
-            // });
-        </script>
-        
-    </body>
-
-</html>
+    <!-- cta area start -->
+    <div class="cta-area">
+        <div class="container">
+            <div class="cta-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="cta-content mb-30 mb-lg-0">
+                            <span class="cta-subtitle">Download App</span>
+                            <h2 class="cta-title">Are you Ready to Start your
+                                Online Course?</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="cta-button">
+                            <a href="#" class="cta-btn"><i class="fa-brands fa-apple"></i>Apple Store</a>
+                            <a href="#" class="cta-btn"><i class="fa-brands fa-google-play"></i>Play Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cta area end -->
+@endsection

@@ -3,24 +3,9 @@
 @section('title','Contact')
 
 @section('content')
-    <main>
+
             <!-- breadcrumb area start -->
-            <section class="breadcrumb-area bg-default" data-background="assets/img/breadcrumb/breadcrumb-bg.jpg">
-                <img src="assets/img/breadcrumb/shape-1.png" alt="" class="breadcrumb-shape">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="breadcrumb-content">
-                                <h2 class="breadcrumb-title">Upcoming Events</h2>
-                                <div class="breadcrumb-list">
-                                    <a href="index.html">Home</a>
-                                    <span>Upcoming Events</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            @section('brd_crm_list','Upcoming Events')
             <!-- breadcrumb area end -->
 
             <!-- events area start -->
@@ -153,5 +138,5 @@
                 </div>
             </div>
             <!-- cta area end -->
-        </main>
+
 @endsection

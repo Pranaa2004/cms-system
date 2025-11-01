@@ -65,7 +65,7 @@
                 <div class="col-xl-3 col-sm-5 col-6">
                     <div class="h2_header-right">
                         <div class="h2_header-btn d-none d-sm-block">
-                            <a href="#" class="header-btn theme-btn theme-btn-medium">Sign Up</a>
+                            <a href="{{ route('register_show') }}" class="header-btn theme-btn theme-btn-medium">Sign Up</a>
                         </div>
                         <div class="header-menu-bar d-xl-none ml-10">
                             <span class="header-menu-bar-icon side-toggle">

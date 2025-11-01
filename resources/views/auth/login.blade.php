@@ -1,45 +1,7 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Tell the browser to be responsive to screen width -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!-- Favicon icon -->
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="{{ Vite::asset('resources/backend/assets/images/logo/titlelogos.png') }}">
-        <title>Login</title>
-        <!-- Custom CSS -->
-        @vite(['resources/backend/assets/extra-libs/c3/c3.min.css', 'resources/backend/assets/libs/chartist/dist/chartist.min.css', 'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css', 'resources/backend/dist/css/style.min.css'])
-        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> --}}
-        <!-- Custom CSS -->
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-    </head>
-
-    <body>
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <div class="preloader">
-            <div class="lds-ripple">
-                <div class="lds-pos"></div>
-                <div class="lds-pos"></div>
-            </div>
-        </div>
-        <!-- ============================================================== -->
-        <!-- Main wrapper - style you can find in pages.scss -->
-        <!-- ============================================================== -->
 
 
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
+
+        {{-- <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
             style="repeat center center;">
             <div class="auth-box row">
                 <!-- Left Image Column -->
@@ -92,7 +54,8 @@
                                 <!-- Remember Me -->
                                 <div class="col-lg-12">
                                     <div class="form mb-3">
-                                        <a href="{{ route('password.request') }}" class="fs-6 text-start">Forgot Password</a>
+                                        <a href="{{ route('password.request') }}" class="fs-6 text-start">Forgot
+                                            Password</a>
                                     </div>
                                 </div>
 
@@ -111,17 +74,114 @@
                     </div>
                 </div>
             </div>
+        </div> --}}
+
+
+
+
+@extends('layouts.frontend.main')
+
+@section('title', 'Sing In')
+
+@section('brd_crm_list', 'Sign In')
+
+@section('content')
+    <!-- sign in area start -->
+    <div class="account-area pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-10">
+                    <div class="account-wrap">
+                        <div class="account-top">
+                            <div class="account-top-link">
+                                <a href="{{ route('register_show') }}">Sign Up</a>
+                            </div>
+                            <div class="account-top-current">
+                                <span>Sign In</span>
+                            </div>
+                        </div>
+                        <div class="account-main">
+                            <h3 class="account-title">Sign in to Your Account 👋</h3>
+                            <form action="{{ route('register_store') }}" class="account-form" method="POST">
+                                <div class="account-form-item mb-20">
+                                    <div class="account-form-label">
+                                        <label>Your Email</label>
+                                    </div>
+                                    <div class="account-form-input">
+                                        <input type="email" placeholder="Enter Your Email">
+                                    </div>
+                                </div>
+                                <div class="account-form-item mb-15">
+                                    <div class="account-form-label">
+                                        <label>Your Password</label>
+                                        <a href="{{ route('password.reset') }}">Forgot Password ?</a>
+                                    </div>
+                                    <div class="account-form-input account-form-input-pass">
+                                        <input type="text" placeholder="*********">
+                                        <span><i class="fa-thin fa-eye"></i></span>
+                                    </div>
+                                </div>
+                                <div class="account-form-condition">
+                                    <label class="condition_label">Remember Me
+                                        <input type="checkbox">
+                                        <span class="check_mark"></span>
+                                    </label>
+                                </div>
+                                <div class="account-form-button">
+                                    <button type="submit" class="account-btn">Sign In</button>
+                                </div>
+                            </form>
+                            <div class="account-break">
+                                <span>OR</span>
+                            </div>
+                            <div class="account-bottom">
+                                <div class="account-option">
+                                    <a href="#" class="account-option-account">
+                                        <img src="{{ Vite::asset('resources/frontend/assets/img/bg/google.png') }}" alt="">
+                                        <span>Google</span>
+                                    </a>
+                                    <a href="#" class="account-option-account">
+                                        <img src="{{ Vite::asset('resources/frontend/assets/img/bg/apple.png') }}" alt="">
+                                        <span>Apple</span>
+                                    </a>
+                                    <a href="#" class="account-option-account">
+                                        <img src="{{ Vite::asset('resources/frontend/assets/img/bg/facebook.png') }}" alt="">
+                                        <span>Facebook</span>
+                                    </a>
+                                </div>
+                                <div class="account-bottom-text">
+                                    <p>Don’t have an account ? <a href="{{ route('register_show') }}">Sign Up for free</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- End Wrapper -->
-        <!-- ============================================================== -->
-        <!-- End Wrapper -->
-        <!-- ============================================================== -->
-        <!-- All Jquery -->
-        <!-- ============================================================== -->
-        @include('layouts.backend.includes.scripts')
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </div>
+    <!-- sign in area end -->
 
-    </body>
-
-</html>
+    <!-- cta area start -->
+    <div class="cta-area">
+        <div class="container">
+            <div class="cta-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="cta-content mb-30 mb-lg-0">
+                            <span class="cta-subtitle">Download App</span>
+                            <h2 class="cta-title">Are you Ready to Start your
+                                Online Course?</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="cta-button">
+                            <a href="#" class="cta-btn"><i class="fa-brands fa-apple"></i>Apple Store</a>
+                            <a href="#" class="cta-btn"><i class="fa-brands fa-google-play"></i>Play Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cta area end -->
+@endsection

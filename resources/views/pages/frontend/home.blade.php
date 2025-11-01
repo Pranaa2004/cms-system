@@ -3,7 +3,7 @@
 @section('title', 'School University & Online Education Template | Eduan - eLearning Education')
 
 @section('content')
-    <main>
+
         <!-- banner area start -->
         <section class="h2_banner-area">
             <div class="h2_single-banner">
@@ -2284,5 +2284,5 @@
             </div>
         </div>
         <!-- cta area end -->
-    </main>
+    
 @endsection
