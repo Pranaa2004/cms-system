@@ -62,15 +62,12 @@ class AuthController extends Controller
     public function dashboard_show()
     {
         if (Auth::check()) {
-            return view('index');
+            return view('pages.backend.index');
         }
 
         return redirect()->route('login_show')->with('error', 'You must be logged in to access the dashboard.');
     }
 
-    public function forgotpw(){
-        return view('auth.forgotPassword');
-    }
 
     //      ---- logout ------
     public function logout(Request $request)
