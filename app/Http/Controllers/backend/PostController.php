@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\backend;
 
-use Illuminate\Support\Facades\Auth;
+
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -42,7 +44,7 @@ class PostController extends Controller
         $post->body = $validatedata['description'];
         // $post->status =
         // $post->save();
-        
+
 
     }
 

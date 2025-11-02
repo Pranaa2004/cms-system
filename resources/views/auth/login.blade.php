@@ -1,7 +1,125 @@
+@extends('layouts.frontend.main')
+
+@section('title', 'Sing In')
+
+@section('brd_crm_list', 'Sign In')
+
+@section('content')
+    <!-- sign in area start -->
+    <div class="account-area pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-10">
+                    <div class="account-wrap">
+                        <div class="account-top">
+                            <div class="account-top-link">
+                                <a href="{{ route('register_show') }}">Sign Up</a>
+                            </div>
+                            <div class="account-top-current">
+                                <span>Sign In</span>
+                            </div>
+                        </div>
+
+                        <!-- Display Session Error -->
+                        @if (session('error'))
+                            <div class="alert alert-danger">{{ session('error') }}</div>
+                        @endif
+
+                        <div class="account-main">
+                            <h3 class="account-title">Sign in to Your Account 👋</h3>
+                            <form action="{{ route('login_store') }}" class="account-form" method="POST">
+                                @csrf
+                                <div class="account-form-item mb-20">
+                                    <div class="account-form-label">
+                                        <label>Your Email</label>
+                                    </div>
+                                    <div class="account-form-input">
+                                        <input type="email" placeholder="Enter Your Email" name="email">
+                                        @error('email')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="account-form-item mb-15">
+                                    <div class="account-form-label">
+                                        <label>Your Password</label>
+                                        <a href="{{ route('password.request') }}">Forgot Password ?</a>
+                                    </div>
+                                    <div class="account-form-input account-form-input-pass">
+                                        <input type="text" placeholder="*********" name="password">
+                                        <span><i class="fa-thin fa-eye"></i></span>
+                                        @error('password')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="account-form-condition">
+                                    <label class="condition_label">Remember Me
+                                        <input type="checkbox">
+                                        <span class="check_mark"></span>
+                                    </label>
+                                </div>
+                                <div class="account-form-button">
+                                    <button type="submit" class="account-btn">Sign In</button>
+                                </div>
+                            </form>
+                            <div class="account-break">
+                                <span>OR</span>
+                            </div>
+                            <div class="account-bottom">
+                                <div class="account-option">
+                                    <a href="#" class="account-option-account">
+                                        <img src="{{ Vite::asset('resources/frontend/assets/img/bg/google.png') }}" alt="">
+                                        <span>Google</span>
+                                    </a>
+                                    <a href="#" class="account-option-account">
+                                        <img src="{{ Vite::asset('resources/frontend/assets/img/bg/apple.png') }}" alt="">
+                                        <span>Apple</span>
+                                    </a>
+                                    <a href="#" class="account-option-account">
+                                        <img src="{{ Vite::asset('resources/frontend/assets/img/bg/facebook.png') }}" alt="">
+                                        <span>Facebook</span>
+                                    </a>
+                                </div>
+                                <div class="account-bottom-text">
+                                    <p>Don’t have an account ? <a href="{{ route('register_show') }}">Sign Up for free</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sign in area end -->
+
+    <!-- cta area start -->
+    <div class="cta-area">
+        <div class="container">
+            <div class="cta-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="cta-content mb-30 mb-lg-0">
+                            <span class="cta-subtitle">Download App</span>
+                            <h2 class="cta-title">Are you Ready to Start your
+                                Online Course?</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="cta-button">
+                            <a href="#" class="cta-btn"><i class="fa-brands fa-apple"></i>Apple Store</a>
+                            <a href="#" class="cta-btn"><i class="fa-brands fa-google-play"></i>Play Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cta area end -->
+@endsection
 
 
-
-        {{-- <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
+{{-- <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
             style="repeat center center;">
             <div class="auth-box row">
                 <!-- Left Image Column -->
@@ -75,113 +193,3 @@
                 </div>
             </div>
         </div> --}}
-
-
-
-
-@extends('layouts.frontend.main')
-
-@section('title', 'Sing In')
-
-@section('brd_crm_list', 'Sign In')
-
-@section('content')
-    <!-- sign in area start -->
-    <div class="account-area pt-120 pb-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-8 col-md-10">
-                    <div class="account-wrap">
-                        <div class="account-top">
-                            <div class="account-top-link">
-                                <a href="{{ route('register_show') }}">Sign Up</a>
-                            </div>
-                            <div class="account-top-current">
-                                <span>Sign In</span>
-                            </div>
-                        </div>
-                        <div class="account-main">
-                            <h3 class="account-title">Sign in to Your Account 👋</h3>
-                            <form action="{{ route('register_store') }}" class="account-form" method="POST">
-                                <div class="account-form-item mb-20">
-                                    <div class="account-form-label">
-                                        <label>Your Email</label>
-                                    </div>
-                                    <div class="account-form-input">
-                                        <input type="email" placeholder="Enter Your Email">
-                                    </div>
-                                </div>
-                                <div class="account-form-item mb-15">
-                                    <div class="account-form-label">
-                                        <label>Your Password</label>
-                                        <a href="{{ route('password.reset') }}">Forgot Password ?</a>
-                                    </div>
-                                    <div class="account-form-input account-form-input-pass">
-                                        <input type="text" placeholder="*********">
-                                        <span><i class="fa-thin fa-eye"></i></span>
-                                    </div>
-                                </div>
-                                <div class="account-form-condition">
-                                    <label class="condition_label">Remember Me
-                                        <input type="checkbox">
-                                        <span class="check_mark"></span>
-                                    </label>
-                                </div>
-                                <div class="account-form-button">
-                                    <button type="submit" class="account-btn">Sign In</button>
-                                </div>
-                            </form>
-                            <div class="account-break">
-                                <span>OR</span>
-                            </div>
-                            <div class="account-bottom">
-                                <div class="account-option">
-                                    <a href="#" class="account-option-account">
-                                        <img src="{{ Vite::asset('resources/frontend/assets/img/bg/google.png') }}" alt="">
-                                        <span>Google</span>
-                                    </a>
-                                    <a href="#" class="account-option-account">
-                                        <img src="{{ Vite::asset('resources/frontend/assets/img/bg/apple.png') }}" alt="">
-                                        <span>Apple</span>
-                                    </a>
-                                    <a href="#" class="account-option-account">
-                                        <img src="{{ Vite::asset('resources/frontend/assets/img/bg/facebook.png') }}" alt="">
-                                        <span>Facebook</span>
-                                    </a>
-                                </div>
-                                <div class="account-bottom-text">
-                                    <p>Don’t have an account ? <a href="{{ route('register_show') }}">Sign Up for free</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- sign in area end -->
-
-    <!-- cta area start -->
-    <div class="cta-area">
-        <div class="container">
-            <div class="cta-wrapper">
-                <div class="row align-items-center">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="cta-content mb-30 mb-lg-0">
-                            <span class="cta-subtitle">Download App</span>
-                            <h2 class="cta-title">Are you Ready to Start your
-                                Online Course?</h2>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="cta-button">
-                            <a href="#" class="cta-btn"><i class="fa-brands fa-apple"></i>Apple Store</a>
-                            <a href="#" class="cta-btn"><i class="fa-brands fa-google-play"></i>Play Store</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- cta area end -->
-@endsection

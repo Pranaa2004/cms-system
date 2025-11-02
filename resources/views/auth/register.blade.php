@@ -91,37 +91,34 @@
                         <div class="account-main">
                             <h3 class="account-title">Sign in to Your Account </h3>
                             <form action="{{ route('register_store') }}" class="account-form" method="POST">
+                                @csrf
                                 <div class="account-form-item mb-20">
                                     <div class="account-form-label">
                                         <label>First Name</label>
                                     </div>
                                     <div class="account-form-input">
-                                        <input type="text" placeholder="First Name">
+                                        <input type="text" placeholder="First Name" name="name">
                                     </div>
                                 </div>
-                                <div class="account-form-item mb-20">
-                                    <div class="account-form-label">
-                                        <label>Last Name</label>
-                                    </div>
-                                    <div class="account-form-input">
-                                        <input type="text" placeholder="Last Name">
-                                    </div>
-                                </div>
+
                                 <div class="account-form-item mb-20">
                                     <div class="account-form-label">
                                         <label>Your Email</label>
                                     </div>
                                     <div class="account-form-input">
-                                        <input type="email" placeholder="Enter Your Email">
+                                        <input type="email" placeholder="Enter Your Email" name="email">
+                                        @error('email')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="account-form-item mb-15">
                                     <div class="account-form-label">
                                         <label>Your Password</label>
-                                        <a href="{{ route('password.request') }}">Forgot Password ?</a>
+
                                     </div>
                                     <div class="account-form-input account-form-input-pass">
-                                        <input type="text" placeholder="*********">
+                                        <input type="text" placeholder="*********" name="password">
                                         <span><i class="fa-thin fa-eye"></i></span>
                                     </div>
                                 </div>

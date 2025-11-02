@@ -1,16 +1,15 @@
 <?php
 
-use App\Http\Controllers\Auth\ForgotPasswordController;
-use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\backend\Auth\ForgotPasswordController;
+use App\Http\Controllers\backend\Auth\ResetPasswordController;
 use App\Http\Controllers\backend\AuthController;
 use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\MediaController;
-use App\Http\Controllers\MenuController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\TagController;
+use App\Http\Controllers\backend\CategoryController;
+use App\Http\Controllers\backend\MediaController;
+use App\Http\Controllers\backend\MenuController;
+use App\Http\Controllers\backend\PageController;
+use App\Http\Controllers\backend\PostController;
+use App\Http\Controllers\backend\TagController;
 
 // Route::get('/', function () {
 //     return view('layouts.backend.main');

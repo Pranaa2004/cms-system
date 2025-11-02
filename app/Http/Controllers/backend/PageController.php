@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\backend;
 
 use App\Models\MediaAsset;
+use App\Http\Controllers\Controller;
 use App\Models\Page;
 use App\StatusEnum;
 use Illuminate\Http\Request;
@@ -183,6 +184,6 @@ class PageController extends Controller
         $page->delete();
 
         return redirect()->route('pages.index')->with('Success', 'Successfully Deleted !!');
-        
+
     }
 }

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\backend;
 
 use App\Models\MediaAsset;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class MediaController extends Controller
@@ -56,7 +57,7 @@ class MediaController extends Controller
      */
     public function show(string $id)
     {
-        
+
     }
 
     /**
