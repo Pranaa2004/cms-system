@@ -17,9 +17,12 @@
     </head>
 
     <body>
+        @if (!Route::is('posts.create'))
         <!-- sidebar-information-area-start -->
         @include('layouts.frontend.includes.sidebar')
         <!-- sidebar-information-area-end -->
+        @endif
+
 
         <!-- header area start -->
         @include('layouts.frontend.includes.header')

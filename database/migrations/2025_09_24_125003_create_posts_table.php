@@ -24,7 +24,7 @@ return new class extends Migration
             $table->tinyInteger('is_featured');
             $table->unsignedBigInteger('featured_media_id');
             $table->longText('meta');
-            $table->timestamp('deleted_at', precision: 0);
+             $table->timestamp('deleted_at', precision: 0)->nullable()->default(null);
             $table->timestamps();
 
         });

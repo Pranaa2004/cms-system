@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers\backend;
 
-
+use App\Enums\Enums\StatusEnum;
+use App\Enums\StatusEnum as EnumsStatusEnum;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\MediaAsset;
+use App\Models\Tag;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Enum;
@@ -19,7 +23,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('pages.backend.posts.index',compact('posts'));
+        return view('pages.backend.posts.index', compact('posts'));
+
     }
 
     /**
@@ -27,7 +32,10 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('pages.backend.posts.create');
+        $parentCartegories  = Category::all()->where('parent_id', '=', '0');
+        $tags = Tag::all();
+        return view('pages.backend.posts.create',compact('parentCartegories', 'tags'));
+
     }
 
     /**
@@ -35,12 +43,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedata = $request->validate([
-            'title'=> 'required|string',
 
+        //author_id	editor_id	title	excerpt	body	status	published_at	expires_at	is_featured	featured_media_id	meta
+
+        $validatedata = $request->validate([
+            'title' => 'required|string',
             'content' => 'required|string|max:255',
             'authod_id' => 'unique:pages,author_id',
-            //'status' => ['required', new Enum(::class)],
+            'status' => ['required', new Enum(EnumsStatusEnum::class)],
             'published_at' => 'nullable|date',
             'expires_at' => 'nullable|date',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
@@ -48,16 +58,12 @@ class PostController extends Controller
         ]);
 
         $post = new Post;
-        $post->orther_id = Auth::user()->id;
+        $post->author_id = Auth::user()->id;
         $post->editor_id = Auth::user()->id;
         $post->title = $validatedata['title'];
+        $post->excerpt = "";
         // $post->excerpt = Str::substr($validatedata['description'], 0, );
-        $post->body = $validatedata['description'];
-        // $post->status =
-        // $post->save();
-
-        $post->title = $validatedata['title'];
-       
+        // $post->body = $validatedata['description'];
         $post->body = $validatedata['content'];
         $post->status = $validatedata['status'];
         $post->published_at = $validatedata['published_at'];
@@ -65,6 +71,7 @@ class PostController extends Controller
 
         $mediaId = null;
         if ($request->hasFile('image')) {
+            $post->is_featured = 1;
             $file = $request->file('image');
             $path = $file->store('uploads/pages', 'public');
 
@@ -80,37 +87,37 @@ class PostController extends Controller
             ]);
 
             $mediaId = $media->id;
+        } else {
+            $post->is_featured = 0;
         }
 
         $post->featured_media_id = $mediaId;
         $post->meta = "";
         $post->save();
 
+        foreach($request->input('tags') as $tag){
+            $post->tags()->attach($tag);
+        }
+
+        return redirect()->route('posts.index')->with('Success', 'Successfully post created !');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-
-    }
+    public function show(string $id) {}
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
+    public function edit(string $id) {
 
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-
-    }
+    public function update(Request $request, string $id) {}
 
     /**
      * Remove the specified resource from storage.
@@ -120,6 +127,6 @@ class PostController extends Controller
         $post = Post::find($id);
         $post->delete();
 
-        return redirect()->back()->with('Sucess','Successfully Deleted !');
+        return redirect()->back()->with('Sucess', 'Successfully Deleted !');
     }
 }

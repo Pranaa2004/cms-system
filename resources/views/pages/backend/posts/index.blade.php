@@ -34,20 +34,38 @@
                             <table id="zero_config" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Categories</th>
+                                        <th>Tags</th>
+                                        <th>Date</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($pages as $post)
+                                    @foreach ($posts as $post)
                                         <tr>
+                                            <td>{{ $post->title }}</td>
+                                            <td>{{ $post->user->name }}</td>
                                             <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>
+                                                @foreach ($post->tags as $tag)
+                                                    <div>
+                                                        {{ $tag->name }}
+                                                    </div>
+                                                @endforeach
+                                            </td>
+                                            <td>
+                                                <center>
+                                                    <div>
+                                                        {{ $post->status }}
+                                                    </div>
+                                                    <div>
+                                                        {{ $post->published_at }}
+                                                    </div>
+                                                </center>
+
+                                            </td>
                                             <td>
                                                 <a href="{{ route('posts.edit', $post->id) }}"
                                                     class="btn btn-sm btn-warning">Edit</a>
@@ -64,10 +82,11 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Categories</th>
+                                        <th>Tags</th>
+                                        <th>Date</th>
                                         <th>Actions</th>
                                     </tr>
                                 </tfoot>

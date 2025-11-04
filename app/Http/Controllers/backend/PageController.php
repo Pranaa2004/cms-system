@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\backend;
 
-use App\Models\MediaAsset;
+use App\Enums\Enums\StatusEnum;
+use App\Enums\StatusEnum as EnumsStatusEnum;
 use App\Http\Controllers\Controller;
+use App\Models\MediaAsset;
 use App\Models\Page;
-use App\StatusEnum;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
@@ -43,7 +44,7 @@ class PageController extends Controller
             'slug' => 'required|string|max:255|unique:pages,slug',
             'content' => 'required|string|max:255',
             'authod_id' => 'unique:pages,author_id',
-            'status' => ['required', new Enum(StatusEnum::class)],
+            'status' => ['required', new Enum(EnumsStatusEnum::class)],
             'published_at' => 'nullable|date',
             'expires_at' => 'nullable|date',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
@@ -134,7 +135,7 @@ class PageController extends Controller
             'slug' => 'required|string|max:255|unique:pages,slug',
             'content' => 'required|string|max:255',
             'authod_id' => 'unique:pages,author_id',
-            'status' => ['required', new Enum(StatusEnum::class)],
+            'status' => ['required', new Enum(EnumsStatusEnum::class)],
             'published_at' => 'nullable|date',
             'expires_at' => 'nullable|date',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
@@ -170,6 +171,7 @@ class PageController extends Controller
         $page->featured_media_id = $mediaId;
         $page->meta = '';
         $page->save();
+        // $page->tags->atta
 
         return redirect()->route('pages.index')->with('success', 'Page updated successfully!');
     }
