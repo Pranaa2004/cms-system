@@ -6,7 +6,10 @@ namespace App\Http\Controllers\backend;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\MediaAsset;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Validation\Rules\Enum;
 
 class PostController extends Controller
 {
@@ -33,7 +36,15 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validatedata = $request->validate([
-            'title'=> 'required|string'
+            'title'=> 'required|string',
+
+            'content' => 'required|string|max:255',
+            'authod_id' => 'unique:pages,author_id',
+            //'status' => ['required', new Enum(::class)],
+            'published_at' => 'nullable|date',
+            'expires_at' => 'nullable|date',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
+
         ]);
 
         $post = new Post;
@@ -45,6 +56,35 @@ class PostController extends Controller
         // $post->status =
         // $post->save();
 
+        $post->title = $validatedata['title'];
+       
+        $post->body = $validatedata['content'];
+        $post->status = $validatedata['status'];
+        $post->published_at = $validatedata['published_at'];
+        $post->expires_at = $validatedata['expires_at'];
+
+        $mediaId = null;
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = $file->store('uploads/pages', 'public');
+
+            $media = MediaAsset::create([
+                'disk' => 'public',
+                'path' => $path,
+                'mime_type' => $file->getMimeType(),
+                'size_kb' => $file->getSize() / 1024,
+                'width' => getimagesize($file)[0] ?? null,
+                'height' => getimagesize($file)[1] ?? null,
+                'alt' => $validatedata['title'],
+                'variants' => '',
+            ]);
+
+            $mediaId = $media->id;
+        }
+
+        $post->featured_media_id = $mediaId;
+        $post->meta = "";
+        $post->save();
 
     }
 

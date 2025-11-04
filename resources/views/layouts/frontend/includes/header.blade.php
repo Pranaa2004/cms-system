@@ -45,16 +45,14 @@
                                         <li><a href="{{ route('event-details') }}">Event Details</a></li>
                                         <li><a href="{{ route('price') }}">Price</a></li>
                                         <li><a href="{{ route('gallery') }}">Gallery</a></li>
-                                        {{-- <li><a href="sign-up.html">Sign Up</a></li> --}}
-                                        {{-- <li><a href="sign-in.html">Sign In</a></li> --}}
                                         <li><a href="{{ route('error') }}">404</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-has-child">
-                                    <a href="blog.html">Blog</a>
+                                    <a href="{{ route('blog') }}">Blog</a>
                                     <ul class="submenu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li><a href="{{ route('blog') }}">Blog</a></li>
+                                        <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{{ route('contact-us') }}">Contact</a></li>

@@ -53,12 +53,13 @@ Route::view('/about','pages.frontend.about')->name('about');
 Route::view('/teacher','pages.frontend.teacher')->name('teacher');
 Route::view('/teacher-details','pages.frontend.teacher-details')->name('teacher-details');
 Route::view('/events','pages.frontend.events')->name('events');
-Route::view('event-details','pages.frontend.event-details')->name('event-details');
-Route::view('404','pages.frontend.error')->name('error');
+Route::view('/event-details','pages.frontend.event-details')->name('event-details');
+Route::view('/404','pages.frontend.error')->name('error');
 Route::view('/gallery','pages.frontend.gallery')->name('gallery');
-Route::view('contact-us','pages.frontend.contact')->name('contact-us');
-Route::view('price','pages.frontend.price')->name('price');
-
+Route::view('/contact-us','pages.frontend.contact')->name('contact-us');
+Route::view('/price','pages.frontend.price')->name('price');
+Route::view('/blog','pages.frontend.blog')->name('blog');
+Route::view('/blog-details','pages.frontend.blog-details')->name('blog-details');
 
 
 
