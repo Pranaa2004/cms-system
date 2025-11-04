@@ -42,7 +42,7 @@ class TagController extends Controller
 
         $tag = new Tag;
         $tag->name = $validatedData['name'];
-        $tag->slug = str::slug($validatedData['slug']);
+        $tag->slug = Str::slug($validatedData['slug']);
         $tag->description = $request->input('description');
         $tag->save();
 

@@ -53,7 +53,6 @@
     </div>
 @endsection --}}
 
-
 @extends('layouts.backend.main')
 
 @section('title', 'Create Post')
@@ -91,46 +90,46 @@
                                 <input type="text" class="form-control" id="title" name="title"
                                     value="{{ old('title') }}" required>
                             </div>
+
                             <div class="mb-3">
                                 <label for="content" class="form-label">Content</label>
                                 <textarea class="form-control" id="content" name="content" rows="5" required>{{ old('content') }}</textarea>
                             </div>
+
+                            <div class="mb-3">
+                                <label for="category" class="form-label">Category</label>
+                                {{-- this is the start for the drop down --}}
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div id="modules">
+                                                @foreach ($categories as $category)
+                                                    <p class="drag"><a class="btn btn-default">{{ $category->name }}</a>
+                                                    </p>
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div id="dropzone"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{-- this is the end for the drop down --}}
+                            </div>
+
                             <div class="mb-3">
                                 <label for="tags" class="form-label">Tags</label>
                                 @foreach ($tags as $tag)
                                     <div class="form-check">
-                                        <input type="checkbox" name="tags[]" id="{{ $tag->name }}" class="form-check-input" value="{{ $tag->id }}">
+                                        <input type="checkbox" name="tags[]" id="{{ $tag->name }}"
+                                            class="form-check-input" value="{{ $tag->id }}">
                                         <label for="{{ $tag->name }}" class="form-check-labe">{{ $tag->name }}</label>
                                     </div>
                                 @endforeach
                             </div>
-                            
-                            {{-- <div class="container mt-5">
-                                <div class="mb-3">
-                                    <label for="mainSelect" class="form-label">Main Category:</label>
-                                    <select class="form-select" id="mainSelect">
-                                        <option value="">Select Category</option>
-                                        <option value="fruit">Fruit</option>
-                                        <option value="car">Car</option>
-                                    </select>
-                                </div>
 
-                                <div class="mb-3">
-                                    <label for="subSelect" class="form-label">Sub Item:</label>
-                                    <select class="form-select" id="subSelect" disabled>
-                                        <option value="">Select item</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- jQuery -->
-                            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                            <!-- Bootstrap JS (optional, for other Bootstrap features) -->
-                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-                            <!-- Custom Script -->
-                            <script src="your_script.js"></script> --}}
-
-                            {{-- </div> --}}
                             <div class="mb-3">
                                 <div class="row">
                                     <div class="col-6">
@@ -150,6 +149,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="mb-3">
                                 <div class="row">
                                     <div class="col-6">
@@ -163,6 +163,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <button type="submit" class="btn btn-primary">Create Post</button>
                         </form>
                     </div>
@@ -170,38 +171,5 @@
             </div>
         </div>
     </div>
-    {{-- <script>
-        $(document).ready(function() {
-            // Hierarchical data structure
-            var selectData = {
-                "fruit": ["Apple", "Banana", "Orange", "Grape"],
-                "car": ["Toyota", "Honda", "Ford", "Chevrolet"]
-            };
-
-            var $mainSelect = $('#mainSelect');
-            var $subSelect = $('#subSelect');
-
-            $mainSelect.on('change', function() {
-                var selectedCategory = $(this).val();
-
-                // Clear previous options in sub select box
-                $subSelect.html('<option value="">Select item</option>');
-
-                if (selectedCategory) {
-                    // Enable the sub select box
-                    $subSelect.prop('disabled', false);
-
-                    // Populate options based on selected category
-                    var items = selectData[selectedCategory];
-                    $.each(items, function(index, value) {
-                        $subSelect.append('<option value="' + value + '">' + value + '</option>');
-                    });
-                } else {
-                    // Disable sub select box if no category is selected
-                    $subSelect.prop('disabled', true);
-                }
-            });
-        });
-    </script> --}}
 
 @endsection

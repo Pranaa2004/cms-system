@@ -24,7 +24,8 @@ class PostController extends Controller
     {
         $posts = Post::all();
         return view('pages.backend.posts.index', compact('posts'));
-
+        // $cate = Category::all()->where("parent_id",'=','0');
+        // dd($cate);
     }
 
     /**
@@ -32,9 +33,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        $parentCartegories  = Category::all()->where('parent_id', '=', '0');
+        $categories  = Category::all()->where('parent_id', '=', '0');
         $tags = Tag::all();
-        return view('pages.backend.posts.create',compact('parentCartegories', 'tags'));
+        return view('pages.backend.posts.create',compact('categories', 'tags'));
 
     }
 

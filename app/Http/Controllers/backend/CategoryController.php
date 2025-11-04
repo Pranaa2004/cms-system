@@ -37,7 +37,7 @@ class CategoryController extends Controller
 
         $category = new Category;
         $category->name =  $validatedData['name'];
-        $category->slug = $validatedData['slug'];
+        $category->slug = Str::slug($validatedData['slug']);
         $category->parent_id = $request->input('parent_id');
         $category->description = $request->input('description');
         $category->order_column = 1;
