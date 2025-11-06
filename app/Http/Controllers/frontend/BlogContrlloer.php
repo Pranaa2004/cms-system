@@ -14,8 +14,8 @@ class BlogContrlloer extends Controller
         $post_count = Post::all()->where('status','=','published')->count();
         // $post = Post::find(5)->mediaAsset->path;
 
-        //return view('pages.frontend.blog',compact('posts'));
-        return view('pages.sample',compact('post'));
+        return view('pages.frontend.blog',compact('posts'));
+        // return view('pages.sample',compact('posts'));
 
     }
 }
