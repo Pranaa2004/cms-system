@@ -30,6 +30,6 @@ class Post extends Model
 
     public function mediaAsset(): BelongsTo
     {
-        return $this->belongsTo(MediaAsset::class);
+        return $this->belongsTo(MediaAsset::class,'featured_media_id');
     }
 }

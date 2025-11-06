@@ -10,6 +10,7 @@ use App\Http\Controllers\backend\MenuController;
 use App\Http\Controllers\backend\PageController;
 use App\Http\Controllers\backend\PostController;
 use App\Http\Controllers\backend\TagController;
+use App\Http\Controllers\frontend\BlogContrlloer;
 
 // Route::get('/', function () {
 //     return view('layouts.backend.main');
@@ -58,10 +59,10 @@ Route::view('/404','pages.frontend.error')->name('error');
 Route::view('/gallery','pages.frontend.gallery')->name('gallery');
 Route::view('/contact-us','pages.frontend.contact')->name('contact-us');
 Route::view('/price','pages.frontend.price')->name('price');
-Route::view('/blog','pages.frontend.blog')->name('blog');
 Route::view('/blog-details','pages.frontend.blog-details')->name('blog-details');
 
 
+Route::get('/blog',[BlogContrlloer::class,'show_blog'])->name('blog');
 
 
 
