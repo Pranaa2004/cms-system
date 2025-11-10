@@ -27,16 +27,16 @@
                                 <div class="h2_banner-tutor">
                                     <div class="h2_banner-tutor-img">
                                         <div class="h2_banner-inner-img">
-                                            <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/tutor-1.png') }}" alt="">
+                                            <img src="{{ Vite::asset('resources/frontend/assets/img/banner-inner-img/1.png') }}" alt="">
                                         </div>
                                         <div class="h2_banner-inner-img">
-                                            <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/tutor-2.png') }}" alt="">
+                                            <img src="{{ Vite::asset('resources/frontend/assets/img/banner-inner-img/2.png') }}" alt="">
                                         </div>
                                         <div class="h2_banner-inner-img">
-                                            <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/tutor-3.png') }}" alt="">
+                                            <img src="{{ Vite::asset('resources/frontend/assets/img/banner-inner-img/3.png') }}" alt="">
                                         </div>
                                         <div class="h2_banner-inner-img">
-                                            <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/tutor-4.png') }}" alt="">
+                                            <img src="{{ Vite::asset('resources/frontend/assets/img/banner-inner-img/4.png') }}" alt="">
                                             <span>2k+</span>
                                         </div>
                                     </div>
@@ -50,7 +50,7 @@
                         <div class="col-xl-6 col-lg-6 d-none d-lg-block">
                             <div class="h2_banner-right pl-80">
                                 <div class="h2_banner-img">
-                                    <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/banner-bg.png') }}" alt="">
+                                    <img src="{{ Vite::asset('resources/frontend/assets/img/hero.png') }}" alt="" class="img-fluid rounded">
                                 </div>
                                 <div class="h2_banner-right-shape">
                                     <img class="h2_banner-shape-1" src="{{ Vite::asset('resources/frontend/assets/img/banner/2/shape_1.png') }}" alt="">
@@ -158,7 +158,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="h2_category-item mb-30">
                             <div class="h2_category-img">
-                                <img src="{{ Vite::asset('resources/frontend/assets/img/category/2/1.jpg') }}" alt="">
+                                <img src="{{ Vite::asset('resources/frontend/assets/img/cart-course/digimark.png') }}" alt="">
                             </div>
                             <div class="h2_category-content">
                                 <h5><a href="course.html">Digital Marketing</a></h5>
@@ -169,7 +169,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="h2_category-item mb-30">
                             <div class="h2_category-img">
-                                <img src="{{ Vite::asset('resources/frontend/assets/img/category/2/2.jpg') }}" alt="">
+                                <img src="{{ Vite::asset('resources/frontend/assets/img/cart-course/graphicdesign.png') }}" alt="">
                             </div>
                             <div class="h2_category-content">
                                 <h5><a href="course.html">Graphic Design</a></h5>
@@ -180,7 +180,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="h2_category-item mb-30">
                             <div class="h2_category-img">
-                                <img src="{{ Vite::asset('resources/frontend/assets/img/category/2/3.jpg') }}" alt="">
+                                <img src="{{ Vite::asset('resources/frontend/assets/img/cart-course/writing.png') }}" alt="">
                             </div>
                             <div class="h2_category-content">
                                 <h5><a href="course.html">Writing & Reading</a></h5>
@@ -191,7 +191,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="h2_category-item mb-30">
                             <div class="h2_category-img">
-                                <img src="{{ Vite::asset('resources/frontend/assets/img/category/2/4.jpg') }}" alt="">
+                                <img src="{{ Vite::asset('resources/frontend/assets/img/cart-course/itandsoftware.png') }}" alt="">
                             </div>
                             <div class="h2_category-content">
                                 <h5><a href="course.html">IT & Software</a></h5>
@@ -202,7 +202,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="h2_category-item mb-30">
                             <div class="h2_category-img">
-                                <img src="{{ Vite::asset('resources/frontend/assets/img/category/2/5.jpg') }}" alt="">
+                                <img src="{{ Vite::asset('resources/frontend/assets/img/cart-course/mobile.png') }}" alt="">
                             </div>
                             <div class="h2_category-content">
                                 <h5><a href="course.html">Mobile Application</a></h5>
@@ -213,7 +213,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="h2_category-item mb-30">
                             <div class="h2_category-img">
-                                <img src="{{ Vite::asset('resources/frontend/assets/img/category/2/6.jpg') }}" alt="">
+                                <img src="{{ Vite::asset('resources/frontend/assets/img/cart-course/art&humitics.png') }}" alt="">
                             </div>
                             <div class="h2_category-content">
                                 <h5><a href="course.html">Art & Humanities</a></h5>
@@ -224,7 +224,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="h2_category-item mb-30">
                             <div class="h2_category-img">
-                                <img src="{{ Vite::asset('resources/frontend/assets/img/category/2/7.jpg') }}" alt="">
+                                <img src="{{ Vite::asset('resources/frontend/assets/img/cart-course/web-design.png') }}" alt="">
                             </div>
                             <div class="h2_category-content">
                                 <h5><a href="course.html">Web Design</a></h5>
@@ -235,7 +235,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="h2_category-item mb-30">
                             <div class="h2_category-img">
-                                <img src="{{ Vite::asset('resources/frontend/assets/img/category/2/8.jpg') }}" alt="">
+                                <img src="{{ Vite::asset('resources/frontend/assets/img/cart-course/ui.png') }}" alt="">
                             </div>
                             <div class="h2_category-content">
                                 <h5><a href="course.html">UX/UI Design</a></h5>
@@ -2260,6 +2260,6 @@
         </section>
         <!-- blog area end -->
 
-        
+
 
 @endsection

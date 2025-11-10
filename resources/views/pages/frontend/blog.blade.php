@@ -13,8 +13,8 @@
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="h2_blog-item mb-30">
                             <div class="h2_blog-img">
-                                <a href="{{ route('blog-details') }}"><img src="{{ $post->mediaAsset->path }}"
-                                        alt="n"></a>
+                                <a href="{{ route('blog-details') }}"><img src="{{ asset('storage/' .$post->mediaAsset->path) }}"
+                                        alt="n" height="200" width="50"></a>
                             </div>
                             <div class="h2_blog-content">
                                 <div class="h2_blog-content-meta">
