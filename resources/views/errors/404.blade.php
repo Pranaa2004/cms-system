@@ -1,10 +1,9 @@
 <!Doctype html>
 <html class="no-js" lang="zxx">
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@yield('title')</title>
+        <title>404</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon"
@@ -17,42 +16,29 @@
     </head>
 
     <body>
-        @if (!Route::is('posts.create'))
-        <!-- sidebar-information-area-start -->
-        @include('layouts.frontend.includes.sidebar')
-        <!-- sidebar-information-area-end -->
-        @endif
-
-
         <!-- header area start -->
         @include('layouts.frontend.includes.header')
         <!-- header area end -->
 
         <main>
-            @if (!Route::is('home') )
-                <!-- breadcrumb area start -->
-                <section class="breadcrumb-area bg-default"
-                    data-background="{{ Vite::asset('resources/frontend/assets/img/breadcrumb/breadcrumb-bg.jpg') }}">
-                    <img src="{{ Vite::asset('resources/frontend/assets/img/breadcrumb/shape-1.png') }}" alt=""
-                        class="breadcrumb-shape">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="breadcrumb-content">
-                                    <h2 class="breadcrumb-title">@yield('brd_crm_list')</h2>
-                                    <div class="breadcrumb-list">
-                                        <a href="{{ route('home') }}">Home</a>
-                                        <span>@yield('brd_crm_list')</span>
-                                    </div>
-                                </div>
+            <!-- error area start -->
+            <div class="error-area pt-110 pb-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="error-content-img w_img">
+                                <img src="{{ Vite::asset('resources/frontend/assets/img/404/404.png') }}"
+                                    alt="404">
+                            </div>
+                            <div class="error-content text-center mb-85">
+                                <h2>Sorry, Page Not Found!</h2>
+                                <a href="{{ route('home') }}" class="theme-btn theme-btn-big">Go To Homepage</a>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- breadcrumb area end -->
-            @endif
-
-            @yield('content')
+                </div>
+            </div>
+            <!-- error area end -->
             <!-- cta area start -->
             <div class="cta-area">
                 <div class="container">

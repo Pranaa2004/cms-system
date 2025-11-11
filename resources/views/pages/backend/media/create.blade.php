@@ -14,7 +14,7 @@
                                 <a href="{{ route('dashboard') }}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="#">Media</a>
+                                <a href="{{ route('category.index') }}">Media</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">Create Media</li>
                         </ol>
@@ -34,7 +34,7 @@
                                 <input type="file" class="form-control" id="image" name="image" accept="image/*">
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Create Page</button>
+                            <button type="submit" class="btn btn-primary">Create Media</button>
                         </form>
                     </div>
                 </div>
