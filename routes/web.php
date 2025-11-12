@@ -11,20 +11,7 @@ use App\Http\Controllers\backend\PageController;
 use App\Http\Controllers\backend\PostController;
 use App\Http\Controllers\backend\TagController;
 use App\Http\Controllers\frontend\BlogContrlloer;
-
-// Route::get('/', function () {
-//     return view('layouts.backend.main');
-// });
-
-Route::get('/login', [AuthController::class, 'login_show'])->name('login_show');
-Route::post('/login', [AuthController::class, 'login_store'])->name('login_store');
-
-Route::get('/register', [AuthController::class, 'register_show'])->name('register_show');
-Route::post('/register', [AuthController::class, 'register_store'])->name('register_store');
-
-Route::get('/dashboard', [AuthController::class, 'dashboard_show'])->name('dashboard');
-
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+use App\Http\Controllers\frontend\BlogDetailsController;
 
 Route::resources([
     '/menus' => MenuController::class,
@@ -35,6 +22,21 @@ Route::resources([
     '/medias' => MediaController::class
 
 ]);
+
+// ---------------------- login --------------------------------------------
+
+Route::get('/login', [AuthController::class, 'login_show'])->name('login_show');
+Route::post('/login', [AuthController::class, 'login_store'])->name('login_store');
+
+//--------------------- Register ---------------------------------------------
+
+Route::get('/register', [AuthController::class, 'register_show'])->name('register_show');
+Route::post('/register', [AuthController::class, 'register_store'])->name('register_store');
+
+Route::get('/dashboard', [AuthController::class, 'dashboard_show'])->name('dashboard');
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 
 // --------------------------- Forget Password ------------------------------//
 
@@ -48,24 +50,17 @@ Route::controller(ResetPasswordController::class)->group(function () {
 });
 
 
-//-------------- Frontend ------------------------------
-Route::view('/', 'pages.frontend.home')->name('home');
-Route::view('/about','pages.frontend.about')->name('about');
-Route::view('/teacher','pages.frontend.teacher')->name('teacher');
-Route::view('/teacher-details','pages.frontend.teacher-details')->name('teacher-details');
-Route::view('/events','pages.frontend.events')->name('events');
-Route::view('/event-details','pages.frontend.event-details')->name('event-details');
-Route::view('/404','errors.404')->name('error');
-Route::view('/gallery','pages.frontend.gallery')->name('gallery');
-Route::view('/contact-us','pages.frontend.contact')->name('contact-us');
-Route::view('/price','pages.frontend.price')->name('price');
-Route::view('/blog-details','pages.frontend.blog-details')->name('blog-details');
+//------------------ Frontend ------------------------------
 
-
+// ----- Dynamic ------
+Route::get('/',[BlogContrlloer::class,'show_blog_home'])->name('home');
 Route::get('/blog',[BlogContrlloer::class,'show_blog'])->name('blog');
+Route::get('/blog-details',[BlogDetailsController::class,'showBlogDetails'])->name('blog-details');
 
-
-
+// ---- Static -------
+Route::view('/about','pages.frontend.about')->name('about');
+Route::view('/404','errors.404')->name('error');
+Route::view('/contact-us','pages.frontend.contact')->name('contact-us');
 
 
 

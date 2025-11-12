@@ -27,15 +27,16 @@
                                     <a href="{{ route('home') }}">Home</a>
 
                                 </li>
-                                <li class="menu-has-child">
+                                {{-- <li class="menu-has-child">
                                     <a href="course.html">Courses</a>
                                     <ul class="submenu">
                                         <li><a href="course.html">Courses 1</a></li>
                                         <li><a href="course-2.html">Courses 2</a></li>
                                         <li><a href="course-details.html">Course Details</a></li>
                                     </ul>
-                                </li>
-                                <li class="menu-has-child">
+                                </li> --}}
+                                <li><a href="{{ route('about') }}">About</a></li>
+                                {{-- <li class="menu-has-child">
                                     <a href="#">Pages</a>
                                     <ul class="submenu">
                                         <li><a href="{{ route('about') }}">About</a></li>
@@ -45,16 +46,16 @@
                                         <li><a href="{{ route('event-details') }}">Event Details</a></li>
                                         <li><a href="{{ route('price') }}">Price</a></li>
                                         <li><a href="{{ route('gallery') }}">Gallery</a></li>
-                                        <li><a href="{{ route('error') }}">404</a></li>
                                     </ul>
-                                </li>
-                                <li class="menu-has-child">
-                                    <a href="{{ route('blog') }}">Blog</a>
+                                </li> --}}
+                                <li><a href="{{ route('blog') }}">Blog</a></li>
+                                {{-- <li class="menu-has-child">
+                                    <a href="{{  }}">Blog</a>
                                     <ul class="submenu">
                                         <li><a href="{{ route('blog') }}">Blog</a></li>
                                         <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
                                 <li><a href="{{ route('contact-us') }}">Contact</a></li>
                             </ul>
                         </nav>

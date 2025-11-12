@@ -8,14 +8,20 @@ use Illuminate\Http\Request;
 
 class BlogContrlloer extends Controller
 {
-    function show_blog()
+    public function show_blog()
     {
-        $posts = Post::all()->where('status','=','published');
-        $post_count = Post::all()->where('status','=','published')->count();
+        $posts = Post::all()->where('status', '=', 'published')->sortByDesc('created_at');
+        $post_count = Post::all()->where('status', '=', 'published')->count();
         // $post = Post::find(5)->mediaAsset->path;
 
-        return view('pages.frontend.blog',compact('posts'));
+        return view('pages.frontend.blog', compact('posts'));
         // return view('pages.sample',compact('posts'));
 
+    }
+
+    public function show_blog_home()
+    {
+        $posts = Post::limit(6)->get()->where('status', '=', 'published')->sortByDesc('created_at');
+        return view('pages.frontend.home', compact('posts'));
     }
 }

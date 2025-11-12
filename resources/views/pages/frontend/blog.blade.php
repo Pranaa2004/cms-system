@@ -22,7 +22,7 @@
                                     <span><i class="fa-thin fa-clock"></i>{{ $post->published_at }}</span>
                                 </div>
                                 <h5 class="h2_blog-content-title"><a href="#">{{ $post->body }}</a></h5>
-                                <a href="#" class="theme-btn blog-btn t-theme-btn">Read More</a>
+                                <a href="{{ route('blog-details',$post->id) }}" class="theme-btn blog-btn t-theme-btn">Read More</a>
                             </div>
                         </div>
                     </div>
