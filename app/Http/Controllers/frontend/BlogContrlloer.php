@@ -21,7 +21,7 @@ class BlogContrlloer extends Controller
 
     public function show_blog_home()
     {
-        $posts = Post::limit(6)->get()->where('status', '=', 'published')->sortByDesc('created_at');
+        $posts = $posts = Post::where('status', 'published')->orderBy('created_at', 'desc')->limit(6)->get();
         return view('pages.frontend.home', compact('posts'));
     }
 }

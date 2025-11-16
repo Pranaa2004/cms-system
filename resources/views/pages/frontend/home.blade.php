@@ -321,9 +321,10 @@
                                 <div class="col-xl-4 col-lg-6 col-md-6">
                                     <div class="h2_course-item mb-30">
                                         <div class="h2_course-item-img">
-                                            <a href="course-details.html"><img
-                                                    src="{{ asset('storage/' . $post->mediaAsset->path) }}"
-                                                    alt="{{ $post->mediaAsset->alt }}"></a>
+                                            <a href="course-details.html">
+                                                <img src="{{ asset('storage/' . $post->mediaAsset->path) }}"
+                                                alt="{{ $post->mediaAsset->alt }}" height="200" width="100">
+                                            </a>
                                         </div>
                                         <div class="h2_course-content">
                                             <div class="h2_course-content-top">
