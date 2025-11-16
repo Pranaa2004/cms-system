@@ -323,7 +323,7 @@
                                         <div class="h2_course-item-img">
                                             <a href="course-details.html">
                                                 <img src="{{ asset('storage/' . $post->mediaAsset->path) }}"
-                                                alt="{{ $post->mediaAsset->alt }}" height="200" width="100">
+                                                    alt="{{ $post->mediaAsset->alt }}" height="200" width="100">
                                             </a>
                                         </div>
                                         <div class="h2_course-content">
@@ -1762,6 +1762,14 @@
         </div>
     </section>
     <!-- blog area end -->
+    <button id="check">Test Mee </button>
+    <script>
+        $(document).ready(function() {
+            $('#check').click(function(){
+                alert("Hii there jquery ready !!");
+            })
+        });
+    </script>
 
 
 

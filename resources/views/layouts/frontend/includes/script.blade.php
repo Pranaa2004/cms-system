@@ -11,5 +11,6 @@
     'resources/frontend/assets/js/odometer.min.js',
     'resources/frontend/assets/js/appear.min.js',
     'resources/frontend/assets/js/main.js',
+    'resources/frontend/js/app.js',
 
 ]);

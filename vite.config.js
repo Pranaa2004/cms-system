@@ -29,6 +29,7 @@ export default defineConfig({
                 //<------------------------------------------------------------------------- JS ---------------------------------------------------------->
 
                 // <---------- FrontEnd  JS -------------->
+                'resources/frontend/js/app.js',
                 'resources/frontend/assets/js/jquery.min.js',
                 'resources/frontend/assets/js/bootstrap.bundle.min.js',
                 'resources/frontend/assets/js/swiper-bundle.min.js',
@@ -42,6 +43,7 @@ export default defineConfig({
                 'resources/frontend/assets/js/main.js',
 
                 //  <---------- BackEnd  JS ------------>
+                'resources/backend/js/app.js',
                 "resources/backend/assets/libs/jquery/dist/jquery.min.js",
                 "resources/backend/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js",
                 // <!-- apps -->
