@@ -1762,15 +1762,16 @@
         </div>
     </section>
     <!-- blog area end -->
-    <button id="check">Test Mee </button>
-    <script>
-        $(document).ready(function() {
-            $('#check').click(function(){
-                alert("Hii there jquery ready !!");
-            })
-        });
-    </script>
-
-
+    <button id="check">Test Mee</button>
 
 @endsection
+
+@push('script')
+    <script>
+        $(document).ready(function() {
+            alert("Hii there jquery ready !!");
+            // $('#check').click(function() {
+            // });
+        });
+    </script>
+@endpush

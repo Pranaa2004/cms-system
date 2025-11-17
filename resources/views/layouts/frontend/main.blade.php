@@ -84,6 +84,8 @@
 
         <!-- JS here -->
         @include('layouts.frontend.includes.script')
+
+        @stack('script')
     </body>
 
 </html>
