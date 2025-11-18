@@ -17,7 +17,7 @@
     "dependencies": {
         "@popperjs/core": "^2.11.8",
         "chartist": "^1.5.0",
-        "d3": "^7.9.0",
-        "jquery": "^3.7.1"
+        "d3": "^7.9.0"
+        
     }
 }

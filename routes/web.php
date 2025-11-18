@@ -65,3 +65,4 @@ Route::view('/contact-us','pages.frontend.contact')->name('contact-us');
 
 
 
+Route::view('/sample', 'pages.sample');
