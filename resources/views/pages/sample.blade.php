@@ -33,7 +33,7 @@
 
 </html> --}}
 
-
+{{--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +51,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             const ctx = document.getElementById('myChart').getContext('2d');
             new Chart(ctx, {
-                type: 'bar', // or 'line', 'pie', etc.
+                type: 'pie', // or 'line', 'pie', etc.
                 data: {
                     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                     datasets: [{
@@ -87,4 +87,12 @@
         });
     </script>
 </body>
-</html>
+</html> --}}
+<?php
+use Carbon\Carbon;
+
+$currentDateTime = Carbon::now();
+?>
+@if('2000-03-21 09:35:00' <$currentDateTime)
+    {{ 'That is true' }}
+@endif
