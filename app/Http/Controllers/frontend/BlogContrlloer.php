@@ -10,23 +10,26 @@ use Carbon\Carbon;
 class BlogContrlloer extends Controller
 {
 
-    public function sheduledPosts()
-    {
-        $currentDateTime  = Carbon::now();
-        if ('status' == 'published') {
-            if (('published_at' < $currentDateTime) && ('expires_at' > $currentDateTime)) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }
-
-
     public function show_blog()
     {
 
-        $posts = Post::all()->where('status', '=', 'published')->sortByDesc('created_at');
+        $now = Carbon::now();
+
+        $sehduledPost = Post::where('status','scheduled')
+                            ->where('published_at','<=',$now)
+                            ->where('expires_at','>=',$now)
+                            ->get();
+                            
+        $publishedPosts = Post::where('status', 'published')
+                      ->where('published_at', '<=', $now)
+                      ->where(function ($query) use ($now) {
+                          $query->where('expires_at', '>=', $now)
+                                ->orWhereNull('expires_at');
+                      })
+                      ->get();
+
+        $posts = [$sehduledPost,$publishedPosts];
+
         $post_count = Post::all()->where('status', '=', 'published')->count();
         // $post = Post::find(5)->mediaAsset->path;
 
@@ -41,3 +44,6 @@ class BlogContrlloer extends Controller
         return view('pages.frontend.home', compact('posts'));
     }
 }
+
+
+Post::where('status', 'published')->where('published_at', '<=', $now)->where(function ($query) use ($now) { $query->where('expires_at', '>=', $now)->orWhereNull('expires_at');})->get();
