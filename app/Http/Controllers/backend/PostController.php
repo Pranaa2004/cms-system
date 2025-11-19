@@ -165,7 +165,7 @@ class PostController extends Controller
 
             $mediaId = $media->id;
         } else {
-            $post->is_featured = 0;
+            $post->is_featured = 0;//Not this place
         }
 
         $post->featured_media_id = $mediaId;

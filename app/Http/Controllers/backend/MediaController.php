@@ -13,7 +13,8 @@ class MediaController extends Controller
      */
     public function index()
     {
-        return view('pages.backend.media.index');
+        $medias = MediaAsset::all();
+        return view('pages.backend.media.index',compact('medias'));
     }
 
     /**
