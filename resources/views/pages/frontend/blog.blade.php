@@ -9,7 +9,7 @@
     <section class="innerPage_blog-area pt-120 pb-90">
         <div class="container">
             <div class="row">
-                @for ($i = 0; $i < $posts. length; $i++)
+                @for ($i = 0; $i < count($posts); $i++)
                     @foreach ($posts[$i] as $post)
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="h2_blog-item mb-30">

@@ -35,8 +35,7 @@ class PostController extends Controller
     {
         $categories  = Category::all()->where('parent_id', '=', '0');
         $tags = Tag::all();
-        return view('pages.backend.posts.create',compact('categories', 'tags'));
-
+        return view('pages.backend.posts.create', compact('categories', 'tags'));
     }
 
     /**
@@ -96,7 +95,7 @@ class PostController extends Controller
         $post->meta = "";
         $post->save();
 
-        foreach($request->input('tags') as $tag){
+        foreach ($request->input('tags') as $tag) {
             $post->tags()->attach($tag);
         }
 
@@ -111,14 +110,74 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id) {
-
+    public function edit(string $id)
+    {
+        $post = Post::find($id);
+        $categories  = Category::all()->where('parent_id', '=', '0');
+        $tags = Tag::all();
+        return view('pages.backend.posts.edit', compact('post', 'categories', 'tags'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id) {}
+    public function update(Request $request, string $id)
+    {
+        $validatedata = $request->validate([
+            'title' => 'required|string',
+            'content' => 'required|string|max:255',
+            'authod_id' => 'unique:pages,author_id',
+            'status' => ['required', new Enum(EnumsStatusEnum::class)],
+            'published_at' => 'nullable|date',
+            'expires_at' => 'nullable|date',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
+
+        ]);
+
+        $post = Post::find($id);
+        $post->author_id = Auth::user()->id;
+        $post->editor_id = Auth::user()->id;
+        $post->title = $validatedata['title'];
+        $post->excerpt = "";
+        // $post->excerpt = Str::substr($validatedata['description'], 0, );
+        // $post->body = $validatedata['description'];
+        $post->body = $validatedata['content'];
+        $post->status = $validatedata['status'];
+        $post->published_at = $validatedata['published_at'];
+        $post->expires_at = $validatedata['expires_at'];
+
+        $mediaId = null;
+        if ($request->hasFile('image')) {
+            $post->is_featured = 1;
+            $file = $request->file('image');
+            $path = $file->store('uploads/pages', 'public');
+
+            $media = MediaAsset::create([
+                'disk' => 'public',
+                'path' => $path,
+                'mime_type' => $file->getMimeType(),
+                'size_kb' => $file->getSize() / 1024,
+                'width' => getimagesize($file)[0] ?? null,
+                'height' => getimagesize($file)[1] ?? null,
+                'alt' => $validatedata['title'],
+                'variants' => '',
+            ]);
+
+            $mediaId = $media->id;
+        } else {
+            $post->is_featured = 0;
+        }
+
+        $post->featured_media_id = $mediaId;
+        $post->meta = "";
+        $post->save();
+
+        foreach ($request->input('tags') as $tag) {
+            $post->tags()->attach($tag);
+        }
+
+        return redirect()->route('posts.index')->with('Success', 'Successfully post created !');
+    }
 
     /**
      * Remove the specified resource from storage.

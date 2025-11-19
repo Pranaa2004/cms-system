@@ -19,7 +19,7 @@ class BlogContrlloer extends Controller
                             ->where('published_at','<=',$now)
                             ->where('expires_at','>=',$now)
                             ->get();
-                            
+
         $publishedPosts = Post::where('status', 'published')
                       ->where('published_at', '<=', $now)
                       ->where(function ($query) use ($now) {
@@ -46,4 +46,4 @@ class BlogContrlloer extends Controller
 }
 
 
-Post::where('status', 'published')->where('published_at', '<=', $now)->where(function ($query) use ($now) { $query->where('expires_at', '>=', $now)->orWhereNull('expires_at');})->get();
+//Post::where('status', 'published')->where('published_at', '<=', $now)->where(function ($query) use ($now) { $query->where('expires_at', '>=', $now)->orWhereNull('expires_at');})->get();
