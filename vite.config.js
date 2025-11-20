@@ -44,7 +44,7 @@ export default defineConfig({
 
                 //  <---------- BackEnd  JS ------------>
                 'resources/backend/js/app.js',
-                "resources/backend/assets/libs/jquery/dist/jquery.min.js",
+                // "resources/backend/assets/libs/jquery/dist/jquery.min.js",
                 "resources/backend/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js",
                 // <!-- apps -->
                 // <!-- apps -->
@@ -67,6 +67,9 @@ export default defineConfig({
                 'resources/backend/assets/libs/jquery/dist/jquery.min.js',
                 'resources/backend/assets/libs/popper.js/dist/umd/popper.min.js',
                 'resources/backend/assets/libs/bootstrap/dist/js/bootstrap.min.js',
+
+                //<---SCSS File ---->
+                'resources/scss/app.scss',
             ],
             refresh: true,
         }),

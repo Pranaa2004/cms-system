@@ -23,22 +23,28 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <form action="{{ route('medias.store') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <div class="mb-3">
-                                <input type="file" class="form-control" id="image" name="image" accept="image/*">
+    <form action="{{ route('medias.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="cart">
+                                <div class="cart-body">
+                                    <input type="file" class="form-control form-control-lg" id="image" name="image"
+                                        accept="image/*">
+                                </div>  
                             </div>
-
-                            <button type="submit" class="btn btn-primary">Create Media</button>
-                        </form>
+                        </div>
+                        <div class="col-2">
+                            <div class="cart-footer mx-4 my-1">
+                                <button type="submit" class="btn btn-primary">+</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 @endsection

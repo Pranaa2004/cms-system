@@ -1,0 +1,15 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+// Your colors
+$custom-colors: (
+  "teal": #20c997,
+  "indigo": #6610f2,
+  "sky": #0dcaf0,
+);
+
+// Merge theme colors
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Load full Bootstrap
+@import "bootstrap/scss/bootstrap";

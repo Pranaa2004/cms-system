@@ -4,5 +4,5 @@ import.meta.glob([
     '../dist/img/**',
 ]);
 import Chart from 'chart.js/auto';
-window.Chart = Chart; 
+window.Chart = Chart;   
 
