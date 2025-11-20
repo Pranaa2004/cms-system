@@ -4,7 +4,7 @@
 
 @section('content')
     <div></div>
-    <section class="innerPage_blog-area pt-120 pb-90">
+
         <div class="container">
             <div class="row">
                 @foreach ($medias as $media)
@@ -19,6 +19,6 @@
                 @endforeach
             </div>
         </div>
-    </section>
+ 
 
 @endsection
