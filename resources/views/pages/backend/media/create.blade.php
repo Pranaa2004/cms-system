@@ -34,12 +34,12 @@
                                 <div class="cart-body">
                                     <input type="file" class="form-control form-control-lg" id="image" name="image"
                                         accept="image/*">
-                                </div>  
+                                </div>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="cart-footer mx-4 my-1">
-                                <button type="submit" class="btn btn-primary">+</button>
+                                <button type="submit" class="btn btn-primary"><span><i class=" fas fa-plus"></i></span></button>
                             </div>
                         </div>
                     </div>

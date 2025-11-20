@@ -33,22 +33,31 @@
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required
                             value="{{ $tag->name }}">
+                        @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="slug" class="form-label">Slug</label>
-                        <input type="text" class="form-control" id="slug" name="slug"
-                            value="{{ $tag->slug }}" required>
+                        <input type="text" class="form-control" id="slug" name="slug" value="{{ $tag->slug }}"
+                            required>
+                        @error('slug')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
                         <textarea class="form-control" id="description" name="description" rows="5" required>{{ $tag->description }}</textarea>
+                        @error('description')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <button type="submit" class="btn btn-primary">Update Tag</button>
                 </form>
             </div>
         </div>
     </div>
-    @if ($errors->any())
+    {{-- @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -56,5 +65,5 @@
                 @endforeach
             </ul>
         </div>
-    @endif
+    @endif --}}
 @endsection

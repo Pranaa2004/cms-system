@@ -28,12 +28,15 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('posts.update',$post->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="title" class="form-label">Title</label>
                                 <input type="text" class="form-control" id="title" name="title"
                                     value="{{ $post->title }}" required>
+                                @error('title')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="mb-3">
@@ -104,7 +107,8 @@
                                     </div>
                                     <div class="col-6">
                                         <label for="expires_at" class="form-label">Expires at</label>
-                                        <input type="datetime-local" class="form-control" id="expires_at" name="expires_at" value="{{ $post->published_at }}">
+                                        <input type="datetime-local" class="form-control" id="expires_at" name="expires_at"
+                                            value="{{ $post->published_at }}">
                                     </div>
                                 </div>
                             </div>
