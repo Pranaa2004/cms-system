@@ -1,4 +1,4 @@
-@extends('layouts.backend.main')
+{{-- @extends('layouts.backend.main')
 
 @section('tite', 'Pages')
 
@@ -86,4 +86,94 @@
         </div>
     </div>
 
+@endsection --}}
+{{-- ---------------------------------------------------------------------------------------------------------------------------------------- --}}
+@extends('layouts.backend.main')
+
+@section('title', 'Pages')
+
+@section('content')
+    <div class="container-fluid py-3">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h3 class="fw-bold mb-1">Pages</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Page</li>
+                    </ol>
+                </nav>
+            </div>
+            <a href="{{ route('pages.create') }}" class="btn btn-primary shadow-sm px-4 py-2">
+                <i class="icon-plus me-2"></i>Add New Page
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0 rounded-3">
+            <div class="card-body p-4">
+                <div class="table-responsive">
+                    <table id="zero_config" class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Title</th>
+                                <th>Content</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach ($pages as $page)
+                                <tr>
+                                    <td class="fw-semibold">
+                                        {{ $page->title }}
+                                        <div class="mt-1 small text-muted">
+                                            <a href="{{ route('posts.edit', $page->id) }}" class="me-3 text-warning"
+                                                onclick="return confirm('Are you sure you want to edit this post?')">
+                                                <i class="far fa-edit me-1"></i><span class="small text">Edit</span>
+                                            </a>
+                                            <form action="{{ route('posts.destroy', $page->id) }}" method="POST"
+                                                class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-link p-0 text-danger"
+                                                    onclick="return confirm('Are you sure you want to delete this post?')">
+                                                    <i class="fas fa-trash me-1"></i><span class="small text">Delete</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            @php
+                                                $badgeClass = match ($page->status) {
+                                                    'published' => 'bg-secondary',
+                                                    'scheduled' => 'bg-success',
+                                                    'draft' => 'bg-danger',
+                                                    default => 'bg-warning',
+                                                };
+                                            @endphp
+
+                                            <span class="badge {{ $badgeClass }}">
+                                                {!! $page->status === 'scheduled' ? '<i class="fas fa-clock"></i> ' . $page->status : $page->status !!}
+                                            </span>
+                                            {{-- <div class="text-center"> <span class="badge @if ($page->status === 'published') {{ 'bg-primary' }} @elseif ($page->status === 'scheduled'){{ 'bg-success' }} @elseif ($page->status === 'draft') {{ 'bg-danger' }} @else {{ 'bg-warning' }} @endif ">{!! $page->status === 'scheduled' ? '<i class="fas fa-clock"></i>' . $page->status : $page->status !!}</span> --}}
+                                        </div>
+                                        <div class="small text-muted mt-1">{{ $page->published_at }}</div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+
+                        <tfoot class="table-light">
+                            <tr>
+                                <th>Title</th>
+                                <th>Content</th>
+                                <th>Date</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

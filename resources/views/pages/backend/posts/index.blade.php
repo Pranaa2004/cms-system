@@ -152,8 +152,8 @@
                                     <td class="fw-semibold">
                                         {{ $post->title }}
                                         <div class="mt-1 small text-muted">
-                                            <a href="{{ route('posts.edit', $post->id) }}" class="me-3 text-primary">
-                                                <i class="far fa-edit me-1"></i>Edit
+                                            <a href="{{ route('posts.edit', $post->id) }}" class="me-3 text-warning" onclick="return confirm('Are you sure you want to edit this post?')">
+                                                <i class="far fa-edit me-1"></i><span class="small text">Edit</span>
                                             </a>
                                             <form action="{{ route('posts.destroy', $post->id) }}" method="POST"
                                                 class="d-inline">
@@ -161,7 +161,7 @@
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-link p-0 text-danger"
                                                     onclick="return confirm('Are you sure you want to delete this post?')">
-                                                    <i class="fas fa-trash me-1"></i>Delete
+                                                    <i class="fas fa-trash me-1"></i><span class="small text">Delete</span>
                                                 </button>
                                             </form>
                                         </div>
@@ -189,7 +189,7 @@
                                             @endphp
 
                                             <span class="badge {{ $badgeClass }}">
-                                                {!! $post->status === 'scheduled' ? '<i class="fas fa-clock"></i>' . $post->status : $post->status !!}
+                                                {!! $post->status === 'scheduled' ? '<i class="fas fa-clock"></i> ' . $post->status : $post->status !!}
                                             </span>
                                             {{-- <div class="text-center"> <span class="badge @if ($post->status === 'published') {{ 'bg-primary' }} @elseif ($post->status === 'scheduled'){{ 'bg-success' }} @elseif ($post->status === 'draft') {{ 'bg-danger' }} @else {{ 'bg-warning' }} @endif ">{!! $post->status === 'scheduled' ? '<i class="fas fa-clock"></i>' . $post->status : $post->status !!}</span> --}}
                                         </div>

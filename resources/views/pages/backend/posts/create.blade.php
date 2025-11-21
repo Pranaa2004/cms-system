@@ -53,7 +53,7 @@
     </div>
 @endsection --}}
 
-@extends('layouts.backend.main')
+{{-- @extends('layouts.backend.main')
 
 @section('title', 'Create Post')
 
@@ -98,7 +98,7 @@
 
                             <div class="mb-3">
                                 <label for="category" class="form-label">Category</label>
-                                {{-- this is the start for the drop down --}}
+
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -116,7 +116,7 @@
                                     </div>
                                 </div>
 
-                                {{-- this is the end for the drop down --}}
+
                             </div>
 
                             <div class="mb-3">
@@ -171,5 +171,134 @@
             </div>
         </div>
     </div>
+
+@endsection --}}
+
+
+@extends('layouts.backend.main')
+
+@section('title', 'Create Post')
+
+@section('content')
+    <div class="container-fluid py-3">
+        <div class="row">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h3 class="fw-bold mb-1">Posts</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                            <li class="breadcrumb-item active"><a href="{{ route('posts.index') }}">Posts</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Add Post</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body py-4 px-4">
+                        <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            {{-- TITLE --}}
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Post Title</label>
+                                <input type="text" name="title" class="form-control form-control-md"
+                                    placeholder="Enter a clear, descriptive title" value="{{ old('title') }}" required>
+                            </div>
+
+                            {{-- CONTENT --}}
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Content</label>
+                                <textarea name="content" rows="6" class="form-control" placeholder="Write your content here..." required>{{ old('content') }}</textarea>
+                            </div>
+
+                            {{-- CATEGORY (drag UI improved layout) --}}
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Category</label>
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="p-3 border rounded bg-light" id="modules">
+                                            <h6 class="fw-bold mb-3">Available Categories</h6>
+                                            @foreach ($categories as $category)
+                                                <p class="drag mb-2">
+                                                    <a class="btn btn-outline-dark w-100">{{ $category->name }}</a>
+                                                </p>
+                                            @endforeach
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="p-3 border rounded bg-light" id="dropzone">
+                                            <h6 class="fw-bold mb-3">Selected Category</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- TAGS --}}
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Tags</label>
+                                <div class="row">
+                                    @foreach ($tags as $tag)
+                                        <div class="col-md-3 col-sm-4 col-6">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" name="tags[]"
+                                                    id="tag-{{ $tag->id }}" value="{{ $tag->id }}">
+                                                <label class="form-check-label" for="tag-{{ $tag->id }}">
+                                                    {{ $tag->name }}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+
+                            {{-- STATUS + PUBLISH TIME --}}
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Status</label>
+                                    <select name="status" class="form-select">
+                                        @foreach (\App\Enums\StatusEnum::cases() as $status)
+                                            <option value="{{ $status->value }}">{{ $status->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Publish At</label>
+                                    <input type="datetime-local" name="published_at" class="form-control">
+                                </div>
+                            </div>
+
+                            {{-- IMAGE + EXPIRY --}}
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Feature Image</label>
+                                    <input type="file" class="form-control" name="image" accept="image/*">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Expire At</label>
+                                    <input type="datetime-local" name="expires_at" class="form-control">
+                                </div>
+                            </div>
+
+                            {{-- SUBMIT BUTTON --}}
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">
+                                    Create Post
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 @endsection
