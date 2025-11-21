@@ -16,7 +16,7 @@
                 <li class="list-divider"></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><span class="pb-1"><i class="bi bi-file-earmark-post"></span></i><span
+                        aria-expanded="false"><i class="icon-pin"></i><span
                             class="hide-menu">Post</span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
                         <li class="sidebar-item"><a href="{{ route('posts.index') }}" class="sidebar-link"><span
@@ -40,7 +40,7 @@
                     </ul>
                 </li>
                 <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                        aria-expanded="false"></i><span
                             class="hide-menu">Pages</span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
                         <li class="sidebar-item"><a href="{{ route('pages.index') }}" class="sidebar-link"><span
@@ -54,7 +54,11 @@
                     </ul>
                 </li>
                 <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i data-feather="box" class="feather-icon"></i><span
+                        aria-expanded="false">
+                        <span style="position: relative; width: 24px; height: 24px;">
+                            <i class="bi bi-camera" style="position: absolute; top: 0; left: 0 ;background-color:white"></i>
+                            <i class="bi bi-music-note-beamed" style="position: absolute; top: 5px; left: 5px;"></i>
+                            </span><span
                             class="hide-menu">Media</span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
                         <li class="sidebar-item"><a href="{{ route('medias.index') }}" class="sidebar-link"><span
