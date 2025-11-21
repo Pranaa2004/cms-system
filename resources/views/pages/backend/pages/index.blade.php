@@ -43,7 +43,6 @@
                                 <tbody>
                                     @foreach ($pages as $page)
                                         <tr>
-
                                             <td>{{ $page->title }}</td>
                                             <td>{{ Str::limit($page->body, 50) }}</td>
                                             <td>
@@ -86,5 +85,5 @@
             </div>
         </div>
     </div>
-    
+
 @endsection

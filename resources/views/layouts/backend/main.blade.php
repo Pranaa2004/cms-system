@@ -12,8 +12,10 @@
         <link rel="icon" type="image/png" sizes="16x16"
             href="{{ Vite::asset('resources/backend/assets/images/logo/titlelogos.png') }}">
         <title>@yield('title')</title>
+
         <!-- Custom CSS -->
-        @stack('css')
+        <link rel="stylesheet" href="croppie.css" />
+        <script src="croppie.js"></script>
         @vite(['resources/backend/assets/extra-libs/c3/c3.min.css', 'resources/backend/assets/libs/chartist/dist/chartist.min.css', 'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css', 'resources/backend/dist/css/style.min.css'])
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> --}}
         <!-- Custom CSS -->
@@ -89,7 +91,7 @@
         <!-- ============================================================== -->
         @include('layouts.backend.includes.scripts')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        @stack('script')
+
 
 
     </body>
