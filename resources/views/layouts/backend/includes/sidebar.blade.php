@@ -8,7 +8,7 @@
             <ul id="sidebarnav">
                 {{-- @auth --}}
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('dashboard') }}"
-                        aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                        aria-expanded="false"><span class="pb-1"><i data-feather="home" class="feather-icon"></span></i><span
                             class="hide-menu">Dashboard</span></a>
                 </li>
                 {{-- @endauth --}}
@@ -16,7 +16,7 @@
                 <li class="list-divider"></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                        aria-expanded="false"><span class="pb-1"><i class="bi bi-file-earmark-post"></span></i><span
                             class="hide-menu">Post</span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
                         <li class="sidebar-item"><a href="{{ route('posts.index') }}" class="sidebar-link"><span
@@ -98,7 +98,7 @@
                                     class="hide-menu"> Simple Line Icons </span></a></li>
                     </ul>
                 </li> --}}
-                
+
                 {{-- <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
 
