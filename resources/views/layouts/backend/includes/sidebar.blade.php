@@ -40,7 +40,7 @@
                     </ul>
                 </li>
                 <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"></i><span
+                        aria-expanded="false"><i class="far fa-clone"></i><span
                             class="hide-menu">Pages</span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
                         <li class="sidebar-item"><a href="{{ route('pages.index') }}" class="sidebar-link"><span

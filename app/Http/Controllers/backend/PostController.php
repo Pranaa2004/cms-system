@@ -22,7 +22,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::all()->sortByDesc('created_at');
         return view('pages.backend.posts.index', compact('posts'));
         // $cate = Category::all()->where("parent_id",'=','0');
         // dd($cate);

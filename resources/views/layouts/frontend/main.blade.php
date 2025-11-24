@@ -12,15 +12,16 @@
         <!-- Place favicon.ico in the root directory -->
 
         <!-- CSS here -->
+        {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> --}}
         @vite(['resources/frontend/assets/css/bootstrap.min.css', 'resources/frontend/assets/css/animate.min.css', 'resources/frontend/assets/css/magnific-popup.css', 'resources/frontend/assets/css/fontawesome-all.min.css', 'resources/frontend/assets/css/odometer.min.css', 'resources/frontend/assets/css/nice-select.css', 'resources/frontend/assets/css/meanmenu.css', 'resources/frontend/assets/css/swiper-bundle.min.css', 'resources/frontend/assets/css/main.css']);
-
     </head>
 
     <body>
         @if (!Route::is('posts.create'))
-        <!-- sidebar-information-area-start -->
-        @include('layouts.frontend.includes.sidebar')
-        <!-- sidebar-information-area-end -->
+            <!-- sidebar-information-area-start -->
+            @include('layouts.frontend.includes.sidebar')
+            <!-- sidebar-information-area-end -->
         @endif
 
 
@@ -29,7 +30,7 @@
         <!-- header area end -->
 
         <main>
-            @if (!Route::is('home') )
+            @if (!Route::is('home'))
                 <!-- breadcrumb area start -->
                 <section class="breadcrumb-area bg-default"
                     data-background="{{ Vite::asset('resources/frontend/assets/img/breadcrumb/breadcrumb-bg.jpg') }}">

@@ -5,9 +5,11 @@
                 <div class="col-xl-3 col-sm-7 col-6">
                     <div class="h2_header-left">
                         <div class="h2_header-logo">
-                            <a href="{{ route('home') }}"><img src="{{ Vite::asset('resources/frontend/assets/img/logo/logo.png') }}" alt=""></a>
+                            <a href="{{ route('home') }}"><img
+                                    src="{{ Vite::asset('resources/frontend/assets/img/logo/logo.png') }}"
+                                    alt=""></a>
                         </div>
-                        <div class="h2_header-category d-none d-sm-block">
+                        {{-- <div class="h2_header-category d-none d-sm-block">
                             <a href="#"><i class="fa-solid fa-grid"></i><span>Category</span></a>
                             <ul class="h2_header-category-submenu">
                                 <li><a href="#">Design</a></li>
@@ -16,14 +18,14 @@
                                 <li><a href="#">Data Science</a></li>
                                 <li><a href="#">Marketing</a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-xl-6 d-none d-xl-block">
                     <div class="h2_header-middle">
                         <nav class="h2_main-menu mobile-menu" id="mobile-menu">
                             <ul>
-                                <li >
+                                <li>
                                     <a href="{{ route('home') }}">Home</a>
 
                                 </li>
@@ -64,7 +66,19 @@
                 <div class="col-xl-3 col-sm-5 col-6">
                     <div class="h2_header-right">
                         <div class="h2_header-btn d-none d-sm-block">
-                            <a href="{{ route('login_show') }}" class="header-btn theme-btn theme-btn-medium">Sign In</a>
+                            <button type="button" class="header-btn theme-btn theme-btn-medium" data-bs-toggle="modal"
+                                data-bs-target="#loginPouup">
+                                Sign In
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="loginPouup" tabindex="-1" aria-labelledby="loginPouup"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                            @include('auth.login')
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="header-menu-bar d-xl-none ml-10">
                             <span class="header-menu-bar-icon side-toggle">
