@@ -33,11 +33,17 @@
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required
                             value="{{ $category->name }}">
+                        @error('name')
+                            <small class="alert alert-danger"><i class="icon-info"></i> {{ $message }}</small>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="slug" class="form-label">Slug</label>
                         <input type="text" class="form-control" id="slug" name="slug"
                             value="{{ $category->slug }}" required>
+                        @error('slug')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="parent_id" class="form-label">Parent Category</label>
@@ -58,13 +64,5 @@
             </div>
         </div>
     </div>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+
 @endsection
