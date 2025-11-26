@@ -145,8 +145,37 @@
                             <div class="row mb-4">
                                 <div class="col-md-6">
                                     <label class="form-label fw-semibold">Feature Image</label>
-                                    <input type="file" class="form-control" name="image" accept="image/*">
+                                    <input type="file" class="form-control" id="uploadImage" name="image"
+                                        accept="image/*">
                                 </div>
+                                @push('js')
+                                    <script>
+                                        $(document).ready(function() {
+                                            alert("Hii");
+                                            // $(#uploadImage).on('change', function() {
+                                            //     if (this.files && this.files.length > 0) {
+
+                                            //         alert("Hii");
+                                            //         // var file = this.files[0]; // Get the first selected file
+
+                                            //         // // Optional: Further validation to ensure it's an image
+                                            //         // if (file.type.startsWith('image/')) {
+                                            //         //     console.log('An image file has been uploaded:', file.name);
+                                            //         //     // You can now perform actions like displaying a preview,
+                                            //         //     // enabling an upload button, etc.
+                                            //         // } else {
+                                            //         //     console.log('A file was selected, but it is not an image:', file.name);
+                                            //         //     // Handle non-image files, e.g., clear the input, show an error.
+                                            //         //     $(this).val(''); // Clear the input
+                                            //         // }
+                                            //     } else {
+                                            //         // No file has been selected (e.g., user opened dialog and cancelled)
+                                            //         console.log('No file selected.');
+                                            //     }
+                                            // })
+                                        })
+                                    </script>
+                                @endpush
 
                                 <div class="col-md-6">
                                     <label class="form-label fw-semibold">Expire At</label>

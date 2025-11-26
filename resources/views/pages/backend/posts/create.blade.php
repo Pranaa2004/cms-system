@@ -275,10 +275,93 @@
                             {{-- IMAGE + EXPIRY --}}
                             <div class="row mb-4">
                                 <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Feature Image</label>
-                                    <input type="file" class="form-control" name="image" accept="image/*">
+                                    <div class="" id="imageModal">
+                                        <label class="form-label fw-semibold">Feature Image</label>
+                                        <input type="file" class="form-control" id="uploadImage" name="image"
+                                            accept="image/*">
+                                    </div>
                                 </div>
 
+                                <div class="modal fade" id="imageCropModal" aria-hidden="true"
+                                    aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" id="modalBody">
+                                                {{-- Croping Image Here --}}
+                                                <div class="" id="selectedImgEdit"></div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                                    data-bs-toggle="modal">OK</button>
+                                                <button type="button" class="btn btn-danger"
+                                                    data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                                    aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Hide this modal and show the first with the button below.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
+                                                    data-bs-toggle="modal">Back to
+                                                    first</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="" id="tesr"></div>
+                                @push('js')
+                                    <script>
+                                        $(document).ready(function() {
+                                            $('#imageCropModal').modal('hide');
+                                            $('#uploadImage').on('change', function() {
+                                                if (this.files && this.files.length > 0) {
+                                                    var file = this.files[0].name; // Get the first selected file
+                                                    // for (var i = 0; i < this.files.length; i++) {
+                                                    //     var file = this.files[i];
+                                                    //     console.log("File " + i + ": " + file.name);
+                                                    // }
+                                                    $('#imageCropModal').modal('show');
+                                                    // var reader = new FileReader();
+
+                                                    // // Set the onload event handler for the FileReader
+                                                    // reader.onload = function(e) {
+                                                    //     // e.target.result contains the data URL representing the image
+                                                    //     var imageDataUrl = e.target.result;
+                                                    //     $('#previewImage').attr('src', imageDataUrl);
+                                                    $('#selectedImgEdit').croppie({
+                                                        url: file,
+                                                        viewport: {
+                                                            width: 200,
+                                                            height: 200,
+                                                            type: 'squre'
+                                                        },
+                                                        boundary: {
+                                                            width: 300,
+                                                            height: 300
+                                                        }
+                                                    });
+
+                                                }
+                                            })
+                                        })
+                                    </script>
+                                @endpush
                                 <div class="col-md-6">
                                     <label class="form-label fw-semibold">Expire At</label>
                                     <input type="datetime-local" name="expires_at" class="form-control">

@@ -23,6 +23,7 @@ Route::resources([
 
 ]);
 
+
 // ---------------------- login --------------------------------------------
 
 Route::get('/login', [AuthController::class, 'login_show'])->name('login_show');
