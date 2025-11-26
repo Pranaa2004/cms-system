@@ -158,7 +158,12 @@
                                             </span>
                                             {{-- <div class="text-center"> <span class="badge @if ($page->status === 'published') {{ 'bg-primary' }} @elseif ($page->status === 'scheduled'){{ 'bg-success' }} @elseif ($page->status === 'draft') {{ 'bg-danger' }} @else {{ 'bg-warning' }} @endif ">{!! $page->status === 'scheduled' ? '<i class="fas fa-clock"></i>' . $page->status : $page->status !!}</span> --}}
                                         </div>
-                                        <div class="small text-muted mt-1">{{ $page->published_at }}</div>
+                                        <div class="small text-muted mt-1">
+                                            <small>
+                                                <i class="fas fa-history"></i>
+                                                {{ Carbon::parse($page->published_at)->diffForHumans() }}
+                                            </small>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach

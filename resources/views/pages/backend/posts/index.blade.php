@@ -113,6 +113,9 @@
 <!-- Improved UI for Posts Page (Bootstrap 5 Compatible) -->
 @extends('layouts.backend.main')
 
+@php
+    use Carbon\Carbon;
+@endphp
 @section('title', 'Posts')
 
 @section('content')
@@ -152,7 +155,8 @@
                                     <td class="fw-semibold">
                                         {{ $post->title }}
                                         <div class="mt-1 small text-muted">
-                                            <a href="{{ route('posts.edit', $post->id) }}" class="me-3 text-warning" onclick="return confirm('Are you sure you want to edit this post?')">
+                                            <a href="{{ route('posts.edit', $post->id) }}" class="me-3 text-warning"
+                                                onclick="return confirm('Are you sure you want to edit this post?')">
                                                 <i class="far fa-edit me-1"></i><span class="small text">Edit</span>
                                             </a>
                                             <form action="{{ route('posts.destroy', $post->id) }}" method="POST"
@@ -193,7 +197,12 @@
                                             </span>
                                             {{-- <div class="text-center"> <span class="badge @if ($post->status === 'published') {{ 'bg-primary' }} @elseif ($post->status === 'scheduled'){{ 'bg-success' }} @elseif ($post->status === 'draft') {{ 'bg-danger' }} @else {{ 'bg-warning' }} @endif ">{!! $post->status === 'scheduled' ? '<i class="fas fa-clock"></i>' . $post->status : $post->status !!}</span> --}}
                                         </div>
-                                        <div class="small text-muted mt-1">{{ $post->published_at }}</div>
+                                        <div class="small text-muted mt-1">
+                                            <small>
+                                                <i class="fas fa-history"></i>
+                                                {{ Carbon::parse($post->published_at)->diffForHumans() }}
+                                            </small>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach
