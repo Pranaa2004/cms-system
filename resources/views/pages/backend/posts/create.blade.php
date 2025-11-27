@@ -347,20 +347,42 @@
                                                             $('#previewImage').croppie('destroy');
                                                         }
 
-                                                        cropper = $('#previewImage').croppie({
-                                                            url: e.target
-                                                                .result, // e.target.result contains the data URL representing the image
+                                                        var el = document.getElementById('previewImage');
+                                                        var vanilla = new Croppie(el, {
                                                             viewport: {
                                                                 width: 500,
-                                                                height: 250,
-                                                                type: 'square'
+                                                                height: 250
                                                             },
                                                             boundary: {
                                                                 width: 300,
                                                                 height: 300
-                                                            }
-
+                                                            },
+                                                            showZoomer: true,
+                                                            enableOrientation: true
                                                         });
+                                                        vanilla.bind({
+                                                            url: e.target,
+                                                            orientation: 4
+                                                        });
+                                                        //on button click
+                                                        // vanilla.result('blob').then(function(blob) {
+                                                        //     // do something with cropped blob
+                                                        // });
+
+                                                        // cropper = $('#previewImage').croppie({
+                                                        //     url: e.target
+                                                        //         .result, // e.target.result contains the data URL representing the image
+                                                        //     viewport: {
+                                                        //         width: 500,
+                                                        //         height: 250,
+                                                        //         type: 'square'
+                                                        //     },
+                                                        //     boundary: {
+                                                        //         width: 300,
+                                                        //         height: 300
+                                                        //     }
+
+                                                        // });
 
                                                     }
                                                     reader.readAsDataURL(this.files[0]);
