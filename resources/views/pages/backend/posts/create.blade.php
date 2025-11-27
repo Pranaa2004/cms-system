@@ -293,7 +293,7 @@
                                             <div class="modal-body" id="modalBody">
                                                 {{-- Croping Image Here --}}
                                                 <div class="" id="selectedImgEdit"></div>
-
+                                                <img src="" alt="" class="" id="previewImage">
                                             </div>
                                             <div class="modal-footer">
                                                 <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
@@ -328,39 +328,77 @@
                                 @push('js')
                                     <script>
                                         $(document).ready(function() {
+
                                             $('#imageCropModal').modal('hide');
+
+                                            let cropper = null;
+
                                             $('#uploadImage').on('change', function() {
                                                 if (this.files && this.files.length > 0) {
-                                                    var file = this.files[0].name; // Get the first selected file
-                                                    // for (var i = 0; i < this.files.length; i++) {
-                                                    //     var file = this.files[i];
-                                                    //     console.log("File " + i + ": " + file.name);
-                                                    // }
-                                                    $('#imageCropModal').modal('show');
-                                                    // var reader = new FileReader();
+                                                    var reader = new FileReader();
+                                                    reader.onload = function(e) { // Set the onload event handler for the FileReader
+                                                        $('#imageCropModal').modal('show');
 
-                                                    // // Set the onload event handler for the FileReader
-                                                    // reader.onload = function(e) {
-                                                    //     // e.target.result contains the data URL representing the image
-                                                    //     var imageDataUrl = e.target.result;
-                                                    //     $('#previewImage').attr('src', imageDataUrl);
-                                                    $('#selectedImgEdit').croppie({
-                                                        url: file,
-                                                        viewport: {
-                                                            width: 200,
-                                                            height: 200,
-                                                            type: 'squre'
-                                                        },
-                                                        boundary: {
-                                                            width: 300,
-                                                            height: 300
+                                                        var imageDataUrl = e.target.result;
+                                                        $('#previewImage').attr('src', imageDataUrl);
+
+                                                        //Check already have any4 cropped image in there
+                                                        if (cropper !== null) {
+                                                            $('#previewImage').croppie('destroy');
                                                         }
-                                                    });
 
+                                                        cropper = $('#previewImage').croppie({
+                                                            url: e.target
+                                                                .result, // e.target.result contains the data URL representing the image
+                                                            viewport: {
+                                                                width: 500,
+                                                                height: 250,
+                                                                type: 'square'
+                                                            },
+                                                            boundary: {
+                                                                width: 300,
+                                                                height: 300
+                                                            }
+
+                                                        });
+
+                                                    }
+                                                    reader.readAsDataURL(this.files[0]);
                                                 }
-                                            })
-                                        })
+                                            });
+                                        });
                                     </script>
+                                    {{-- <script>
+                                        let cropper = null;
+                                        $('#uploadImage').on('change', function() {
+                                            if (!this.files || !this.files[0]) return;
+
+                                            let reader = new FileReader();
+
+                                            reader.onload = function(e) {
+                                                $('#imageCropModal').modal('show');
+
+                                                if (cropper !== null) {
+                                                    $('#selectedImgEdit').croppie('destroy');
+                                                }
+
+                                                cropper = $('#selectedImgEdit').croppie({
+                                                    url: e.target.result,
+                                                    viewport: {
+                                                        width: 200,
+                                                        height: 200,
+                                                        type: 'square'
+                                                    },
+                                                    boundary: {
+                                                        width: 300,
+                                                        height: 300
+                                                    }
+                                                });
+                                            };
+
+                                            reader.readAsDataURL(this.files[0]);
+                                        });
+                                    </script> --}}
                                 @endpush
                                 <div class="col-md-6">
                                     <label class="form-label fw-semibold">Expire At</label>
@@ -382,6 +420,11 @@
         </div>
     </div>
 
-
+    {{-- <script>
+        for (var i = 0; i < this.files.length; i++) {
+            var file = this.files[i];
+            console.log("File " + i + ": " + file.name);
+        }
+    </script> --}}
 
 @endsection

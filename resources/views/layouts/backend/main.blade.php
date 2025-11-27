@@ -15,9 +15,12 @@
 
         <!-- Custom CSS -->
         @stack('css')
-        <link rel="stylesheet" href="croppie.css" />
-        <script src="croppie.js"></script>
+        {{-- Bootstrap Icons Css here --}}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        {{--  End Bootstrap  --}}
+        {{-- Juery js and Croppie Css, Js --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" />
+        {{-- End Jquery and Croppie --}}
         @vite(['resources/backend/assets/extra-libs/c3/c3.min.css', 'resources/backend/assets/libs/chartist/dist/chartist.min.css', 'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css', 'resources/backend/dist/css/style.min.css'])
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> --}}
         <!-- Custom CSS -->
@@ -92,7 +95,7 @@
         <!-- All Jquery -->
         <!-- ============================================================== -->
         @include('layouts.backend.includes.scripts')
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
         @stack('js')
 
