@@ -1,4 +1,18 @@
 {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script> --}}
+
+
+<!-- Croppie CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" />
+
+<!-- jQuery (only once, either via Vite or CDN) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Other Vite bundled scripts -->
 @vite([
 
     'resources/backend/assets/libs/jquery/dist/jquery.min.js',
@@ -25,30 +39,6 @@
     // 'resources/',
     // 'resources/',
     ])
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script> --}}
-
-
-<!-- Croppie CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" />
-
-<!-- jQuery (only once, either via Vite or CDN) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Other Vite bundled scripts -->
-@vite([
-    'resources/backend/dist/js/app-style-switcher.js',
-    'resources/backend/dist/js/feather.min.js',
-    'resources/backend/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js',
-    'resources/backend/dist/js/sidebarmenu.js',
-    'resources/backend/dist/js/custom.min.js',
-    'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js',
-    'resources/backend/assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js',
-])
 
 <!-- Croppie JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
