@@ -1,5 +1,6 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/{version}/croppie.min.js"></script>
 @vite([
 
     'resources/frontend/assets/js/jquery.min.js',
@@ -16,3 +17,12 @@
     'resources/frontend/js/app.js',
 
 ]);
+
+
+<script>
+    $(document).ready(function() {
+        $('#loginPouup').on('shown.bs.modal', function () {
+            $('#email').focus();
+        });
+    });
+</script>

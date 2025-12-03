@@ -1766,7 +1766,7 @@
 
 @endsection
 
-@push('script')
+{{-- @push('script')
     <script>
         $(document).ready(function() {
             alert("Hii there jquery ready !!");
@@ -1774,4 +1774,4 @@
             // });
         });
     </script>
-@endpush
+@endpush --}}

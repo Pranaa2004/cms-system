@@ -104,7 +104,7 @@
                         <label>Your Email</label>
                     </div>
                     <div class="account-form-input">
-                        <input type="email" placeholder="Enter Your Email" name="email">
+                        <input type="email" placeholder="Enter Your Email" name="email" id="email">
                         @error('email')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror

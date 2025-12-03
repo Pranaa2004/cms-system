@@ -10,7 +10,7 @@
         <link rel="shortcut icon" type="image/x-icon"
             href="{{ Vite::asset('resources/frontend/assets/img/favicon.png') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/{version}/croppie.min.css">
-        <!-- Place favicon.ico in the root directory -->
+        <!-- Place favicon.ico in the root director y -->
 
         <!-- CSS here -->
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
