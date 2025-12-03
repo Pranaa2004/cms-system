@@ -138,7 +138,7 @@
         <div class="card shadow-sm border-0 rounded-3">
             <div class="card-body p-4">
                 <div class="table-responsive">
-                    <table id="zero_config" class="table table-hover align-middle">
+                    <table  class="table table-hover align-middle" id="datatable">
                         <thead class="table-light">
                             <tr>
                                 <th>Title</th>
@@ -223,3 +223,16 @@
         </div>
     </div>
 @endsection
+
+@push('js')
+    <script>
+        $(document).ready(function() {
+            $('#datatable').DataTable({
+                paging: true,
+                searching: true,
+                ordering: true,
+                info: true
+            });
+        });
+    </script>
+@endpush
