@@ -79,10 +79,14 @@
 
     <!-- sign in area end -->
 
+    {{-- ----------------------------------------------------------------------------- --}}
+
+    <!-- sign in area start -->
+
     <div class="modal-body">
         <div class="account-top">
             <div class="account-top-link">
-                <a href="{{ route('register_show') }}">Sign Up</a>
+                <a href="#" id="btn-signup" data-target-content="login-body">Sign Up</a>
             </div>
             <div class="account-top-current">
                 <span>Sign In</span>
@@ -94,49 +98,95 @@
         @endif
 
         <div class="account-main">
-            <h3 class="account-title">Sign in to Your Account 👋</h3>
-
-            <form action="{{ route('login_store') }}" class="account-form" method="POST">
-                @csrf
-
-                <div class="account-form-item mb-20">
-                    <div class="account-form-label">
-                        <label>Your Email</label>
-                    </div>
-                    <div class="account-form-input">
-                        <input type="email" placeholder="Enter Your Email" name="email" id="email">
-                        @error('email')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="account-form-item mb-15">
-                    <div class="account-form-label">
-                        <label>Your Password</label>
-                        <a href="{{ route('password.request') }}">Forgot Password ?</a>
+            <div id="login-body" class="modal-content-section">
+                <h3 class="account-title">Sign in to Your Account 👋</h3>
+                <form action="{{ route('login_store') }}" class="account-form" method="POST">
+                    @csrf
+                    <div class="account-form-item mb-20">
+                        <div class="account-form-label">
+                            <label>Your Email</label>
+                        </div>
+                        <div class="account-form-input">
+                            <input type="email" placeholder="Enter Your Email" name="email" id="email">
+                            @error('email')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
                     </div>
 
-                    <div class="account-form-input account-form-input-pass">
-                        <input type="password" placeholder="*********" name="password">
-                        <span><i class="fa-thin fa-eye"></i></span>
-                        @error('password')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
+                    <div class="account-form-item mb-15">
+                        <div class="account-form-label">
+                            <label>Your Password</label>
+                            <a href="{{ route('password.request') }}"><span class="text-primary"><small>Forgot Password
+                                        ?</small></span></a>
+                        </div>
+
+                        <div class="account-form-input account-form-input-pass">
+                            <input type="password" placeholder="*********" name="password">
+                            <span><i class="fa-thin fa-eye"></i></span>
+                            @error('password')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
                     </div>
-                </div>
 
-                <div class="account-form-condition">
-                    <label class="condition_label">Remember Me
-                        <input type="checkbox" name="remember">
-                        <span class="check_mark"></span>
-                    </label>
-                </div>
+                    <div class="account-form-condition">
+                        <label class="condition_label">Remember Me
+                            <input type="checkbox" name="remember">
+                            <span class="check_mark"></span>
+                        </label>
+                    </div>
 
-                <div class="account-form-button">
-                    <button type="submit" class="account-btn">Sign In</button>
-                </div>
-            </form>
+                    <div class="account-form-button">
+                        <button type="submit" class="account-btn">Sign In</button>
+                    </div>
+                </form>
+            </div>
+            <div id="register-body" class="modal-content-section" style="display: none">
+                <h3 class="account-title">Sign in to Your Account </h3>
+                <form action="{{ route('register_store') }}" class="account-form" method="POST">
+                    @csrf
+                    <div class="account-form-item mb-20">
+                        <div class="account-form-label">
+                            <label>First Name</label>
+                        </div>
+                        <div class="account-form-input">
+                            <input type="text" placeholder="First Name" name="name">
+                        </div>
+                    </div>
+
+                    <div class="account-form-item mb-20">
+                        <div class="account-form-label">
+                            <label>Your Email</label>
+                        </div>
+                        <div class="account-form-input">
+                            <input type="email" placeholder="Enter Your Email" name="email">
+                            @error('email')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="account-form-item mb-15">
+                        <div class="account-form-label">
+                            <label>Your Password</label>
+
+                        </div>
+                        <div class="account-form-input account-form-input-pass">
+                            <input type="text" placeholder="*********" name="password">
+                            <span><i class="fa-thin fa-eye"></i></span>
+                        </div>
+                    </div>
+                    <div class="account-form-condition">
+                        <label class="condition_label">Remember Me
+                            <input type="checkbox">
+                            <span class="check_mark"></span>
+                        </label>
+                    </div>
+                    <div class="account-form-button">
+                        <button type="submit" class="account-btn">Sign Up</button>
+                    </div>
+                </form>
+            </div>
 
             <div class="account-break"><span>OR</span></div>
 
@@ -180,11 +230,35 @@
                     toggle.classList.add("fa-eye");
                 }
             });
+
+
+            //------------------------------------------------------
+
+                // Function to switch content within the modal
+                function switchModalContent(targetContentId) {
+                    $('.modal-content-section').hide(); // Hide all content sections
+                    $('#' + targetContentId).show(); // Show the target content section
+                }
+
+                // Event listener for buttons that trigger content switching
+                $('#btn-signup').on('click', '.switch-content', function() {
+                    const targetContent = $(this).data('target-content');
+                    switchModalContent(targetContent);
+                });
+
+                // Optional: Reset content to default when modal is hidden
+                $('#myDynamicModal').on('hidden.bs.modal', function() {
+                    switchModalContent('register-body'); // Show default content (Option 1)
+                });
+
         });
     </script>
 
 
 
+    <!-- sign in area end -->
+
+    {{-- ---------------------------------------------------------------------- --}}
 
     {{-- <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
 
