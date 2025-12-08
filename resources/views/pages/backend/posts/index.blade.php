@@ -138,7 +138,7 @@
         <div class="card shadow-sm border-0 rounded-3">
             <div class="card-body p-4">
                 <div class="table-responsive">
-                    <table  class="table table-hover align-middle" id="datatable">
+                    <table class="table table-hover align-middle" id="datatable">
                         <thead class="table-light">
                             <tr>
                                 <th>Title</th>
@@ -156,8 +156,20 @@
                                         {{ $post->title }}
                                         <div class="mt-1 small text-muted">
                                             <a href="{{ route('posts.edit', $post->id) }}" class="me-3 text-warning"
-                                                onclick="return confirm('Are you sure you want to edit this post?')">
+                                                onclick="return confirm('Are you sure you want to edit this post?')"
+                                                data-bs-toggle="modal" data-bs-target="#editPost">
                                                 <i class="far fa-edit me-1"></i><span class="small text">Edit</span>
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                    data-bs-keyboard="false" tabindex="-1"
+                                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-body">
+                                                                @include('pages.backend.posts.edit')
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </a>
                                             <form action="{{ route('posts.destroy', $post->id) }}" method="POST"
                                                 class="d-inline">

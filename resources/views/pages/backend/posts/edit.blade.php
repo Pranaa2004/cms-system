@@ -1,4 +1,4 @@
-@extends('layouts.backend.main')
+{{-- @extends('layouts.backend.main')
 
 @section('title', 'Edit Post')
 
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -51,10 +51,10 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div id="modules">
-                                                @foreach ($categories as $category)
-                                                    <p class="drag"><a class="btn btn-default">{{ $category->name }}</a>
-                                                    </p>
-                                                @endforeach
+                                                    {{-- @foreach ($categories as $category)
+                                                        <p class="drag"><a class="btn btn-default">{{ $category->name }}</a>
+                                                        </p>
+                                                    @endforeach --}}
                                             </div>
                                         </div>
 
@@ -69,13 +69,13 @@
 
                             <div class="mb-3">
                                 <label for="tags" class="form-label">Tags</label>
-                                @foreach ($tags as $tag)
+                                {{-- @foreach ($tags as $tag)
                                     <div class="form-check">
                                         <input type="checkbox" name="tags[]" id="{{ $tag->name }}"
                                             class="form-check-input" value="{{ $tag->id }}">
                                         <label for="{{ $tag->name }}" class="form-check-labe">{{ $tag->name }}</label>
                                     </div>
-                                @endforeach
+                                @endforeach --}}
                             </div>
 
                             <div class="mb-3">
@@ -120,5 +120,5 @@
             </div>
         </div>
     </div>
-
-@endsection
+{{--
+@endsection --}}
