@@ -39,18 +39,14 @@
 
     <div class="mb-3">
         <label for="name" class="form-label fw-semibold">Name</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-        @error('name')
-            <div class="text-danger small mt-1">{{ $message }}</div>
-        @enderror
+        <input type="text" class="form-control" id="name" name="name">
+        <x-error-alert err_field='name' />
     </div>
 
     <div class="mb-3">
         <label for="slug" class="form-label fw-semibold">Slug</label>
-        <input type="text" class="form-control" id="slug" name="slug" required>
-        @error('slug')
-            <div class="text-danger small mt-1">{{ $message }}</div>
-        @enderror
+        <input type="text" class="form-control" id="slug" name="slug">
+        <x-error-alert err_field='slug' />
     </div>
 
     <div class="mb-3">
@@ -66,9 +62,7 @@
     <div class="mb-3">
         <label for="description" class="form-label fw-semibold">Description</label>
         <textarea class="form-control" id="description" name="description" rows="4"></textarea>
-        @error('description')
-            <div class="text-danger small mt-1">{{ $message }}</div>
-        @enderror
+        <x-error-alert err_field='description' />
     </div>
 
     <button type="submit" class="btn btn-primary w-100">

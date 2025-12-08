@@ -8,13 +8,13 @@ use Illuminate\View\Component;
 
 class ErrorAlert extends Component
 {
-    public $colum_attri ='';
+    public $err_field = '';
     /**
      * Create a new component instance.
      */
-    public function __construct($colum_attri)
+    public function __construct($err_field = null)
     {
-        $this->colum_attri = $colum_attri;
+        $this->err_field = $err_field;
     }
 
     /**

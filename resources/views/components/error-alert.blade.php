@@ -1,6 +1,3 @@
-<div>
-
-    @error('{{ $colum_attri }}')
-        <small class="alert-danger"> {{ $message }}</small>
-    @enderror
-</div>
+@error($err_field)
+    <div class="text-danger small mt-1">{{ $message }}</div>
+@enderror
