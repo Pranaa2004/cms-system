@@ -46,14 +46,18 @@ export default defineConfig({
                 'resources/backend/js/app.js',
                 // "resources/backend/assets/libs/jquery/dist/jquery.min.js",
                 "resources/backend/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js",
-                // <!-- apps -->
+
                 // <!-- apps -->
                 "resources/backend/dist/js/app-style-switcher.js",
                 "resources/backend/dist/js/feather.min.js",
                 "resources/backend/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js",
                 "resources/backend/dist/js/sidebarmenu.js",
+
+
                 // <!--Custom JavaScript -->
                 "resources/backend/dist/js/custom.min.js",
+
+
                 // <!--This page JavaScript -->
                 "resources/backend/assets/extra-libs/c3/d3.min.js",
                 "resources/backend/assets/extra-libs/c3/c3.min.js",

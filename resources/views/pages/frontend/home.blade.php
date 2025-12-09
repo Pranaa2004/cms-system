@@ -353,7 +353,7 @@
                                             </p>
                                             <div class="h2_course-content-author">
                                                 <div class="h2_course-author-img">
-                                                    <img src="{{ Vite::asset('assets/img/course/2/author-1.jpg') }}"
+                                                    <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-1.jpg') }}"
                                                         alt="">
                                                 </div>
                                                 <div class="h2_course-author-info">
@@ -382,7 +382,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/1.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/1.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -412,7 +412,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-1.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-1.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Eric Wid get</a></span>
@@ -440,7 +440,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/1.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/1.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -470,7 +470,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-1.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-1.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Eric Wid get</a></span>
@@ -492,7 +492,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/2.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/2.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -522,7 +522,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-2.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-2.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Hanson Deck</a></span>
@@ -544,7 +544,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/3.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/3.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -574,7 +574,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-3.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-3.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Max Conversion</a></span>
@@ -596,7 +596,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/4.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/4.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -626,7 +626,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-4.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-4.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Ravi O'Leigh</a></span>
@@ -648,7 +648,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/5.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/5.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -678,7 +678,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-5.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-5.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Valentino Morose</a></span>
@@ -700,7 +700,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/6.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/6.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -730,7 +730,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-6.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-6.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Dylan Meringue</a></span>
@@ -757,7 +757,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/1.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/1.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -787,7 +787,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-1.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-1.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Eric Wid get</a></span>
@@ -809,7 +809,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/2.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/2.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -839,7 +839,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-2.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-2.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Hanson Deck</a></span>
@@ -861,7 +861,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/3.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/3.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -891,7 +891,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-3.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-3.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Max Conversion</a></span>
@@ -913,7 +913,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/4.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/4.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -943,7 +943,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-4.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-4.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Ravi O'Leigh</a></span>
@@ -965,7 +965,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/5.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/5.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -996,7 +996,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-5.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-5.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Valentino Morose</a></span>
@@ -1018,7 +1018,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/6.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/6.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -1048,7 +1048,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-6.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-6.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Dylan Meringue</a></span>
@@ -1075,7 +1075,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/1.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/1.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -1105,7 +1105,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-1.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-1.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Eric Wid get</a></span>
@@ -1126,7 +1126,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/2.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/2.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -1156,7 +1156,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-2.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-2.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Hanson Deck</a></span>
@@ -1178,7 +1178,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/3.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/3.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -1208,7 +1208,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-3.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-3.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Max Conversion</a></span>
@@ -1230,7 +1230,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/4.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/4.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -1260,7 +1260,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-4.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-4.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Ravi O'Leigh</a></span>
@@ -1282,7 +1282,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/5.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/5.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -1313,7 +1313,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-5.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-5.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Valentino Morose</a></span>
@@ -1335,7 +1335,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="h2_course-item mb-30">
                                     <div class="h2_course-item-img">
-                                        <a href="course-details.html"><img src="assets/img/course/2/6.jpg"
+                                        <a href="course-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/course/2/6.jpg') }}"
                                                 alt=""></a>
                                     </div>
                                     <div class="h2_course-content">
@@ -1365,7 +1365,7 @@
                                         </p>
                                         <div class="h2_course-content-author">
                                             <div class="h2_course-author-img">
-                                                <img src="assets/img/course/2/author-6.jpg" alt="">
+                                                <img src="{{ Vite::asset('resources/frontend/assets/img/course/2/author-6.jpg') }}" alt="">
                                             </div>
                                             <div class="h2_course-author-info">
                                                 <span>By <a href="#">Dylan Meringue</a></span>
@@ -1394,17 +1394,17 @@
 
     <!-- about area start -->
     <section class="h2_about-area pt-120 pb-70">
-        <img src="assets/img/about/2/shape-5.png" alt="" class="h2_about-top-shape">
+        <img src="{{ Vite::asset('resources/frontend/assets/img/about/2/shape-5.png') }}" alt="" class="h2_about-top-shape">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="h2_about-img mb-50">
                         <div class="h2_about-inner-img">
-                            <img src="assets/img/about/2/1.jpg" alt="" class="h2_inner-img">
-                            <img src="assets/img/about/2/shape-4.png" alt="" class="h2_inner-img-shape">
+                            <img src="{{ Vite::asset('resources/frontend/assets/img/about/2/1.jpg') }}" alt="" class="h2_inner-img">
+                            <img src="{{ Vite::asset('resources/frontend/assets/img/about/2/shape-4.png') }}" alt="" class="h2_inner-img-shape">
                         </div>
                         <div class="h2_about-inner-img2">
-                            <img src="assets/img/about/2/2.jpg" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/assets/img/about/2/2.jpg') }}" alt="">
                             <div class="h2_about-img-button"><a href="https://www.youtube.com/watch?v=dMlASgogxo4"
                                     class="popup-video"><i class="fa-solid fa-play"></i></a></div>
                         </div>
@@ -1413,16 +1413,16 @@
                             <h5>Congratulations</h5>
                         </div>
                         <div class="h2_about-img-shape d-none d-sm-block">
-                            <img class="h2_about-shape-1" src="assets/img/about/2/shape-1.png" alt="">
-                            <img class="h2_about-shape-2" src="assets/img/about/2/shape-2.png" alt="">
-                            <img class="h2_about-shape-3" src="assets/img/about/2/shape-3.png" alt="">
+                            <img class="h2_about-shape-1" src="{{ Vite::asset('resources/frontend/assets/img/about/2/shape-1.png') }}" alt="">
+                            <img class="h2_about-shape-2" src="{{ Vite::asset('resources/frontend/assets/img/about/2/shape-2.png') }}" alt="">
+                            <img class="h2_about-shape-3" src="{{ Vite::asset('resources/frontend/assets/img/about/2/shape-3.png') }}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-10 mb-50">
                     <div class="section-area-2 mb-35">
                         <h2 class="section-title mb-20">Education Instructors Play Crucial Role in Shaping The Lives
-                            of Their <span>Students <img src="assets/img/banner/2/line.png" alt=""></span>
+                            of Their <span>Students <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/line.png') }}" alt=""></span>
                         </h2>
                         <p class="section-text">
                             Maecenas Felis Tellus, dictum sed fermentum vel, various condiment dolour. Donec aliquot,
@@ -1448,7 +1448,7 @@
                         <div class="h2_cta-content">
                             <div class="section-area-2 small-section-area-2 text-center">
                                 <h2 class="section-title mb-30">Are You Ready To Start <br>
-                                    Your <span>Course? <img src="assets/img/banner/2/line.png" alt=""></span>
+                                    Your <span>Course? <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/line.png') }}" alt=""></span>
                                 </h2>
                             </div>
                             <form action="#" class="h2_cta-content-form">
@@ -1471,7 +1471,7 @@
                     <div class="section-area-2 mb-50 text-center">
                         <h2 class="section-title mb-30">Examining the Costs and
                             Benefits of
-                            <span>Education <img src="assets/img/banner/2/line.png" alt=""></span>
+                            <span>Education <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/line.png') }}" alt=""></span>
                         </h2>
                     </div>
                 </div>
@@ -1601,7 +1601,7 @@
                     <div class="h2_teacher-section bg-default" data-background="assets/img/teacher/2/bg.jpg">
                         <div class="section-area-2">
                             <h2 class="section-title mb-30">Our Most <br> Experience
-                                <span>Professor <img src="assets/img/banner/2/line.png" alt=""></span>
+                                <span>Professor <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/line.png') }}" alt=""></span>
                             </h2>
                         </div>
                         <div class="h2_teacher-button">
@@ -1613,7 +1613,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="h2_teacher-item mb-30">
                         <div class="h2_teacher-img">
-                            <img src="assets/img/teacher/2/1.jpg" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/assets/img/teacher/2/1.jpg') }}" alt="">
                         </div>
                         <div class="h2_teacher-content">
                             <h5 class="h2_teacher-content-title">
@@ -1626,7 +1626,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="h2_teacher-item mb-30">
                         <div class="h2_teacher-img">
-                            <img src="assets/img/teacher/2/2.jpg" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/assets/img/teacher/2/2.jpg') }}" alt="">
                         </div>
                         <div class="h2_teacher-content">
                             <h5 class="h2_teacher-content-title">
@@ -1639,7 +1639,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="h2_teacher-item mb-30">
                         <div class="h2_teacher-img">
-                            <img src="assets/img/teacher/2/3.jpg" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/assets/img/teacher/2/3.jpg') }}" alt="">
                         </div>
                         <div class="h2_teacher-content">
                             <h5 class="h2_teacher-content-title">
@@ -1652,7 +1652,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="h2_teacher-item mb-30">
                         <div class="h2_teacher-img">
-                            <img src="assets/img/teacher/2/4.jpg" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/assets/img/teacher/2/4.jpg') }}" alt="">
                         </div>
                         <div class="h2_teacher-content">
                             <h5 class="h2_teacher-content-title">
@@ -1665,7 +1665,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="h2_teacher-item mb-30">
                         <div class="h2_teacher-img">
-                            <img src="assets/img/teacher/2/5.jpg" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/assets/img/teacher/2/5.jpg') }}" alt="">
                         </div>
                         <div class="h2_teacher-content">
                             <h5 class="h2_teacher-content-title">
@@ -1678,7 +1678,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="h2_teacher-item mb-30">
                         <div class="h2_teacher-img">
-                            <img src="assets/img/teacher/2/6.jpg" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/assets/img/teacher/2/6.jpg') }}" alt="">
                         </div>
                         <div class="h2_teacher-content">
                             <h5 class="h2_teacher-content-title">
@@ -1700,7 +1700,7 @@
                 <div class="col-xl-6 col-lg-8 col-md-10">
                     <div class="section-area-2 mb-50 text-center h2_blog-section-area">
                         <h2 class="section-title mb-30">Our Latest
-                            <span>Articles <img src="assets/img/banner/2/line.png" alt=""></span>
+                            <span>Articles <img src="{{ Vite::asset('resources/frontend/assets/img/banner/2/line.png') }}" alt=""></span>
                         </h2>
                         <p class="section-text">
                             Through a combination of lectures, readings, discussions, students will gain a solid
@@ -1713,7 +1713,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="h2_blog-item mb-30">
                         <div class="h2_blog-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/2/blog-1.jpg" alt=""></a>
+                            <a href="blog-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/blog/2/blog-1.jpg') }}" alt=""></a>
                         </div>
                         <div class="h2_blog-content">
                             <div class="h2_blog-content-meta">
@@ -1729,7 +1729,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="h2_blog-item mb-30">
                         <div class="h2_blog-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/2/blog-2.jpg" alt=""></a>
+                            <a href="blog-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/blog/2/blog-2.jpg') }}" alt=""></a>
                         </div>
                         <div class="h2_blog-content">
                             <div class="h2_blog-content-meta">
@@ -1745,7 +1745,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="h2_blog-item mb-30">
                         <div class="h2_blog-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/2/blog-3.jpg" alt=""></a>
+                            <a href="blog-details.html"><img src="{{ Vite::asset('resources/frontend/assets/img/blog/2/blog-3.jpg') }}" alt=""></a>
                         </div>
                         <div class="h2_blog-content">
                             <div class="h2_blog-content-meta">
@@ -1762,7 +1762,7 @@
         </div>
     </section>
     <!-- blog area end -->
-    <button id="check">Test Mee</button>
+
 
 @endsection
 
