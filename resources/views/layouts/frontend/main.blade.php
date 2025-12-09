@@ -1,29 +1,42 @@
-<!Doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>@yield('title')</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon"
-            href="{{ Vite::asset('resources/frontend/assets/img/favicon.png') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/{version}/croppie.min.css">
-        <!-- Place favicon.ico in the root director y -->
+        <link rel="shortcut icon" type="image/x-icon" href="">
 
-        <!-- CSS here -->
-        {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> --}}
-        @vite(['resources/frontend/assets/css/bootstrap.min.css', 'resources/frontend/assets/css/animate.min.css', 'resources/frontend/assets/css/magnific-popup.css', 'resources/frontend/assets/css/fontawesome-all.min.css', 'resources/frontend/assets/css/odometer.min.css', 'resources/frontend/assets/css/nice-select.css', 'resources/frontend/assets/css/meanmenu.css', 'resources/frontend/assets/css/swiper-bundle.min.css', 'resources/frontend/assets/css/main.css']);
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Croppie  -->
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@100;600;800&display=swap"
+            rel="stylesheet">
+
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        @vite(['resources/frontend/lib/animate/animate.min.css', 'resources/frontend/lib/owlcarousel/assets/owl.carousel.min.css', 'resources/frontend/css/bootstrap.min.css', 'resources/frontend/css/style.css'])
+
+        @stack('css')
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/{version}/croppie.min.css">
+
     </head>
 
     <body>
-        @if (!Route::is('posts.create'))
+        {{-- @if (!Route::is('posts.create')) --}}
             <!-- sidebar-information-area-start -->
-            @include('layouts.frontend.includes.sidebar')
+            {{-- @include('layouts.frontend.includes.sidebar') --}}
             <!-- sidebar-information-area-end -->
-        @endif
+        {{-- @endif --}}
 
 
         <!-- header area start -->
@@ -55,30 +68,7 @@
             @endif
 
             @yield('content')
-            <!-- cta area start -->
-            <div class="cta-area">
-                <div class="container">
-                    <div class="cta-wrapper">
-                        <div class="row align-items-center">
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="cta-content mb-30 mb-lg-0">
-                                    <span class="cta-subtitle">Download App</span>
-                                    <h2 class="cta-title">Are you Ready to Start your
-                                        Online Course?</h2>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="cta-button">
-                                    <a href="#" class="cta-btn"><i class="fa-brands fa-apple"></i>Apple Store</a>
-                                    <a href="#" class="cta-btn"><i class="fa-brands fa-google-play"></i>Play
-                                        Store</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- cta area end -->
+
         </main>
         <!-- footer area start -->
         @include('layouts.frontend.includes.footer')

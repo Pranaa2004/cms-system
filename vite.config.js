@@ -9,15 +9,16 @@ export default defineConfig({
                 // <===================================== CSS ===============================>
 
                 // <---------- FrontEnd  CSS -------------->
-                'resources/frontend/assets/css/bootstrap.min.css',
-                'resources/frontend/assets/css/animate.min.css',
-                'resources/frontend/assets/css/magnific-popup.css',
-                'resources/frontend/assets/css/fontawesome-all.min.css',
-                'resources/frontend/assets/css/odometer.min.css',
-                'resources/frontend/assets/css/nice-select.css',
-                'resources/frontend/assets/css/meanmenu.css',
-                'resources/frontend/assets/css/swiper-bundle.min.css',
-                'resources/frontend/assets/css/main.css',
+
+                //<!-- Libraries Stylesheet -->
+                'resources/frontend/lib/animate/animate.min.css',
+                'resources/frontend/lib/owlcarousel/assets/owl.carousel.min.css',
+
+                //<!-- Customized Bootstrap Stylesheet -->
+                'resources/frontend/css/bootstrap.min.css',
+
+                //<!-- Template Stylesheet -->
+                'resources/frontend/css/style.css',
 
 
                 //  <---------- BackEnd  CSS -------------->
@@ -29,18 +30,10 @@ export default defineConfig({
                 //<------------------------------------------------------------------------- JS ---------------------------------------------------------->
 
                 // <---------- FrontEnd  JS -------------->
-                'resources/frontend/js/app.js',
-                'resources/frontend/assets/js/jquery.min.js',
-                'resources/frontend/assets/js/bootstrap.bundle.min.js',
-                'resources/frontend/assets/js/swiper-bundle.min.js',
-                'resources/frontend/assets/js/jquery.meanmenu.min.js',
-                'resources/frontend/assets/js/wow.min.js',
-                'resources/frontend/assets/js/jquery.nice-select.min.js',
-                'resources/frontend/assets/js/jquery.scrollUp.min.js',
-                'resources/frontend/assets/js/jquery.magnific-popup.min.js',
-                'resources/frontend/assets/js/odometer.min.js',
-                'resources/frontend/assets/js/appear.min.js',
-                'resources/frontend/assets/js/main.js',
+                'resources/frontend/lib/easing/easing.min.js',
+                'resources/frontend/lib/waypoints/waypoints.min.js',
+                'resources/frontend/lib/owlcarousel/owl.carousel.min.js',
+                'resources/frontend/js/main.js',
 
                 //  <---------- BackEnd  JS ------------>
                 'resources/backend/js/app.js',

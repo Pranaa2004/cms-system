@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- banner area start -->
-    <section class="h2_banner-area">
+    {{-- <section class="h2_banner-area">
         <div class="h2_single-banner">
             <div class="container">
                 <div class="row align-items-center">
@@ -84,11 +84,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- banner area end -->
 
     <!-- counter area start -->
-    <div class="counter-area pt-120 pb-110">
+    {{-- <div class="counter-area pt-120 pb-110">
         <div class="container">
             <div class="counter-wrap">
                 <div class="row g-0">
@@ -151,11 +151,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- counter area end -->
 
     <!-- cart category area start -->
-    <section class="h2_category-area pb-100">
+    {{-- <section class="h2_category-area pb-100">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -265,13 +265,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- cart category area end -->
 
     <!-- Blog Post area start -->
-    <section class="h2_course-area pt-110 pb-120">
-        <div class="container">
-            <div class="row align-items-end">
+    {{-- <section class="h2_course-area pt-110 pb-120">
+        <div class="container"> --}}
+            {{-- <div class="row align-items-end">
                 <div class="col-xl-5 col-lg-6">
                     <div class="section-area-2">
                         <h2 class="section-title mb-50">Browse Our <br> Exclusive <span>Courses <img
@@ -311,8 +311,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="h2_course-wrap">
+            </div> --}}
+            {{-- <div class="h2_course-wrap">
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab" tabindex="0">
@@ -344,10 +344,7 @@
                                             </div>
                                             <h5 class="h2_course-content-title"><a
                                                     href="course-details.html">{{ $post->title }}</a></h5>
-                                            {{-- <div class="h2_course-content-info">
-                                                <span><i class="fa-thin fa-book-blank"></i>23 Lessons</span>
-                                                <span><i class="fa-thin fa-user-group"></i>45 Students</span>
-                                            </div> --}}
+
                                             <p class="h2_course-content-text">
                                                 Through a combination of lectures, readings and discussions students.
                                             </p>
@@ -362,9 +359,7 @@
                                             </div>
                                         </div>
                                         <div class="h2_course-content-bottom">
-                                            {{-- <div class="h2_course-bottom-price">
-                                                <span><del>$140</del>$96.00</span>
-                                            </div> --}}
+
                                             <div class="h2_course-bottom-btn">
                                                 <a href="{{ route('blog-details', $post->id) }}">More Details<i
                                                         class="fa-light fa-arrow-right"></i><i
@@ -1389,11 +1384,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Blog Post area end -->
 
     <!-- about area start -->
-    <section class="h2_about-area pt-120 pb-70">
+    {{-- <section class="h2_about-area pt-120 pb-70">
         <img src="{{ Vite::asset('resources/frontend/assets/img/about/2/shape-5.png') }}" alt="" class="h2_about-top-shape">
         <div class="container">
             <div class="row align-items-center">
@@ -1436,11 +1431,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- about area end -->
 
     <!-- cta 2 area start -->
-    <div class="h2_cta-area">
+    {{-- <div class="h2_cta-area">
         <div class="container">
             <div class="h2_cta-wrap bg-default pt-70 pb-80" data-background="assets/img/cta/2/1.jpg">
                 <div class="row justify-content-center">
@@ -1460,11 +1455,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- cta 2 area end -->
 
     <!-- price area start -->
-    <section class="h2_price-area pt-110 pb-90">
+    {{-- <section class="h2_price-area pt-110 pb-90">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-7 col-md-10">
@@ -1590,11 +1585,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- price area end -->
 
     <!-- teacher area start -->
-    <section class="h2_teacher-area pb-80">
+    {{-- <section class="h2_teacher-area pb-80">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 col-md-12 mb-30">
@@ -1690,11 +1685,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- teacher area end -->
 
     <!-- blog area start -->
-    <section class="h2_blog-area pb-90">
+    {{-- <section class="h2_blog-area pb-90">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8 col-md-10">
@@ -1760,7 +1755,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- blog area end -->
 
 

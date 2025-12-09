@@ -1,86 +1,167 @@
-<footer class="footer-area h2_footer-area">
-    <div class="footer-top pt-240 pb-55">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-xl-3 col-lg-7 col-md-7 col-sm-12">
-                    <div class="footer-widget mb-40">
-                        <div class="footer-logo">
-                            <a href="index.html"><img src="{{ Vite::asset('resources/frontend/assets/img/logo/logo-white.png') }}" alt=""></a>
-                        </div>
-                        <p class="footer-widget-text mb-35">
-                            Through a combination of lectures, readings, discussions, students will gain solid
-                            foundation in educational.
-                        </p>
-                        <div class="footer-social">
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
+<!-- Footer Start -->
+<div class="container-fluid bg-dark footer py-5">
+    <div class="container py-5">
+        <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <a href="#" class="d-flex flex-column flex-wrap">
+                        <p class="text-white mb-0 display-6">Newsers</p>
+                        <small class="text-light" style="letter-spacing: 11px; line-height: 0;">Newspaper</small>
+                    </a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="d-flex position-relative rounded-pill overflow-hidden">
+                        <input class="form-control border-0 w-100 py-3 rounded-pill" type="email"
+                            placeholder="example@gmail.com">
+                        <button type="submit"
+                            class="btn btn-primary border-0 py-3 px-5 rounded-pill text-white position-absolute"
+                            style="top: 0; right: 0;">Subscribe Now</button>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-5 col-md-5 col-sm-6 d-flex justify-content-xl-center">
-                    <div class="footer-widget mb-40">
-                        <h5 class="footer-widget-title">Useful Link</h5>
-                        <div class="footer-widget-list">
-                            <ul>
-                                <li><a href="#">About Eduan</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Help Centre</a></li>
-                                <li><a href="#">Refund</a></li>
-                                <li><a href="#">Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
-                        </div>
+            </div>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6 col-xl-3">
+                <div class="footer-item-1">
+                    <h4 class="mb-4 text-white">Get In Touch</h4>
+                    <p class="text-secondary line-h">Address: <span class="text-white">123 Streat, New York</span></p>
+                    <p class="text-secondary line-h">Email: <span class="text-white">Example@gmail.com</span></p>
+                    <p class="text-secondary line-h">Phone: <span class="text-white">+0123 4567 8910</span></p>
+                    <div class="d-flex line-h">
+                        <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                class="fab fa-twitter text-dark"></i></a>
+                        <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                class="fab fa-facebook-f text-dark"></i></a>
+                        <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                class="fab fa-youtube text-dark"></i></a>
+                        <a class="btn btn-light btn-md-square rounded-circle" href=""><i
+                                class="fab fa-linkedin-in text-dark"></i></a>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-5 col-md-5 col-sm-6 d-flex justify-content-xl-center order-md-4 order-xl-3">
-                    <div class="footer-widget mb-40">
-                        <h5 class="footer-widget-title">Categories</h5>
-                        <div class="footer-widget-list">
-                            <ul>
-                                <li><a href="#">Design Skills</a></li>
-                                <li><a href="#">Development</a></li>
-                                <li><a href="#">Marketing</a></li>
-                                <li><a href="#">Finance & Accounting</a></li>
-                                <li><a href="#">IT & Software</a></li>
-                                <li><a href="#">Sales Marketing</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-7 col-md-7 col-sm-12 order-md-3 order-xl-4">
-                    <div class="footer-widget ml-80 mb-40">
-                        <h5 class="footer-widget-title">Newsletter</h5>
-                        <p class="footer-widget-text mb-20 newsletter-text">Sign up foe our newsletter and get 34% <br>
-                            off your next course.</p>
-                        <form action="#">
-                            <div class="footer-subscribe-form">
-                                <input type="email" placeholder="Enter Your Email*">
-                                <button type="submit">Subscribe</button>
+            </div>
+            <div class="col-lg-6 col-xl-3">
+                <div class="footer-item-2">
+                    <div class="d-flex flex-column mb-4">
+                        <h4 class="mb-4 text-white">Recent Posts</h4>
+                        <a href="#">
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle border border-2 border-primary overflow-hidden">
+                                    <img src="{{ Vite::asset('resources/frontend/img/footer-1.jpg')}}" class="img-zoomin img-fluid rounded-circle w-100"
+                                        alt="">
+                                </div>
+                                <div class="d-flex flex-column ps-4">
+                                    <p class="text-uppercase text-white mb-3">Life Style</p>
+                                    <a href="#" class="h6 text-white">
+                                        Get the best speak market, news.
+                                    </a>
+                                    <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> Dec 9,
+                                        2024</small>
+                                </div>
                             </div>
-                            <div class="footer-subscribe-condition">
-                                <label class="condition_label">I agree to the terms of use and privacy policy.
-                                    <input type="checkbox">
-                                    <span class="check_mark"></span>
-                                </label>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <a href="#">
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle border border-2 border-primary overflow-hidden">
+                                    <img src="{{ Vite::asset('resources/frontend/img/footer-2.jpg')}}" class="img-zoominimg-fluid rounded-circle w-100"
+                                        alt="">
+                                </div>
+                                <div class="d-flex flex-column ps-4">
+                                    <p class="text-uppercase text-white mb-3">Sports</p>
+                                    <a href="#" class="h6 text-white">
+                                        Get the best speak market, news.
+                                    </a>
+                                    <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> Dec 9,
+                                        2024</small>
+                                </div>
                             </div>
-                        </form>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-3">
+                <div class="d-flex flex-column text-start footer-item-3">
+                    <h4 class="mb-4 text-white">Categories</h4>
+                    <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                        Sports</a>
+                    <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                        Magazine</a>
+                    <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                        Lifestyle</a>
+                    <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                        Politician</a>
+                    <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                        Technology</a>
+                    <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                        Intertainment</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-3">
+                <div class="footer-item-4">
+                    <h4 class="mb-4 text-white">Our Gallary</h4>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <div class="rounded overflow-hidden">
+                                <img src="{{ Vite::asset('resources/frontend/img/footer-1.jpg')}}" class="img-zoomin img-fluid rounded w-100" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="rounded overflow-hidden">
+                                <img src="{{ Vite::asset('resources/frontend/img/footer-2.jpg')}}" class="img-zoomin img-fluid rounded w-100"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="rounded overflow-hidden">
+                                <img src="{{ Vite::asset('resources/frontend/img/footer-3.jpg')}}" class="img-zoomin img-fluid rounded w-100"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="rounded overflow-hidden">
+                                <img src="{{ Vite::asset('resources/frontend/img/footer-4.jpg')}}" class="img-zoomin img-fluid rounded w-100"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="rounded overflow-hidden">
+                                <img src="{{ Vite::asset('resources/frontend/img/footer-5.jpg')}}" class="img-zoomin img-fluid rounded w-100"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="rounded overflow-hidden">
+                                <img src="{{ Vite::asset('resources/frontend/img/footer-6.jpg')}}" class="img-zoomin img-fluid rounded w-100"
+                                    alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="copyright-text">
-                        <p>Copyright © 2023 All Rights Reserved by Eduan</p>
-                    </div>
-                </div>
+</div>
+<!-- Footer End -->
+
+
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site
+                        Name</a>, All right reserved.</span>
+            </div>
+            <div class="col-md-6 my-auto text-center text-md-end text-white">
+                <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a
+                    href="https://themewagon.com">ThemeWagon</a>
             </div>
         </div>
     </div>
-</footer>
+</div>
+<!-- Copyright End -->
