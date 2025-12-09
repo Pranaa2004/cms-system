@@ -111,12 +111,25 @@
 
 
 <!-- Improved UI for Posts Page (Bootstrap 5 Compatible) -->
-@extends('layouts.backend.main')
+{{-- @extends('layouts.backend.main')
 
 @php
     use Carbon\Carbon;
 @endphp
 @section('title', 'Posts')
+
+@push('css')
+    <style>
+        #btn-edit {
+            outline: none
+            box-shadow: none ;
+            border: none;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+        }
+    </style>
+@endpush
 
 @section('content')
     <div class="container-fluid py-3">
@@ -155,21 +168,29 @@
                                     <td class="fw-semibold">
                                         {{ $post->title }}
                                         <div class="mt-1 small text-muted">
-                                            <a href="{{ route('posts.edit', $post->id) }}" class="me-3 text-warning"
-                                                onclick="return confirm('Are you sure you want to edit this post?')"
-                                                data-bs-toggle="modal" data-bs-target="#editPost">
-                                                <i class="far fa-edit me-1"></i><span class="small text">Edit</span>
-                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                                    data-bs-keyboard="false" tabindex="-1"
-                                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-body">
-                                                                @include('pages.backend.posts.edit')
-                                                            </div>
+                                            <a class="with-underline me-3">
+                                                <button type="button" class="text-warning" id="btn-edit"
+                                                    onclick="return confirm('Are you sure you want to edit this post?')"
+                                                    data-bs-toggle="modal" data-bs-target="#editPost">
+                                                    <i class="far fa-edit me-1"></i>
+                                                    <span class="small text">Edit</span>
+                                                </button>
+                                            </a>
+                                            <div class="modal fade" id="editPost" data-bs-backdrop="static"
+                                                data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            @include('pages.backend.posts.edit')
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
                                             </a>
                                             <form action="{{ route('posts.destroy', $post->id) }}" method="POST"
                                                 class="d-inline">
@@ -206,9 +227,187 @@
 
                                             <span class="badge {{ $badgeClass }}">
                                                 {!! $post->status === 'scheduled' ? '<i class="fas fa-clock"></i> ' . $post->status : $post->status !!}
-                                            </span>
+                                            </span> --}}
                                             {{-- <div class="text-center"> <span class="badge @if ($post->status === 'published') {{ 'bg-primary' }} @elseif ($post->status === 'scheduled'){{ 'bg-success' }} @elseif ($post->status === 'draft') {{ 'bg-danger' }} @else {{ 'bg-warning' }} @endif ">{!! $post->status === 'scheduled' ? '<i class="fas fa-clock"></i>' . $post->status : $post->status !!}</span> --}}
+                                        {{-- </div>
+                                        <div class="small text-muted mt-1">
+                                            <small>
+                                                <i class="fas fa-history"></i>
+                                                {{ Carbon::parse($post->published_at)->diffForHumans() }}
+                                            </small>
                                         </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+
+                        <tfoot class="table-light">
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Categories</th>
+                                <th>Tags</th>
+                                <th>Date</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@push('js')
+    <script>
+        $(document).ready(function() {
+            $('#datatable').DataTable({
+                paging: true,
+                searching: true,
+                ordering: true,
+                info: true
+            });
+        });
+    </script>
+@endpush --}}
+
+
+
+
+@extends('layouts.backend.main')
+
+@php
+    use Carbon\Carbon;
+@endphp
+@section('title', 'Posts')
+
+@push('css')
+    <style>
+        .btn-edit {
+            outline: none;
+            box-shadow: none;
+            border: none;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .with-underline {
+            text-decoration: underline !important;
+        }
+    </style>
+@endpush
+
+@section('content')
+    <div class="container-fluid py-3">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h3 class="fw-bold mb-1">Posts</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Posts</li>
+                    </ol>
+                </nav>
+            </div>
+            <a href="{{ route('posts.create') }}" class="btn btn-primary shadow-sm px-4 py-2">
+                <i class="icon-plus me-2"></i>Add New Post
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0 rounded-3">
+            <div class="card-body p-4">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle" id="datatable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Categories</th>
+                                <th>Tags</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach ($posts as $post)
+                                @php
+                                    $modalId = 'editPost_' . $post->id;
+                                @endphp
+
+                                <tr>
+                                    <td class="fw-semibold">
+                                        {{ $post->title }}
+
+                                        <div class="mt-1 small text-muted">
+
+                                            <!-- EDIT LINK (fixed) -->
+                                            <a class="with-underline me-3 btn-edit text-warning"
+                                               onclick="return confirm('Are you sure you want to edit this post?')"
+                                               data-bs-toggle="modal"
+                                               data-bs-target="#{{ $modalId }}">
+                                                <i class="far fa-edit me-1"></i>
+                                                <span class="small">Edit</span>
+                                            </a>
+
+                                            <!-- MODAL -->
+                                            <div class="modal fade" id="{{ $modalId }}" data-bs-backdrop="static"
+                                                 data-bs-keyboard="false" tabindex="-1">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            @include('pages.backend.posts.edit')
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- DELETE -->
+                                            <form action="{{ route('posts.destroy', $post->id) }}" method="POST"
+                                                  class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-link p-0 text-danger"
+                                                        onclick="return confirm('Are you sure you want to delete this post?')">
+                                                    <i class="fas fa-trash me-1"></i>
+                                                    <span class="small">Delete</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>
+
+                                    <td>{{ $post->user->name }}</td>
+
+                                    <td class="text-muted">—</td>
+
+                                    <td>
+                                        @foreach ($post->tags as $tag)
+                                            <span class="badge bg-secondary me-1">{{ $tag->name }}</span>
+                                        @endforeach
+                                    </td>
+
+                                    <td>
+                                        <div class="text-center">
+                                            @php
+                                                $badgeClass = match ($post->status) {
+                                                    'published' => 'bg-secondary',
+                                                    'scheduled' => 'bg-success',
+                                                    'draft' => 'bg-danger',
+                                                    default => 'bg-warning',
+                                                };
+                                            @endphp
+
+                                            <span class="badge {{ $badgeClass }}">
+                                                {!! $post->status === 'scheduled'
+                                                    ? '<i class="fas fa-clock"></i> ' . $post->status
+                                                    : $post->status !!}
+                                            </span>
+                                        </div>
+
                                         <div class="small text-muted mt-1">
                                             <small>
                                                 <i class="fas fa-history"></i>

@@ -112,8 +112,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <button type="submit" class="btn btn-primary rounded-pill px-3">Update Post</button>
+                                    </div>
+                                    <div class="col-9">
+                                        <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <button type="submit" class="btn btn-primary rounded-pill">Update Post</button>
+
                         </form>
                     </div>
                 </div>
