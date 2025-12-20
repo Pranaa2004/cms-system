@@ -1778,7 +1778,7 @@
                         <div class="col-4">
                             <div class="rounded-circle position-relative">
                                 <div class="overflow-hidden rounded-circle">
-                                    <img src="img/features-sports-1.jpg" class="img-zoomin img-fluid rounded-circle w-100"
+                                    <img src="{{ Vite::asset('resources/frontend/img/features-sports-1.jpg')}}" class="img-zoomin img-fluid rounded-circle w-100"
                                         alt="">
                                 </div>
                                 <span
@@ -1803,7 +1803,7 @@
                         <div class="col-4">
                             <div class="rounded-circle position-relative">
                                 <div class="overflow-hidden rounded-circle">
-                                    <img src="img/features-technology.jpg" class="img-zoomin img-fluid rounded-circle w-100"
+                                    <img src="{{ Vite::asset('resources/frontend/img/features-technology.jpg')}}" class="img-zoomin img-fluid rounded-circle w-100"
                                         alt="">
                                 </div>
                                 <span
@@ -1828,7 +1828,7 @@
                         <div class="col-4">
                             <div class="rounded-circle position-relative">
                                 <div class="overflow-hidden rounded-circle">
-                                    <img src="img/features-fashion.jpg" class="img-zoomin img-fluid rounded-circle w-100"
+                                    <img src="{{ Vite::asset('resources/frontend/img/features-fashion.jpg')}}" class="img-zoomin img-fluid rounded-circle w-100"
                                         alt="">
                                 </div>
                                 <span
@@ -1853,7 +1853,7 @@
                         <div class="col-4">
                             <div class="rounded-circle position-relative">
                                 <div class="overflow-hidden rounded-circle">
-                                    <img src="img/features-life-style.jpg" class="img-zoomin img-fluid rounded-circle w-100"
+                                    <img src="{{ Vite::asset('resources/frontend/img/features-life-style.jpg')}}" class="img-zoomin img-fluid rounded-circle w-100"
                                         alt="">
                                 </div>
                                 <span
@@ -1885,7 +1885,7 @@
             <div class="row g-4">
                 <div class="col-lg-7 col-xl-8 mt-0">
                     <div class="position-relative overflow-hidden rounded">
-                        <img src="img/news-1.jpg" class="img-fluid rounded img-zoomin w-100" alt="">
+                        <img src="{{ Vite::asset('resources/frontend/img/news-1.jpg')}}" class="img-fluid rounded img-zoomin w-100" alt="">
                         <div class="d-flex justify-content-center px-4 position-absolute flex-wrap"
                             style="bottom: 10px; left: 0;">
                             <a href="#" class="text-white me-3 link-hover"><i class="fa fa-clock"></i> 06 minute
@@ -1911,7 +1911,7 @@
                         <div class="row g-4 align-items-center">
                             <div class="col-md-6">
                                 <div class="rounded overflow-hidden">
-                                    <img src="img/news-2.jpg" class="img-fluid rounded img-zoomin w-100" alt="">
+                                    <img src="{{ Vite::asset('resources/frontend/img/news-2.jpg')}}" class="img-fluid rounded img-zoomin w-100" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -1930,7 +1930,7 @@
                         <div class="row g-4">
                             <div class="col-12">
                                 <div class="rounded overflow-hidden">
-                                    <img src="img/news-3.jpg" class="img-fluid rounded img-zoomin w-100" alt="">
+                                    <img src="{{ Vite::asset('resources/frontend/img/news-3.jpg')}}" class="img-fluid rounded img-zoomin w-100" alt="">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -1944,7 +1944,7 @@
                                 <div class="row g-4 align-items-center">
                                     <div class="col-5">
                                         <div class="overflow-hidden rounded">
-                                            <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-3.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                         </div>
                                     </div>
@@ -1961,7 +1961,7 @@
                                 <div class="row g-4 align-items-center">
                                     <div class="col-5">
                                         <div class="overflow-hidden rounded">
-                                            <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-4.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                         </div>
                                     </div>
@@ -1978,7 +1978,7 @@
                                 <div class="row g-4 align-items-center">
                                     <div class="col-5">
                                         <div class="overflow-hidden rounded">
-                                            <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-5.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                         </div>
                                     </div>
@@ -1995,7 +1995,7 @@
                                 <div class="row g-4 align-items-center">
                                     <div class="col-5">
                                         <div class="overflow-hidden rounded">
-                                            <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-6.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                         </div>
                                     </div>
@@ -2012,7 +2012,7 @@
                                 <div class="row g-4 align-items-center">
                                     <div class="col-5">
                                         <div class="overflow-hidden rounded">
-                                            <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-7.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                         </div>
                                     </div>
@@ -2029,7 +2029,7 @@
                                 <div class="row g-4 align-items-center">
                                     <div class="col-5">
                                         <div class="overflow-hidden rounded">
-                                            <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-7.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                         </div>
                                     </div>
@@ -2073,7 +2073,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="rounded">
-                        <img src="img/banner-img.jpg" class="img-fluid rounded w-100 rounded" alt="">
+                        <img src="{{ Vite::asset('resources/frontend/img/banner-img.jpg')}}" class="img-fluid rounded w-100 rounded" alt="">
                     </div>
                 </div>
             </div>
@@ -2090,7 +2090,7 @@
                 <div class="latest-news-item">
                     <div class="bg-light rounded">
                         <div class="rounded-top overflow-hidden">
-                            <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/img/news-7.jpg')}}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                         </div>
                         <div class="d-flex flex-column p-4">
                             <a href="#" class="h4">Lorem Ipsum is simply dummy text of...</a>
@@ -2105,7 +2105,7 @@
                 <div class="latest-news-item">
                     <div class="bg-light rounded">
                         <div class="rounded-top overflow-hidden">
-                            <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/img/news-6.jpg')}}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                         </div>
                         <div class="d-flex flex-column p-4">
                             <a href="#" class="h4">Lorem Ipsum is simply dummy text of...</a>
@@ -2120,7 +2120,7 @@
                 <div class="latest-news-item">
                     <div class="bg-light rounded">
                         <div class="rounded-top overflow-hidden">
-                            <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/img/news-3.jpg')}}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                         </div>
                         <div class="d-flex flex-column p-4">
                             <a href="#" class="h4">Lorem Ipsum is simply dummy text of...</a>
@@ -2135,7 +2135,7 @@
                 <div class="latest-news-item">
                     <div class="bg-light rounded">
                         <div class="rounded-top overflow-hidden">
-                            <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/img/news-4.jpg')}}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                         </div>
                         <div class="d-flex flex-column p-4">
                             <a href="#" class="h4">Lorem Ipsum is simply dummy text of...</a>
@@ -2150,7 +2150,7 @@
                 <div class="latest-news-item">
                     <div class="bg-light rounded">
                         <div class="rounded-top overflow-hidden">
-                            <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            <img src="{{ Vite::asset('resources/frontend/img/news-5.jpg')}}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                         </div>
                         <div class="d-flex flex-column p-4">
                             <a href="#" class="h4 ">Lorem Ipsum is simply dummy text of...</a>
@@ -2214,7 +2214,7 @@
                                 <div class="row g-4">
                                     <div class="col-lg-8">
                                         <div class="position-relative rounded overflow-hidden">
-                                            <img src="img/news-1.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-1.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                             <div class="position-absolute text-white px-4 py-2 bg-primary rounded"
                                                 style="top: 20px; right: 20px;">
@@ -2246,7 +2246,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-3.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-3.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2266,7 +2266,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-4.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-4.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2286,7 +2286,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-5.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-5.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2306,7 +2306,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-6.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-6.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2326,7 +2326,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-7.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-7.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2350,7 +2350,7 @@
                                 <div class="row g-4">
                                     <div class="col-lg-8">
                                         <div class="position-relative rounded overflow-hidden">
-                                            <img src="img/news-1.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-1.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                             <div class="position-absolute text-white px-4 py-2 bg-primary rounded"
                                                 style="top: 20px; right: 20px;">
@@ -2382,7 +2382,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-3.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-3.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2402,7 +2402,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-4.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-4.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2422,7 +2422,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-5.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-5.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2442,7 +2442,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-6.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-6.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2462,7 +2462,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-7.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-7.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2486,7 +2486,7 @@
                                 <div class="row g-4">
                                     <div class="col-lg-8">
                                         <div class="position-relative rounded overflow-hidden">
-                                            <img src="img/news-1.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-1.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                             <div class="position-absolute text-white px-4 py-2 bg-primary rounded"
                                                 style="top: 20px; right: 20px;">
@@ -2518,7 +2518,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-3.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-3.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2538,7 +2538,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-4.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-4.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2558,7 +2558,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-5.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-5.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2578,7 +2578,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-6.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-6.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2598,7 +2598,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-7.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-7.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2622,7 +2622,7 @@
                                 <div class="row g-4">
                                     <div class="col-lg-8">
                                         <div class="position-relative rounded overflow-hidden">
-                                            <img src="img/news-1.jpg" class="img-zoomin img-fluid rounded w-100"
+                                            <img src="{{ Vite::asset('resources/frontend/img/news-1.jpg')}}" class="img-zoomin img-fluid rounded w-100"
                                                 alt="">
                                             <div class="position-absolute text-white px-4 py-2 bg-primary rounded"
                                                 style="top: 20px; right: 20px;">
@@ -2654,7 +2654,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-3.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-3.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2674,7 +2674,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-4.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-4.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2694,7 +2694,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-5.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-5.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2714,7 +2714,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-6.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-6.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2734,7 +2734,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-7.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-7.jpg') }}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2790,7 +2790,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-3.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-3.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2810,7 +2810,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-4.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-4.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2830,7 +2830,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-5.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-5.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2850,7 +2850,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-6.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-6.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2870,7 +2870,7 @@
                                                 <div class="row g-4 align-items-center">
                                                     <div class="col-5">
                                                         <div class="overflow-hidden rounded">
-                                                            <img src="img/news-7.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/news-7.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded w-100" alt="">
                                                         </div>
                                                     </div>
@@ -2898,7 +2898,7 @@
                             <div class="latest-news-item">
                                 <div class="bg-light rounded">
                                     <div class="rounded-top overflow-hidden">
-                                        <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded-top w-100"
+                                        <img src="{{ Vite::asset('resources/frontend/img/news-7.jpg')}}" class="img-zoomin img-fluid rounded-top w-100"
                                             alt="">
                                     </div>
                                     <div class="d-flex flex-column p-4">
@@ -2915,7 +2915,7 @@
                             <div class="whats-item">
                                 <div class="bg-light rounded">
                                     <div class="rounded-top overflow-hidden">
-                                        <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded-top w-100"
+                                        <img src="{{ Vite::asset('resources/frontend/img/news-6.jpg')}}" class="img-zoomin img-fluid rounded-top w-100"
                                             alt="">
                                     </div>
                                     <div class="d-flex flex-column p-4">
@@ -2932,7 +2932,7 @@
                             <div class="whats-item">
                                 <div class="bg-light rounded">
                                     <div class="rounded-top overflow-hidden">
-                                        <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded-top w-100"
+                                        <img src="{{ Vite::asset('resources/frontend/img/news-3.jpg')}}" class="img-zoomin img-fluid rounded-top w-100"
                                             alt="">
                                     </div>
                                     <div class="d-flex flex-column p-4">
@@ -2949,7 +2949,7 @@
                             <div class="whats-item">
                                 <div class="bg-light rounded">
                                     <div class="rounded-top overflow-hidden">
-                                        <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded-top w-100"
+                                        <img src="{{ Vite::asset('resources/frontend/img/news-4.jpg')}}" class="img-zoomin img-fluid rounded-top w-100"
                                             alt="">
                                     </div>
                                     <div class="d-flex flex-column p-4">
@@ -2966,7 +2966,7 @@
                             <div class="whats-item">
                                 <div class="bg-light rounded">
                                     <div class="rounded-top overflow-hidden">
-                                        <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded-top w-100"
+                                        <img src="{{ Vite::asset('resources/frontend/img/news-5.jpg')}}" class="img-zoomin img-fluid rounded-top w-100"
                                             alt="">
                                     </div>
                                     <div class="d-flex flex-column p-4">
@@ -2988,7 +2988,7 @@
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="lifestyle-item rounded">
-                                        <img src="img/lifestyle-1.jpg" class="img-fluid w-100 rounded" alt="">
+                                        <img src="{{ Vite::asset('resources/frontend/img/lifestyle-1.jpg')}}" class="img-fluid w-100 rounded" alt="">
                                         <div class="lifestyle-content">
                                             <div class="mt-auto">
                                                 <a href="#" class="h4 text-white link-hover">There are many
@@ -3005,7 +3005,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="lifestyle-item rounded">
-                                        <img src="img/lifestyle-2.jpg" class="img-fluid w-100 rounded" alt="">
+                                        <img src="{{ Vite::asset('resources/frontend/img/lifestyle-2.jpg')}}" class="img-fluid w-100 rounded" alt="">
                                         <div class="lifestyle-content">
                                             <div class="mt-auto">
                                                 <a href="#" class="h4 text-white link-hover">There are many
@@ -3072,7 +3072,7 @@
                                                 <div class="col-4">
                                                     <div class="rounded-circle position-relative">
                                                         <div class="overflow-hidden rounded-circle">
-                                                            <img src="img/features-sports-1.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/features-sports-1.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded-circle w-100"
                                                                 alt="">
                                                         </div>
@@ -3099,7 +3099,7 @@
                                                 <div class="col-4">
                                                     <div class="rounded-circle position-relative">
                                                         <div class="overflow-hidden rounded-circle">
-                                                            <img src="img/features-technology.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/features-technology.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded-circle w-100"
                                                                 alt="">
                                                         </div>
@@ -3126,7 +3126,7 @@
                                                 <div class="col-4">
                                                     <div class="rounded-circle position-relative">
                                                         <div class="overflow-hidden rounded-circle">
-                                                            <img src="img/features-fashion.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/features-fashion.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded-circle w-100"
                                                                 alt="">
                                                         </div>
@@ -3153,7 +3153,7 @@
                                                 <div class="col-4">
                                                     <div class="rounded-circle position-relative">
                                                         <div class="overflow-hidden rounded-circle">
-                                                            <img src="img/features-life-style.jpg"
+                                                            <img src="{{ Vite::asset('resources/frontend/img/features-life-style.jpg')}}"
                                                                 class="img-zoomin img-fluid rounded-circle w-100"
                                                                 alt="">
                                                         </div>
@@ -3237,7 +3237,7 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="position-relative banner-2">
-                                                <img src="img/banner-2.jpg" class="img-fluid w-100 rounded"
+                                                <img src="{{ Vite::asset('resources/frontend/img/banner-2.jpg')}}" class="img-fluid w-100 rounded"
                                                     alt="">
                                                 <div class="text-center banner-content-2">
                                                     <h6 class="mb-2">The Most Populer</h6>

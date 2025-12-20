@@ -2,8 +2,6 @@
 
 @section('title', 'Contact')
 
-<!-- breadcrumb area start -->
-@section('brd_crm_list', 'About US')
 <!-- breadcrumb area end -->
 @section('content')
     <!-- about area start -->
@@ -215,6 +213,6 @@
     </section>
     <!-- blog area end -->
 
-   
+
 
 @endsection

@@ -33,9 +33,9 @@
 
     <body>
         {{-- @if (!Route::is('posts.create')) --}}
-            <!-- sidebar-information-area-start -->
-            {{-- @include('layouts.frontend.includes.sidebar') --}}
-            <!-- sidebar-information-area-end -->
+        <!-- sidebar-information-area-start -->
+        {{-- @include('layouts.frontend.includes.sidebar') --}}
+        <!-- sidebar-information-area-end -->
         {{-- @endif --}}
 
 
@@ -56,7 +56,7 @@
                                 <div class="breadcrumb-content">
                                     <h2 class="breadcrumb-title">@yield('brd_crm_list')</h2>
                                     <div class="breadcrumb-list">
-                                        <a href="{{ route('home') }}">Home</a>
+                                        {{-- <a href="{{ route('home') }}">Home</a> --}}
                                         <span>@yield('brd_crm_list')</span>
                                     </div>
                                 </div>
