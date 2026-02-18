@@ -29,26 +29,20 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required|string|max:255|unique:categories,name',
-            'slug' => 'required|string|unique:categories,slug'
+            'slug' => 'required|string|unique:categories,slug',
+            'parent_id' => 'nullable|exists:categories,id',
+            'description' => 'nullable|string'
         ]);
 
         $category = new Category;
-        $category->name =  $validatedData['name'];
+        $category->name = $validatedData['name'];
         $category->slug = Str::slug($validatedData['slug']);
-        $category->parent_id = $request->input('parent_id');
-        $category->description = $request->input('description');
+        $category->parent_id = $validatedData['parent_id'] ?? 0;
+        $category->description = $validatedData['description'];
         $category->order_column = 1;
         $category->save();
-        // Category::create([
-        //     'name' =>
-        //     'slug' => Str::slug($validatedData['slug']),
-        //     'parent_id' => $request->input('parent_id'),
-        //     'description' => $request->input('description'),
-        //     'order_column' => 1
-        // ]);
 
         return redirect()->back()->with('success', 'Category created successfully!');
     }
@@ -66,8 +60,8 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        $category = Category::find($id);
-        $categories = Category::all()->sortByDesc('created_at');
+        $category = Category::findOrFail($id);
+        $categories = Category::where('id', '!=', $id)->get();
         return view('pages.backend.category.edit', compact('category', 'categories'));
     }
 
@@ -76,31 +70,21 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        try {
-            $validatedData = $request->validate([
-                'name' => 'required|string|max:255|unique:categories,name',
-                'slug' => 'required|string|alpha_dash|lowercase|max:255',
-            ]);
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255|unique:categories,name,' . $id,
+            'slug' => 'required|string|max:255|unique:categories,slug,' . $id,
+            'parent_id' => 'nullable|exists:categories,id',
+            'description' => 'nullable|string'
+        ]);
 
-            $category = Category::find($id);
-            $category->name =  $validatedData['name'];
-            $category->slug = $validatedData['slug'];
-            $category->parent_id = $request->input('parent_id');
-            $category->description = $request->input('description');
-            $category->order_column = 1;
-            $category->save();
-            // $category->update([
-            //     'name' =>  $validatedData['name'],
-            //     'slug' => $validatedData['slug'],
-            //     'parent_id' => $request->input('parent_id'),
-            //     'description' => $request->input('description'),
-            //     'order_column' => 1,
-            // ]);
-            return redirect()->route('category.index')->with('success', 'Category created successfully!');
-        } catch (ValidationException $e) {
-            $errors = $e->errors();
-            return redirect()->back()->withErrors($errors)->withInput();
-        }
+        $category = Category::findOrFail($id);
+        $category->name = $validatedData['name'];
+        $category->slug = Str::slug($validatedData['slug']);
+        $category->parent_id = $validatedData['parent_id'] ?? 0;
+        $category->description = $validatedData['description'];
+        $category->save();
+
+        return redirect()->route('category.index')->with('success', 'Category updated successfully!');
     }
 
     /**
@@ -108,9 +92,9 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        $category = Category::find($id);
+        $category = Category::findOrFail($id);
         $category->delete();
 
-        return redirect()->back()->with('Success', 'Success Fully Deleted !');
+        return redirect()->back()->with('success', 'Category deleted successfully!');
     }
 }

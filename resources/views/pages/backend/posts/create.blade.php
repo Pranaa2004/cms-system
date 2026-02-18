@@ -1,452 +1,179 @@
-{{-- @extends('layouts.backend.main')
-
-@section('title', 'Create Post')
-
-@section('content')
-     <div class="page-breadcrumb">
-        <div class="row">
-            <div class="col-7 align-self-center">
-                <h4 class="page-title">Create Post</h4>
-                <div class="d-flex align-items-center">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="#">Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="{{ route('pages.index') }}">Post</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Create Post</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body" style="height: auto">
-                        <form action="{{ route('pages.store') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="title" name="title"
-                                    value="{{ old('title') }}" required placeholder="Add title" style="font-size:40px ; border:hidden">
-                            </div>
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-10">
-                                        <input type="text" class="form-control" id="content" placeholder="Add content" name="content" rows="5" style="border:hidden" required value="{{ old('content') }}">
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-primary rounded-circle "><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary rounded mt-auto">Create Post</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection --}}
-
-{{-- @extends('layouts.backend.main')
-
-@section('title', 'Create Post')
-
-@section('content')
-    <div class="page-breadcrumb">
-        <div class="row">
-            <div class="col-7 align-self-center">
-                <h4 class="page-title">Create Post</h4>
-                <div class="d-flex align-items-center">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="{{ route('dashboard') }}">Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="{{ route('posts.index') }}">Posts</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Create Post</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <div class="mb-3">
-                                <label for="title" class="form-label">Title</label>
-                                <input type="text" class="form-control" id="title" name="title"
-                                    value="{{ old('title') }}" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="content" class="form-label">Content</label>
-                                <textarea class="form-control" id="content" name="content" rows="5" required>{{ old('content') }}</textarea>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="category" class="form-label">Category</label>
-
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div id="modules">
-                                                @foreach ($categories as $category)
-                                                    <p class="drag"><a class="btn btn-default">{{ $category->name }}</a>
-                                                    </p>
-                                                @endforeach
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div id="dropzone"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="tags" class="form-label">Tags</label>
-                                @foreach ($tags as $tag)
-                                    <div class="form-check">
-                                        <input type="checkbox" name="tags[]" id="{{ $tag->name }}"
-                                            class="form-check-input" value="{{ $tag->id }}">
-                                        <label for="{{ $tag->name }}" class="form-check-labe">{{ $tag->name }}</label>
-                                    </div>
-                                @endforeach
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label for="status" class="form-label">Status</label>
-                                        <select name="status" id="status" class="form-select">
-                                            @foreach (\App\Enums\StatusEnum::cases() as $status)
-                                                <option value="{{ $status->value }}">
-                                                    {{ $status->name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-6">
-                                        <label for="published_at" class="form-label">Published at</label>
-                                        <input type="datetime-local" class="form-control" id="published_at"
-                                            name="published_at">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label for="image" class="form-label">Image</label>
-                                        <input type="file" class="form-control" id="image" name="image"
-                                            accept="image/*">
-                                    </div>
-                                    <div class="col-6">
-                                        <label for="expires_at" class="form-label">Expires at</label>
-                                        <input type="datetime-local" class="form-control" id="expires_at" name="expires_at">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Create Post</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-@endsection --}}
-
-
 @extends('layouts.backend.main')
 
 @section('title', 'Create Post')
 
 @section('content')
-    <div class="container-fluid py-3">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <div>
-                    <h3 class="fw-bold mb-1">Posts</h3>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb mb-0">
-                            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active"><a href="{{ route('posts.index') }}">Posts</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Add Post</li>
-                        </ol>
-                    </nav>
-                </div>
+            <div class="col-12 align-self-center mb-4">
+                <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Create New Post</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb m-0 p-0">
+                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('posts.index') }}">Posts</a></li>
+                        <li class="breadcrumb-item text-muted active" aria-current="page">Create</li>
+                    </ol>
+                </nav>
             </div>
+        </div>
 
-            <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
                 <div class="card shadow-sm border-0">
-                    <div class="card-body py-4 px-4">
-                        <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data" id="post-form">
                             @csrf
-                            {{-- TITLE --}}
                             <div class="mb-4">
-                                <label class="form-label fw-semibold">Post Title</label>
-                                <input type="text" name="title" class="form-control form-control-md"
-                                    placeholder="Enter a clear, descriptive title" value="{{ old('title') }}" required>
+                                <label for="title" class="form-label fw-bold">Post Title</label>
+                                <input type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" 
+                                       id="title" name="title" value="{{ old('title') }}" required placeholder="Enter post title">
+                                @error('title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
 
-                            {{-- CONTENT --}}
                             <div class="mb-4">
-                                <label class="form-label fw-semibold">Content</label>
-                                <textarea name="content" rows="6" class="form-control" placeholder="Write your content here..." required>{{ old('content') }}</textarea>
+                                <label for="content" class="form-label fw-bold">Content</label>
+                                <textarea class="form-control @error('content') is-invalid @enderror" 
+                                          id="content" name="content" rows="15" required placeholder="Start writing your story...">{{ old('content') }}</textarea>
+                                @error('content')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
-
-                            {{-- CATEGORY (drag UI improved layout) --}}
-                            <div class="mb-4">
-                                <label class="form-label fw-semibold">Category</label>
-
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="p-3 border rounded bg-light" id="modules">
-                                            <h6 class="fw-bold mb-3">Available Categories</h6>
-                                            @foreach ($categories as $category)
-                                                <p class="drag mb-2">
-                                                    <a class="btn btn-outline-dark w-100">{{ $category->name }}</a>
-                                                </p>
-                                            @endforeach
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="p-3 border rounded bg-light" id="dropzone">
-                                            <h6 class="fw-bold mb-3">Selected Category</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {{-- TAGS --}}
-                            <div class="mb-4">
-                                <label class="form-label fw-semibold">Tags</label>
-                                <div class="row">
-                                    @foreach ($tags as $tag)
-                                        <div class="col-md-3 col-sm-4 col-6">
-                                            <div class="form-check mb-2">
-                                                <input class="form-check-input" type="checkbox" name="tags[]"
-                                                    id="tag-{{ $tag->id }}" value="{{ $tag->id }}">
-                                                <label class="form-check-label" for="tag-{{ $tag->id }}">
-                                                    {{ $tag->name }}
-                                                </label>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-
-                            {{-- STATUS + PUBLISH TIME --}}
-                            <div class="row mb-4">
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Status</label>
-                                    <select name="status" class="form-select">
-                                        @foreach (\App\Enums\StatusEnum::cases() as $status)
-                                            <option value="{{ $status->value }}">{{ $status->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Publish At</label>
-                                    <input type="datetime-local" name="published_at" class="form-control">
-                                </div>
-                            </div>
-
-                            {{-- IMAGE + EXPIRY --}}
-                            <div class="row mb-4">
-                                <div class="col-md-6">
-                                    <div class="" id="imageModal">
-                                        <label class="form-label fw-semibold">Feature Image</label>
-                                        <input type="file" class="form-control" id="uploadImage" name="image"
-                                            accept="image/*">
-                                    </div>
-                                </div>
-
-                                <div class="modal fade" id="imageCropModal" aria-hidden="true"
-                                    aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body" id="modalBody">
-                                                {{-- Croping Image Here --}}
-                                                <div class="" id="selectedImgEdit"></div>
-                                                <img src="" alt="" class="" id="previewImage">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-                                                    data-bs-toggle="modal">OK</button>
-                                                <button type="button" class="btn btn-danger"
-                                                    data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
-                                    aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Hide this modal and show the first with the button below.
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
-                                                    data-bs-toggle="modal">Back to
-                                                    first</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="" id="tesr"></div>
-                                @push('js')
-                                    <script>
-                                        $(document).ready(function() {
-
-                                            $('#imageCropModal').modal('hide');
-
-                                            let cropper = null;
-
-                                            $('#uploadImage').on('change', function() {
-                                                if (this.files && this.files.length > 0) {
-                                                    var reader = new FileReader();
-                                                    reader.onload = function(e) { // Set the onload event handler for the FileReader
-                                                        $('#imageCropModal').modal('show');
-
-                                                        var imageDataUrl = e.target.result;
-                                                        $('#previewImage').attr('src', imageDataUrl);
-
-                                                        //Check already have any4 cropped image in there
-                                                        if (cropper !== null) {
-                                                            $('#previewImage').croppie('destroy');
-                                                        }
-
-                                                        var el = document.getElementById('previewImage');
-                                                        var vanilla = new Croppie(el, {
-                                                            viewport: {
-                                                                width: 500,
-                                                                height: 250
-                                                            },
-                                                            boundary: {
-                                                                width: 300,
-                                                                height: 300
-                                                            },
-                                                            showZoomer: true,
-                                                            enableOrientation: true
-                                                        });
-                                                        vanilla.bind({
-                                                            url: e.target,
-                                                            orientation: 4
-                                                        });
-                                                        //on button click
-                                                        // vanilla.result('blob').then(function(blob) {
-                                                        //     // do something with cropped blob
-                                                        // });
-
-                                                        // cropper = $('#previewImage').croppie({
-                                                        //     url: e.target
-                                                        //         .result, // e.target.result contains the data URL representing the image
-                                                        //     viewport: {
-                                                        //         width: 500,
-                                                        //         height: 250,
-                                                        //         type: 'square'
-                                                        //     },
-                                                        //     boundary: {
-                                                        //         width: 300,
-                                                        //         height: 300
-                                                        //     }
-
-                                                        // });
-
-                                                    }
-                                                    reader.readAsDataURL(this.files[0]);
-                                                }
-                                            });
-                                        });
-                                    </script>
-                                    {{-- <script>
-                                        let cropper = null;
-                                        $('#uploadImage').on('change', function() {
-                                            if (!this.files || !this.files[0]) return;
-
-                                            let reader = new FileReader();
-
-                                            reader.onload = function(e) {
-                                                $('#imageCropModal').modal('show');
-
-                                                if (cropper !== null) {
-                                                    $('#selectedImgEdit').croppie('destroy');
-                                                }
-
-                                                cropper = $('#selectedImgEdit').croppie({
-                                                    url: e.target.result,
-                                                    viewport: {
-                                                        width: 200,
-                                                        height: 200,
-                                                        type: 'square'
-                                                    },
-                                                    boundary: {
-                                                        width: 300,
-                                                        height: 300
-                                                    }
-                                                });
-                                            };
-
-                                            reader.readAsDataURL(this.files[0]);
-                                        });
-                                    </script> --}}
-                                @endpush
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Expire At</label>
-                                    <input type="datetime-local" name="expires_at" class="form-control">
-                                </div>
-                            </div>
-
-                            {{-- SUBMIT BUTTON --}}
-                            <div class="text-end">
-                                <button type="submit" class="btn btn-primary btn-lg px-5">
-                                    Create Post
-                                </button>
-                            </div>
-                        </form>
-
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 fw-bold">Publishing</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="status" class="form-label fw-semibold">Status</label>
+                            <select name="status" id="status" class="form-select @error('status') is-invalid @enderror">
+                                @foreach (\App\Enums\StatusEnum::cases() as $status)
+                                    <option value="{{ $status->value }}" {{ old('status') == $status->value ? 'selected' : '' }}>
+                                        {{ ucfirst($status->name) }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('status')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="published_at" class="form-label fw-semibold">Publish Date</label>
+                            <input type="datetime-local" class="form-control @error('published_at') is-invalid @enderror" 
+                                   id="published_at" name="published_at" value="{{ old('published_at', now()->format('Y-m-d\TH:i')) }}">
+                            @error('published_at')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="expires_at" class="form-label fw-semibold">Expiry Date (Optional)</label>
+                            <input type="datetime-local" class="form-control @error('expires_at') is-invalid @enderror" 
+                                   id="expires_at" name="expires_at" value="{{ old('expires_at') }}">
+                            @error('expires_at')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <hr>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-1"></i> Create Post
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 fw-bold">Categories & Tags</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Categories</label>
+                            <div class="bg-light p-3 rounded @error('categories') border border-danger @enderror" style="max-height: 200px; overflow-y: auto;">
+                                @foreach ($categories as $category)
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" name="categories[]" 
+                                               id="cat-{{ $category->id }}" value="{{ $category->id }}"
+                                               {{ is_array(old('categories')) && in_array($category->id, old('categories')) ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="cat-{{ $category->id }}">
+                                            {{ $category->name }}
+                                        </label>
+                                    </div>
+                                @endforeach
+                            </div>
+                            @error('categories')
+                                <div class="text-danger small mt-1">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Tags</label>
+                            <div class="bg-light p-3 rounded @error('tags') border border-danger @enderror" style="max-height: 200px; overflow-y: auto;">
+                                @foreach ($tags as $tag)
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" name="tags[]" 
+                                               id="tag-{{ $tag->id }}" value="{{ $tag->id }}"
+                                               {{ is_array(old('tags')) && in_array($tag->id, old('tags')) ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="tag-{{ $tag->id }}">
+                                            {{ $tag->name }}
+                                        </label>
+                                    </div>
+                                @endforeach
+                            </div>
+                            @error('tags')
+                                <div class="text-danger small mt-1">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 fw-bold">Featured Image</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <input type="file" class="form-control @error('image') is-invalid @enderror" 
+                                   id="image" name="image" accept="image/*" onchange="previewImg(this)">
+                            @error('image')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div id="image-preview-container" class="mt-3 text-center d-none">
+                            <img id="image-preview" src="#" alt="Preview" class="img-fluid rounded shadow-sm border" style="max-height: 200px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
         </div>
     </div>
-
-    {{-- <script>
-        for (var i = 0; i < this.files.length; i++) {
-            var file = this.files[i];
-            console.log("File " + i + ": " + file.name);
-        }
-    </script> --}}
-
 @endsection
+
+@push('js')
+    <script>
+        function previewImg(input) {
+            const preview = document.getElementById('image-preview');
+            const container = document.getElementById('image-preview-container');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    container.classList.remove('d-none');
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                container.classList.add('d-none');
+            }
+        }
+    </script>
+@endpush

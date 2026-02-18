@@ -22,10 +22,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all()->sortByDesc('created_at');
+        $posts = Post::with(['user', 'tags', 'categories'])->latest()->get();
         return view('pages.backend.posts.index', compact('posts'));
-        // $cate = Category::all()->where("parent_id",'=','0');
-        // dd($cate);
     }
 
     /**
@@ -43,37 +41,32 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-
-        //author_id	editor_id	title	excerpt	body	status	published_at	expires_at	is_featured	featured_media_id	meta
-
-        $validatedata = $request->validate([
-            'title' => 'required|string',
-            'content' => 'required|string|max:255',
-            'authod_id' => 'unique:pages,author_id',
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
             'status' => ['required', new Enum(EnumsStatusEnum::class)],
             'published_at' => 'nullable|date',
             'expires_at' => 'nullable|date',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
-
+            'tags' => 'nullable|array',
+            'tags.*' => 'exists:tags,id',
         ]);
 
         $post = new Post;
-        $post->author_id = Auth::user()->id;
-        $post->editor_id = Auth::user()->id;
-        $post->title = $validatedata['title'];
-        $post->excerpt = "";
-        // $post->excerpt = Str::substr($validatedata['description'], 0, );
-        // $post->body = $validatedata['description'];
-        $post->body = $validatedata['content'];
-        $post->status = $validatedata['status'];
-        $post->published_at = $validatedata['published_at'];
-        $post->expires_at = $validatedata['expires_at'];
+        $post->author_id = Auth::id();
+        $post->editor_id = Auth::id();
+        $post->title = $validatedData['title'];
+        $post->excerpt = Str::limit(strip_tags($validatedData['content']), 160);
+        $post->body = $validatedData['content'];
+        $post->status = $validatedData['status'];
+        $post->published_at = $validatedData['published_at'] ?? now();
+        $post->expires_at = $validatedData['expires_at'];
 
         $mediaId = null;
         if ($request->hasFile('image')) {
             $post->is_featured = 1;
             $file = $request->file('image');
-            $path = $file->store('uploads/pages', 'public');
+            $path = $file->store('uploads/posts', 'public');
 
             $media = MediaAsset::create([
                 'disk' => 'public',
@@ -82,7 +75,7 @@ class PostController extends Controller
                 'size_kb' => $file->getSize() / 1024,
                 'width' => getimagesize($file)[0] ?? null,
                 'height' => getimagesize($file)[1] ?? null,
-                'alt' => $validatedata['title'],
+                'alt' => $validatedData['title'],
                 'variants' => '',
             ]);
 
@@ -95,11 +88,11 @@ class PostController extends Controller
         $post->meta = "";
         $post->save();
 
-        foreach ($request->input('tags') as $tag) {
-            $post->tags()->attach($tag);
+        if ($request->has('tags')) {
+            $post->tags()->sync($request->input('tags'));
         }
 
-        return redirect()->route('posts.index')->with('Success', 'Successfully post created !');
+        return redirect()->route('posts.index')->with('success', 'Post created successfully!');
     }
 
     /**
@@ -112,8 +105,8 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        $post = Post::find($id);
-        $categories  = Category::all()->where('parent_id', '=', '0');
+        $post = Post::findOrFail($id);
+        $categories = Category::where('parent_id', 0)->get();
         $tags = Tag::all();
         return view('pages.backend.posts.edit', compact('post', 'categories', 'tags'));
     }
@@ -123,34 +116,30 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $validatedata = $request->validate([
-            'title' => 'required|string',
-            'content' => 'required|string|max:255',
-            'authod_id' => 'unique:pages,author_id',
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
             'status' => ['required', new Enum(EnumsStatusEnum::class)],
             'published_at' => 'nullable|date',
             'expires_at' => 'nullable|date',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
-
+            'tags' => 'nullable|array',
+            'tags.*' => 'exists:tags,id',
         ]);
 
-        $post = Post::find($id);
-        $post->author_id = Auth::user()->id;
-        $post->editor_id = Auth::user()->id;
-        $post->title = $validatedata['title'];
-        $post->excerpt = "";
-        // $post->excerpt = Str::substr($validatedata['description'], 0, );
-        // $post->body = $validatedata['description'];
-        $post->body = $validatedata['content'];
-        $post->status = $validatedata['status'];
-        $post->published_at = $validatedata['published_at'];
-        $post->expires_at = $validatedata['expires_at'];
+        $post = Post::findOrFail($id);
+        $post->editor_id = Auth::id();
+        $post->title = $validatedData['title'];
+        $post->excerpt = Str::limit(strip_tags($validatedData['content']), 160);
+        $post->body = $validatedData['content'];
+        $post->status = $validatedData['status'];
+        $post->published_at = $validatedData['published_at'];
+        $post->expires_at = $validatedData['expires_at'];
 
-        $mediaId = null;
         if ($request->hasFile('image')) {
             $post->is_featured = 1;
             $file = $request->file('image');
-            $path = $file->store('uploads/pages', 'public');
+            $path = $file->store('uploads/posts', 'public');
 
             $media = MediaAsset::create([
                 'disk' => 'public',
@@ -159,24 +148,23 @@ class PostController extends Controller
                 'size_kb' => $file->getSize() / 1024,
                 'width' => getimagesize($file)[0] ?? null,
                 'height' => getimagesize($file)[1] ?? null,
-                'alt' => $validatedata['title'],
+                'alt' => $validatedData['title'],
                 'variants' => '',
             ]);
 
-            $mediaId = $media->id;
-        } else {
-            $post->is_featured = 0;//Not this place
+            $post->featured_media_id = $media->id;
         }
 
-        $post->featured_media_id = $mediaId;
         $post->meta = "";
         $post->save();
 
-        foreach ($request->input('tags') as $tag) {
-            $post->tags()->attach($tag);
+        if ($request->has('tags')) {
+            $post->tags()->sync($request->input('tags'));
+        } else {
+            $post->tags()->detach();
         }
 
-        return redirect()->route('posts.index')->with('Success', 'Successfully post created !');
+        return redirect()->route('posts.index')->with('success', 'Post updated successfully!');
     }
 
     /**
@@ -184,10 +172,10 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        $post = Post::find($id);
+        $post = Post::findOrFail($id);
         $post->delete();
 
-        return redirect()->back()->with('Sucess', 'Successfully Deleted !');
+        return redirect()->back()->with('success', 'Post deleted successfully!');
     }
 
     

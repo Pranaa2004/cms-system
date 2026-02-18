@@ -1,134 +1,192 @@
-{{-- @extends('layouts.backend.main')
+@extends('layouts.backend.main')
 
 @section('title', 'Edit Post')
 
 @section('content')
-    <div class="page-breadcrumb">
+    <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-7 align-self-center">
-                <h4 class="page-title">Edit Post</h4>
-                <div class="d-flex align-items-center">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="#">Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="{{ route('posts.index') }}">Posts</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Edit Post</li>
-                        </ol>
-                    </nav>
-                </div>
+            <div class="col-12 align-self-center mb-4">
+                <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Edit Post</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb m-0 p-0">
+                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('posts.index') }}">Posts</a></li>
+                        <li class="breadcrumb-item text-muted active" aria-current="page">Edit</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </div> --}}
-    <div class="container-fluid">
+
         <div class="row">
-            <div class="col-12">
-                <div class="card">
+            <div class="col-md-8">
+                <div class="card shadow-sm border-0">
                     <div class="card-body">
-                        <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data" id="post-form">
                             @csrf
-                            <div class="mb-3">
-                                <label for="title" class="form-label">Title</label>
-                                <input type="text" class="form-control" id="title" name="title"
-                                    value="{{ $post->title }}" required>
+                            @method('PUT')
+                            <div class="mb-4">
+                                <label for="title" class="form-label fw-bold">Post Title</label>
+                                <input type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" 
+                                       id="title" name="title" value="{{ old('title', $post->title) }}" required placeholder="Enter post title">
                                 @error('title')
-                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
 
-                            <div class="mb-3">
-                                <label for="content" class="form-label">Content</label>
-                                <textarea class="form-control" id="content" name="content" rows="5" required>{{ $post->body }}</textarea>
+                            <div class="mb-4">
+                                <label for="content" class="form-label fw-bold">Content</label>
+                                <textarea class="form-control @error('content') is-invalid @enderror" 
+                                          id="content" name="content" rows="15" required placeholder="Start writing your story...">{{ old('content', $post->body) }}</textarea>
+                                @error('content')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
-
-                            <div class="mb-3">
-                                <label for="category" class="form-label">Category</label>
-                                {{-- this is the start for the drop down --}}
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div id="modules">
-                                                    {{-- @foreach ($categories as $category)
-                                                        <p class="drag"><a class="btn btn-default">{{ $category->name }}</a>
-                                                        </p>
-                                                    @endforeach --}}
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div id="dropzone"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {{-- this is the end for the drop down --}}
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="tags" class="form-label">Tags</label>
-                                {{-- @foreach ($tags as $tag)
-                                    <div class="form-check">
-                                        <input type="checkbox" name="tags[]" id="{{ $tag->name }}"
-                                            class="form-check-input" value="{{ $tag->id }}">
-                                        <label for="{{ $tag->name }}" class="form-check-labe">{{ $tag->name }}</label>
-                                    </div>
-                                @endforeach --}}
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label for="status" class="form-label">Status</label>
-                                        <select name="status" id="status" class="form-select">
-                                            @foreach (\App\Enums\StatusEnum::cases() as $status)
-                                                <option value="{{ $status->value }}">
-                                                    {{ $status->name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-6">
-                                        <label for="published_at" class="form-label">Published at</label>
-                                        <input type="datetime-local" class="form-control" id="published_at"
-                                            name="published_at" value="{{ $post->published_at }}">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label for="image" class="form-label">Image</label>
-                                        <input type="file" class="form-control" id="image" name="image"
-                                            accept="image/*">
-                                    </div>
-                                    <div class="col-6">
-                                        <label for="expires_at" class="form-label">Expires at</label>
-                                        <input type="datetime-local" class="form-control" id="expires_at" name="expires_at"
-                                            value="{{ $post->published_at }}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <button type="submit" class="btn btn-primary rounded-pill px-3">Update Post</button>
-                                    </div>
-                                    <div class="col-9">
-                                        <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </form>
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 fw-bold">Publishing</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="status" class="form-label fw-semibold">Status</label>
+                            <select name="status" id="status" class="form-select @error('status') is-invalid @enderror">
+                                @foreach (\App\Enums\StatusEnum::cases() as $status)
+                                    <option value="{{ $status->value }}" {{ old('status', $post->status) == $status->value ? 'selected' : '' }}>
+                                        {{ ucfirst($status->name) }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('status')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="published_at" class="form-label fw-semibold">Publish Date</label>
+                            <input type="datetime-local" class="form-control @error('published_at') is-invalid @enderror" 
+                                   id="published_at" name="published_at" value="{{ old('published_at', $post->published_at ? \Carbon\Carbon::parse($post->published_at)->format('Y-m-d\TH:i') : '') }}">
+                            @error('published_at')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="expires_at" class="form-label fw-semibold">Expiry Date (Optional)</label>
+                            <input type="datetime-local" class="form-control @error('expires_at') is-invalid @enderror" 
+                                   id="expires_at" name="expires_at" value="{{ old('expires_at', $post->expires_at ? \Carbon\Carbon::parse($post->expires_at)->format('Y-m-d\TH:i') : '') }}">
+                            @error('expires_at')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <hr>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-warning btn-lg text-white">
+                                <i class="fas fa-save me-1"></i> Update Post
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 fw-bold">Categories & Tags</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Categories</label>
+                            <div class="bg-light p-3 rounded @error('categories') border border-danger @enderror" style="max-height: 200px; overflow-y: auto;">
+                                @php
+                                    $selectedCategories = old('categories', $post->categories->pluck('id')->toArray());
+                                @endphp
+                                @foreach ($categories as $category)
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" name="categories[]" 
+                                               id="cat-{{ $category->id }}" value="{{ $category->id }}"
+                                               {{ in_array($category->id, $selectedCategories) ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="cat-{{ $category->id }}">
+                                            {{ $category->name }}
+                                        </label>
+                                    </div>
+                                @endforeach
+                            </div>
+                            @error('categories')
+                                <div class="text-danger small mt-1">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Tags</label>
+                            <div class="bg-light p-3 rounded @error('tags') border border-danger @enderror" style="max-height: 200px; overflow-y: auto;">
+                                @php
+                                    $selectedTags = old('tags', $post->tags->pluck('id')->toArray());
+                                @endphp
+                                @foreach ($tags as $tag)
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" name="tags[]" 
+                                               id="tag-{{ $tag->id }}" value="{{ $tag->id }}"
+                                               {{ in_array($tag->id, $selectedTags) ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="tag-{{ $tag->id }}">
+                                            {{ $tag->name }}
+                                        </label>
+                                    </div>
+                                @endforeach
+                            </div>
+                            @error('tags')
+                                <div class="text-danger small mt-1">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 fw-bold">Featured Image</h5>
+                    </div>
+                    <div class="card-body">
+                        @if($post->mediaAsset)
+                            <div class="mb-3 text-center">
+                                <img src="{{ asset('storage/' . $post->mediaAsset->path) }}" alt="Current Image" class="img-fluid rounded shadow-sm border mb-2" style="max-height: 150px;">
+                                <p class="small text-muted">Current image</p>
+                            </div>
+                        @endif
+                        <div class="mb-3">
+                            <input type="file" class="form-control @error('image') is-invalid @enderror" 
+                                   id="image" name="image" accept="image/*" onchange="previewImg(this)">
+                            @error('image')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div id="image-preview-container" class="mt-3 text-center d-none">
+                            <img id="image-preview" src="#" alt="Preview" class="img-fluid rounded shadow-sm border" style="max-height: 200px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
         </div>
     </div>
-{{--
-@endsection --}}
+@endsection
+
+@push('js')
+    <script>
+        function previewImg(input) {
+            const preview = document.getElementById('image-preview');
+            const container = document.getElementById('image-preview-container');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    container.classList.remove('d-none');
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                container.classList.add('d-none');
+            }
+        }
+    </script>
+@endpush

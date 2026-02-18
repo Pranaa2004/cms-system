@@ -61,7 +61,14 @@ class AuthController extends Controller
     public function dashboard_show()
     {
         if (Auth::check()) {
-            return view('pages.backend.index');
+            $stats = [
+                'posts' => \App\Models\Post::count(),
+                'pages' => \App\Models\Page::count(),
+                'categories' => \App\Models\Category::count(),
+                'tags' => \App\Models\Tag::count(),
+                'users' => \App\Models\User::count(),
+            ];
+            return view('pages.backend.index', compact('stats'));
         }
 
         return redirect()->route('login_show')->with('error', 'You must be logged in to access the dashboard.');

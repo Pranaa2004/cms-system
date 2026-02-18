@@ -36,8 +36,7 @@ class TagController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255|unique:tags,name',
-            'slug' => 'required|unique:tags,slug',
-
+            'slug' => 'required|string|unique:tags,slug',
         ]);
 
         $tag = new Tag;
@@ -46,7 +45,7 @@ class TagController extends Controller
         $tag->description = $request->input('description');
         $tag->save();
 
-        return redirect()->back()->with('success', 'Category created successfully!');
+        return redirect()->back()->with('success', 'Tag created successfully!');
     }
 
     /**
@@ -62,7 +61,7 @@ class TagController extends Controller
      */
     public function edit(string $id)
     {
-        $tag = Tag::find($id);
+        $tag = Tag::findOrFail($id);
         return view('pages.backend.tags.edit', compact('tag'));
     }
 
@@ -71,24 +70,18 @@ class TagController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        try {
-            $validatedData = $request->validate([
-                'name' => 'required|string|max:255|unique:tags,name',
-                'slug' => 'required|string|alpha_dash|lowercase|max:255',
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255|unique:tags,name,' . $id,
+            'slug' => 'required|string|max:255|unique:tags,slug,' . $id,
+        ]);
 
-            ]);
+        $tag = Tag::findOrFail($id);
+        $tag->name = $validatedData['name'];
+        $tag->slug = Str::slug($validatedData['slug']);
+        $tag->description = $request->input('description');
+        $tag->save();
 
-            $tag = Tag::find($id);
-            $tag->name = $validatedData['name'];
-            $tag->slug = str::slug($validatedData['slug']);
-            $tag->description = $request->input('description');
-            $tag->save();
-
-            return redirect()->route('tags.index')->with('success', 'Category created successfully!');
-        } catch (ValidationException $e) {
-            $errors = $e->errors();
-            return redirect()->back()->withErrors($errors)->withInput();
-        }
+        return redirect()->route('tags.index')->with('success', 'Tag updated successfully!');
     }
 
     /**
@@ -96,9 +89,9 @@ class TagController extends Controller
      */
     public function destroy(string $id)
     {
-        $tag = Tag::find($id);
+        $tag = Tag::findOrFail($id);
         $tag->delete();
 
-        return redirect()->back()->with('success', 'Successfully Deleted !');
+        return redirect()->back()->with('success', 'Tag deleted successfully!');
     }
 }

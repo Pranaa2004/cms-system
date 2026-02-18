@@ -20,8 +20,7 @@ class PageController extends Controller
      */
     public function index()
     {
-        $pages = Page::all();
-
+        $pages = Page::with(['user', 'media'])->latest()->get();
         return view('pages.backend.pages.index', compact('pages'));
     }
 
@@ -38,49 +37,25 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedata = $request->validate([
+        $validatedData = $request->validate([
             'title' => 'required|string|max:255',
-            //'slug' => 'required|string|alpha_dash|lowercase|max:255|unique:pages,slug',
             'slug' => 'required|string|max:255|unique:pages,slug',
-            'content' => 'required|string|max:255',
-            'authod_id' => 'unique:pages,author_id',
+            'content' => 'required|string',
             'status' => ['required', new Enum(EnumsStatusEnum::class)],
             'published_at' => 'nullable|date',
             'expires_at' => 'nullable|date',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
-
         ]);
 
         $page = new Page;
         $page->author_id = Auth::id();
-        $page->title = $validatedata['title'];
-        $page->slug = Str::slug($validatedata['slug']);
-        $page->body = $validatedata['content'];
-        $page->status = $validatedata['status'];
-        $page->published_at = $validatedata['published_at'];
-        $page->expires_at = $validatedata['expires_at'];
+        $page->title = $validatedData['title'];
+        $page->slug = Str::slug($validatedData['slug']);
+        $page->body = $validatedData['content'];
+        $page->status = $validatedData['status'];
+        $page->published_at = $validatedData['published_at'] ?? now();
+        $page->expires_at = $validatedData['expires_at'];
 
-        // if ($request->hasFile('image')) {
-        //     $file = $request->file('image');
-
-        //     // Store the file in public
-        //     $path = $file->store('uploads/pages', 'public');
-
-        //     // Get image size as an Array
-        //     $imageInfo = getimagesize($file);
-
-        // Create media asset
-        // $page->media()->create([
-        //     'disk' => 'public',
-        //     'path' => $path,
-        //     'mime_type' => $file->getMimeType(),
-        //     'size_kb' => round($file->getSize() / 1024, 2),
-        //     'width' => $imageInfo[0] ?? null,
-        //     'height' => $imageInfo[1] ?? null,
-        //     'alt' => $validatedata['title'],
-        //     'variants' => '',
-        // ]);
-        // }
         $mediaId = null;
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -93,7 +68,7 @@ class PageController extends Controller
                 'size_kb' => $file->getSize() / 1024,
                 'width' => getimagesize($file)[0] ?? null,
                 'height' => getimagesize($file)[1] ?? null,
-                'alt' => $validatedata['title'],
+                'alt' => $validatedData['title'],
                 'variants' => '',
             ]);
 
@@ -120,31 +95,34 @@ class PageController extends Controller
      */
     public function edit(string $id)
     {
-        $page = Page::find($id);
+        $page = Page::findOrFail($id);
         return view('pages.backend.pages.edit', compact('page'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Page $page)
+    public function update(Request $request, string $id)
     {
-        $validatedata = $request->validate([
+        $validatedData = $request->validate([
             'title' => 'required|string|max:255',
-            'content' => 'nullable|string',
-            'slug' => 'required|string|max:255|unique:pages,slug',
-            'content' => 'required|string|max:255',
-            'authod_id' => 'unique:pages,author_id',
+            'slug' => 'required|string|max:255|unique:pages,slug,' . $id,
+            'content' => 'required|string',
             'status' => ['required', new Enum(EnumsStatusEnum::class)],
             'published_at' => 'nullable|date',
             'expires_at' => 'nullable|date',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:3072',
         ]);
 
-        $mediaId = $page->featured_media_id;
+        $page = Page::findOrFail($id);
+        $page->title = $validatedData['title'];
+        $page->slug = Str::slug($validatedData['slug']);
+        $page->body = $validatedData['content'];
+        $page->status = $validatedData['status'];
+        $page->published_at = $validatedData['published_at'];
+        $page->expires_at = $validatedData['expires_at'];
 
         if ($request->hasFile('image')) {
-            // Upload new image
             $file = $request->file('image');
             $path = $file->store('uploads/pages', 'public');
 
@@ -155,23 +133,14 @@ class PageController extends Controller
                 'size_kb' => $file->getSize() / 1024,
                 'width' => getimagesize($file)[0] ?? null,
                 'height' => getimagesize($file)[1] ?? null,
-                'alt' => $validatedata['title'],
+                'alt' => $validatedData['title'],
             ]);
 
-            $mediaId = $media->id;
+            $page->featured_media_id = $media->id;
         }
 
-        $page->author_id = Auth::id();
-        $page->title = $validatedata['title'];
-        $page->slug = Str::slug($validatedata['slug']);
-        $page->body = $validatedata['content'];
-        $page->status = $validatedata['status'];
-        $page->published_at = $validatedata['published_at'];
-        $page->expires_at = $validatedata['expires_at'];
-        $page->featured_media_id = $mediaId;
         $page->meta = '';
         $page->save();
-        // $page->tags->atta
 
         return redirect()->route('pages.index')->with('success', 'Page updated successfully!');
     }
@@ -182,10 +151,9 @@ class PageController extends Controller
      */
     public function destroy(string $id)
     {
-        $page = Page::find($id);
+        $page = Page::findOrFail($id);
         $page->delete();
 
-        return redirect()->route('pages.index')->with('Success', 'Successfully Deleted !!');
-
+        return redirect()->route('pages.index')->with('success', 'Page deleted successfully!');
     }
 }

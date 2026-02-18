@@ -1,153 +1,100 @@
-<!-- Left Sidebar - style you can find in sidebar.scss  -->
-<!-- ============================================================== -->
 <aside class="left-sidebar" data-sidebarbg="skin6">
-    <!-- Sidebar scroll-->
     <div class="scroll-sidebar" data-sidebarbg="skin6">
-        <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                {{-- @auth --}}
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('dashboard') }}"
-                        aria-expanded="false"><span class="pb-1"><i data-feather="home" class="feather-icon"></span></i><span
-                            class="hide-menu">Dashboard</span></a>
+                <li class="sidebar-item">
+                    <a class="sidebar-link sidebar-link" href="{{ route('dashboard') }}" aria-expanded="false">
+                        <i data-feather="home" class="feather-icon"></i>
+                        <span class="hide-menu">Dashboard</span>
+                    </a>
                 </li>
-                {{-- @endauth --}}
 
                 <li class="list-divider"></li>
 
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i class="icon-pin"></i><span
-                            class="hide-menu">Post</span></a>
-                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                        <li class="sidebar-item"><a href="{{ route('posts.index') }}" class="sidebar-link"><span
-                                    class="hide-menu">All Post
-                                </span></a>
-                        </li>
-                        <li class="sidebar-item"><a href="{{ route('posts.create') }}" class="sidebar-link"><span
-                                    class="hide-menu">Add Post
-                                </span></a>
-                        </li>
-                        <li class="sidebar-item"><a href="{{ route('category.index') }}" class="sidebar-link"><span
-                                    class="hide-menu">
-                                    Category
-                                </span></a>
-                        </li>
-                        <li class="sidebar-item"><a href="{{ route('tags.index') }}" class="sidebar-link"><span
-                                    class="hide-menu">
-                                    Tags
-                                </span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i class="far fa-clone"></i><span
-                            class="hide-menu">Pages</span></a>
-                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                        <li class="sidebar-item"><a href="{{ route('pages.index') }}" class="sidebar-link"><span
-                                    class="hide-menu">All Pages
-                                </span></a>
-                        </li>
-                        <li class="sidebar-item"><a href="{{ route('pages.create') }}" class="sidebar-link"><span
-                                    class="hide-menu">Add Pages
-                                </span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false">
-                        <span style="position: relative; width: 24px; height: 24px;">
-                            <i class="bi bi-camera" style="position: absolute; top: 0; left: 0 ;background-color:white"></i>
-                            <i class="bi bi-music-note-beamed" style="position: absolute; top: 5px; left: 5px;"></i>
-                            </span><span
-                            class="hide-menu">Media</span></a>
-                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                        <li class="sidebar-item"><a href="{{ route('medias.index') }}" class="sidebar-link"><span
-                                    class="hide-menu">Media Library
-                                </span></a>
-                        </li>
-                        <li class="sidebar-item"><a href="{{ route('medias.create') }}" class="sidebar-link"><span
-                                    class="hide-menu">Add Media File</span></a>
-                        </li>
+                <li class="nav-small-cap"><span class="hide-menu">Content Management</span></li>
 
-                    </ul>
-                </li>
-                {{-- <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
-                        aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
-                            class="hide-menu">Media
-                        </span></a>
-                </li> --}}
-                {{-- <li class="list-divider"></li> --}}
-                {{-- <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
-
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
-                        aria-expanded="false"><i data-feather="lock" class="feather-icon"></i><span
-                            class="hide-menu">Login
-                        </span></a>
-                </li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-register1.html"
-                        aria-expanded="false"><i data-feather="lock" class="feather-icon"></i><span
-                            class="hide-menu">Register
-                        </span></a>
-                </li> --}}
-
-                {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
-                            class="hide-menu">Icons
-                        </span></a>
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i class="icon-pin"></i>
+                        <span class="hide-menu">Posts</span>
+                    </a>
                     <ul aria-expanded="false" class="collapse first-level base-level-line">
-                        <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><span
-                                    class="hide-menu"> Fontawesome Icons </span></a></li>
-
-                        <li class="sidebar-item"><a href="icon-simple-lineicon.html" class="sidebar-link"><span
-                                    class="hide-menu"> Simple Line Icons </span></a></li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('posts.index') }}" class="sidebar-link">
+                                <span class="hide-menu">All Posts</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('posts.create') }}" class="sidebar-link">
+                                <span class="hide-menu">Add New Post</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('category.index') }}" class="sidebar-link">
+                                <span class="hide-menu">Categories</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('tags.index') }}" class="sidebar-link">
+                                <span class="hide-menu">Tags</span>
+                            </a>
+                        </li>
                     </ul>
-                </li> --}}
+                </li>
 
-                {{-- <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
-
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
-                        aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
-                            class="hide-menu">Logout</span></a></li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i data-feather="crosshair" class="feather-icon"></i><span
-                            class="hide-menu">Multi
-                            level
-                            dd</span></a>
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i class="far fa-clone"></i>
+                        <span class="hide-menu">Pages</span>
+                    </a>
                     <ul aria-expanded="false" class="collapse first-level base-level-line">
-                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                    class="hide-menu"> item 1.1</span></a>
+                        <li class="sidebar-item">
+                            <a href="{{ route('pages.index') }}" class="sidebar-link">
+                                <span class="hide-menu">All Pages</span>
+                            </a>
                         </li>
-                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                    class="hide-menu"> item 1.2</span></a>
+                        <li class="sidebar-item">
+                            <a href="{{ route('pages.create') }}" class="sidebar-link">
+                                <span class="hide-menu">Add New Page</span>
+                            </a>
                         </li>
-                        <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)"
-                                aria-expanded="false"><span class="hide-menu">Menu 1.3</span></a>
-                            <ul aria-expanded="false" class="collapse second-level base-level-line">
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item
-                                            1.3.1</span></a></li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item
-                                            1.3.2</span></a></li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item
-                                            1.3.3</span></a></li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item
-                                            1.3.4</span></a></li>
-                            </ul>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                        <i class="bi bi-images me-2"></i>
+                        <span class="hide-menu">Media</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level base-level-line">
+                        <li class="sidebar-item">
+                            <a href="{{ route('medias.index') }}" class="sidebar-link">
+                                <span class="hide-menu">Library</span>
+                            </a>
                         </li>
-                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                    class="hide-menu"> item
-                                    1.4</span></a></li>
-                    </ul> --}}
-                {{-- </li> --}}
+                        <li class="sidebar-item">
+                            <a href="{{ route('medias.create') }}" class="sidebar-link">
+                                <span class="hide-menu">Upload</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list-divider"></li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('logout') }}" 
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <i data-feather="log-out" class="feather-icon"></i>
+                        <span class="hide-menu">Logout</span>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
             </ul>
         </nav>
-        <!-- End Sidebar navigation -->
     </div>
-    <!-- End Sidebar scroll-->
 </aside>
 <!-- ============================================================== -->
 <!-- End Left Sidebar - style you can find in sidebar.scss  -->
