@@ -18,10 +18,15 @@ class PageController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $pages = Page::with(['user', 'media'])->latest()->get();
-        return view('pages.backend.pages.index', compact('pages'));
+        if ($request->ajax()) {
+            $pages = Page::with(['user', 'media'])->latest()->get();
+            return response()->json([
+                'data' => $pages
+            ]);
+        }
+        return view('pages.backend.pages.index');
     }
 
     /**

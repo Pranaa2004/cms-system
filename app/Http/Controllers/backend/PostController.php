@@ -20,10 +20,15 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::with(['user', 'tags', 'categories'])->latest()->get();
-        return view('pages.backend.posts.index', compact('posts'));
+        if ($request->ajax()) {
+            $posts = Post::with(['user', 'tags', 'categories'])->latest()->get();
+            return response()->json([
+                'data' => $posts
+            ]);
+        }
+        return view('pages.backend.posts.index');
     }
 
     /**

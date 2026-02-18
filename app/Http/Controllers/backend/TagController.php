@@ -15,9 +15,15 @@ class TagController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tags = Tag::all()->sortByDesc('created_at');
+        if ($request->ajax()) {
+            $tags = Tag::latest()->get();
+            return response()->json([
+                'data' => $tags
+            ]);
+        }
+        $tags = Tag::latest()->get();
         return view('pages.backend.tags.index', compact('tags'));
     }
 

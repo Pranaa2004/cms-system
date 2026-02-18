@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+use App\Traits\LogsActivity;
+
 class Page extends Model
 {
+    use LogsActivity;
     public function posts(): BelongsToMany
     {
         return $this->belongsToMany(Post::class);

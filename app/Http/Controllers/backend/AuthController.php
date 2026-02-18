@@ -68,7 +68,14 @@ class AuthController extends Controller
                 'tags' => \App\Models\Tag::count(),
                 'users' => \App\Models\User::count(),
             ];
-            return view('pages.backend.index', compact('stats'));
+            $activities = \App\Models\Activity::with('user', 'subject')
+                ->latest()
+                ->limit(10)
+                ->get();
+
+            $notifications = auth()->user()->unreadNotifications()->limit(5)->get();
+
+            return view('pages.backend.index', compact('stats', 'activities', 'notifications'));
         }
 
         return redirect()->route('login_show')->with('error', 'You must be logged in to access the dashboard.');

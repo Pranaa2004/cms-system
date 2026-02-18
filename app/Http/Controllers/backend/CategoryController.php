@@ -13,9 +13,15 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $categories = Category::all()->sortByDesc('created_at');
+        if ($request->ajax()) {
+            $categories = Category::latest()->get();
+            return response()->json([
+                'data' => $categories
+            ]);
+        }
+        $categories = Category::latest()->get();
         return view('pages.backend.category.index', compact('categories'));
     }
 
