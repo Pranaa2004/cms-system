@@ -47,13 +47,10 @@
 <script src="https://cdn.datatables.net/2.3.5/js/dataTables.js"></script> --}}
 
 
-<!-- Croppie CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" />
+<!-- Toastr CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
-<!-- DataTables CSS -->
-<link rel="stylesheet" href="https://cdn.datatables.net/2.3.5/css/dataTables.dataTables.min.css" />
-
-<!-- jQuery (required by DataTables) -->
+<!-- jQuery (required by DataTables and Toastr) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- Vite bundled scripts -->
@@ -64,3 +61,71 @@
 
 <!-- DataTables JS -->
 <script src="https://cdn.datatables.net/2.3.5/js/dataTables.min.js"></script>
+
+<!-- Toastr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+    // Toastr Configuration
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": true,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+
+    @if(session('success'))
+        toastr.success("{{ session('success') }}");
+    @endif
+
+    @if(session('error'))
+        toastr.error("{{ session('error') }}");
+    @endif
+
+    @if(session('info'))
+        toastr.info("{{ session('info') }}");
+    @endif
+
+    @if(session('warning'))
+        toastr.warning("{{ session('warning') }}");
+    @endif
+
+    // Dark/Light Mode Logic
+    (function() {
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        $(document).on('click', '#theme-toggle', function() {
+            let currentTheme = document.documentElement.getAttribute('data-theme');
+            let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update Icon
+            if(newTheme === 'dark') {
+                $(this).find('i').removeClass('bi-moon-stars').addClass('bi-sun');
+            } else {
+                $(this).find('i').removeClass('bi-sun').addClass('bi-moon-stars');
+            }
+        });
+
+        // Initialize icon on page load
+        $(document).ready(function() {
+            if(localStorage.getItem('theme') === 'dark') {
+                $('#theme-toggle').find('i').removeClass('bi-moon-stars').addClass('bi-sun');
+            }
+        });
+    })();
+</script>

@@ -22,6 +22,11 @@
                         <i class="bi bi-globe me-1"></i> Visit Website
                     </a>
                 </li>
+                <li class="nav-item ms-3">
+                    <button id="theme-toggle" class="btn btn-link nav-link p-0 text-dark">
+                        <i class="bi bi-moon-stars font-20"></i>
+                    </button>
+                </li>
             </ul>
             <ul class="navbar-nav float-end">
                 <li class="nav-item dropdown">
